@@ -76,16 +76,18 @@ export default async function DistrictPage({ params }: PageProps) {
         <Breadcrumb items={[{ name: 'Bölgelerimiz', url: '/bolgeler' }, { name: d.name, url: `/bolgeler/${d.slug}-evden-eve-nakliyat` }]} className="pt-4" />
         
         {/* Intro Section */}
-        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
-          <span className="text-brand-accent font-bold text-xs tracking-widest font-sans">
-            {d.introSubtitle}
-          </span>
-          <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
-            {d.name} Evden Eve Nakliyat
-          </h1>
-          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4">
-            {d.introParagraph}
-          </p>
+        <section className="py-20 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
+            <span className="text-brand-accent font-bold text-xs tracking-widest font-sans">
+              {d.introSubtitle}
+            </span>
+            <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
+              {d.name} Evden Eve Nakliyat
+            </h1>
+            <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              {d.introParagraph}
+            </p>
+          </div>
         </section>
 
         {/* Detailed Content */}

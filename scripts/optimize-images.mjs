@@ -17,7 +17,8 @@ const photos = [
   'paketleme-detay',
   'slayt-1',
   'slayt-2',
-  'slayt-3'
+  'slayt-3',
+  'banner-bg'
 ];
 
 async function run() {

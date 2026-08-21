@@ -1,6 +1,6 @@
 # SEO ve Site Sağlığı Durum Raporu (SEO-DURUM.md)
 
-*Rapor Oluşturulma Tarihi:* 21.08.2026 14:20:25
+*Rapor Oluşturulma Tarihi:* 21.08.2026 15:05:40
 *Taranan Sayfa Sayısı:* 64
 
 ---

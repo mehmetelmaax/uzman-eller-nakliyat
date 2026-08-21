@@ -4,12 +4,13 @@
  */
 
 export const IMAGE_BLURS: Record<string, string> = {
-  "arac-filosu": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJZwAARJV8OGSjZCWAAP7IShX7cxUTydxpDkkFcgD9Rmd1jHtHGKdZIezmToTVgt4oFclHV5qE5y6OAAA=",
-  "asansor-kurulum": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJZwAARcViLIvKfXatgAAA/taujXs3M22+w9bfvyVnVBsyh5qC2mW6IaPZBbYR/yVExW4SSopbVArf/YDShAAA",
-  "ekip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoUAA8APzmEuVOvKKWisAgB4CcJZQAIEAPUcm7nNejqP8xdIAD8qvtZiVhvBZ4iqQiyBn0Xcmybzruerdq1Zz/1949cTzvgyFk23kKCeTZ4oj7rmHIwkBvfAuL0sYlZ6NJrYyCVgneWjUV/MoFMepMDAAA=",
+  "arac-filosu": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJYwAAW9Xo1XJDJup3AAAA/IqAxqPfA40dIXr7Ws/tiCHBu79gJQ0PsP4vlyX0e7v9RBFtOAPcwUjVehtdbgwOcCVqZtwAAAA=",
+  "asansor-kurulum": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJZwAARcVgVGgrEvKCUAAA/taujXs3M22+w9bfvyVnVBsyh5qCZ/0sBRrQVRmsJyf0ngOKRgx92mpz0nLShAAA",
+  "ekip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJYwAATv88Sv8Nm8GaIAD+sgf06Nx4WiipbsUiYnh3RoMjgf98w4GLzU/ZlKNKoUnbGn+e9Ngb17OHoHi94Vqnt6/fRhrDbsXIhACJQAA=",
   "marangozluk": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJYgCw7CLbaiQYQWAAzgYAfIhF+h+lrqowLY+BMYW2osulu4f6BQmdayIazgQ5OwL8MXi1YR7XXM2fjS33cTP6E5IFnYAA",
   "paketleme-detay": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoUAA8APzmEuVOvKKWisAgB4CcJQBOmUABr6mZdD4lfe3/K1DwAziTdjMItQbcn5Zh7Qur/asvaUtCVOIjyscMflhVp+BFGw9JZwdEm34l+w0dGHz6WAC8O0wYjFVO5wpKjfGCIv/LorQAA",
-  "slayt-1": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJYwCo9BnaR4rWbRYAAP5laXDBlA0OvnZSboZOwe//rpGNQ0oz0gyue/LEnz3OCnlNZR9v8CcDcHnnw6+IIBC3suMlLhq8PhEn5GcEAAA=",
-  "slayt-2": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAAsAPzmGulQvKSWjMAgB4CcJQBUeg0fhf6RjvKXcMAD+Uor9MP5inADYyb0AopTBqUlfbiZDt4JxDDBHsT/m14wLzVf1sgVuvE1LRjQudKxAFJ9cAmIAAAA=",
-  "slayt-3": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJYgC06BXbvgKoO5NVXgAA/c9giW5YY8W8bXrtq6Pdgxh4CcLsWYh4A8TMxs6tuT6k9aSqiulUQw0W1ISk5iaxYT/NSIdAjh41wNoAAAA="
+  "slayt-1": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJQAXf+BAWMfHdbNTSZ8AA+EUeVJc5Zd4HNoWlYPbGlVL55m0DUUfPI7dvx9L4dIRJDhHvTJ+d8mVx85rhcBj0PxFzWg2/u5tCwAAA",
+  "slayt-2": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJQBOgAqMUuwPJcGcybQAA/IL7Oa+1DIBsWIXmrt0FOfjsLZZALcM89pr0qRuDQSfnr7i9TxhxOu6B0kEgxX3NBMGwOL69tdY1emgAAAA=",
+  "slayt-3": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJQBYdg8TZsho2rNtwkoAA/rI3qYI/2djC4fQEglfJnqpG2Cbm0cakBDpHIUckl1yArD8wr34f0d30XmtWc+Ael7O0kurqjxXr1SMR4UcaMLCjtoAAAA==",
+  "banner-bg": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJQBOgBDvSDi/FCn4yaF7EAP4nbF5SYmjOQclX4f7WkN4XF3EgIu4mHLnKorH1S8W93EIP2XFZoX31tDnzzmcni+J7iBfEP8QAAA=="
 };

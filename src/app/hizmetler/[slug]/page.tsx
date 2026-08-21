@@ -89,16 +89,18 @@ export default async function ServicePage({ params }: PageProps) {
         <Breadcrumb items={[{ name: 'Hizmetlerimiz', url: '/hizmetler' }, { name: s.name, url: `/hizmetler/${s.slug}` }]} className="pt-4" />
         
         {/* Intro Section */}
-        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
-          <span className="text-brand-accent-dark font-bold text-xs tracking-widest uppercase">
-            {replaceVariables(s.introSubtitle)}
-          </span>
-          <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
-            {replaceVariables(s.name)}
-          </h1>
-          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4">
-            {replaceVariables(s.introParagraph)}
-          </p>
+        <section className="py-20 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
+            <span className="text-brand-accent font-bold text-xs tracking-widest uppercase">
+              {replaceVariables(s.introSubtitle)}
+            </span>
+            <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
+              {replaceVariables(s.name)}
+            </h1>
+            <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              {replaceVariables(s.introParagraph)}
+            </p>
+          </div>
         </section>
 
         {/* Detailed Content */}

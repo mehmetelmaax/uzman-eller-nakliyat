@@ -96,24 +96,26 @@ export default async function RoutePage({ params }: PageProps) {
         />
 
         {/* Intro Section */}
-        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
-          <span className="text-brand-accent-dark font-bold text-xs tracking-widest font-sans">
-            ŞEHİRLERARASI ROTA LOJİSTİĞİ
-          </span>
-          <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
-            Mersin {route.city} Evden Eve Nakliyat
-          </h1>
-          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4">
-            {details.introText}
-          </p>
-          <div className="pt-2">
-            <Link
-              href="/hizmetler/sehirlerarasi-evden-eve-nakliyat"
-              className="inline-flex items-center gap-1.5 text-xs text-brand-accent hover:text-white font-bold uppercase tracking-wider transition-colors"
-            >
-              <span>Şehirlerarası Nakliyat Hizmet Detayları</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+        <section className="py-20 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
+            <span className="text-brand-accent font-bold text-xs tracking-widest font-sans">
+              ŞEHİRLERARASI ROTA LOJİSTİĞİ
+            </span>
+            <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
+              Mersin {route.city} Evden Eve Nakliyat
+            </h1>
+            <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              {details.introText}
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/hizmetler/sehirlerarasi-evden-eve-nakliyat"
+                className="inline-flex items-center gap-1.5 text-xs text-brand-accent hover:text-white font-bold uppercase tracking-wider transition-colors"
+              >
+                <span>Şehirlerarası Nakliyat Hizmet Detayları</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         </section>
 

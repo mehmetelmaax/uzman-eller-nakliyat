@@ -31,8 +31,8 @@ export default function HakkimizdaPage() {
       <main className="pt-24 bg-surface-muted">
         <Breadcrumb items={[{ name: 'Hakkımızda', url: '/hakkimizda' }]} className="pt-4" />
         {/* Intro Section */}
-        <section className="py-20 bg-brand-primary text-white relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
+        <section className="py-20 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
             <span className="text-brand-accent font-bold text-xs tracking-widest">
               KURUMSAL PROFİLİMİZ
             </span>

@@ -90,16 +90,18 @@ export default function FiyatlarPage() {
         <Breadcrumb items={[{ name: 'Fiyat Rehberi', url: '/mersin-nakliyat-fiyatlari' }]} className="pt-4" />
         
         {/* Intro Section */}
-        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
-          <span className="text-brand-accent font-bold text-xs tracking-widest">
-            ŞEFFAF FİYAT POLİTİKASI
-          </span>
-          <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
-            Mersin Evden Eve Nakliyat Fiyatları
-          </h1>
-          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4">
-            Mersin genelinde ev taşıma maliyetlerini belirleyen tüm operasyonel etkenler ve güncel bütçe tarifeleri bu sayfada listelenmektedir. Mersin Uzman Eller Nakliyat olarak, tüm taşınma bütçelerinizi şeffaf bir şekilde analiz etmeniz için interaktif hesaplama robotumuzu sunuyoruz.
-          </p>
+        <section className="py-20 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
+            <span className="text-brand-accent font-bold text-xs tracking-widest">
+              ŞEFFAF FİYAT POLİTİKASI
+            </span>
+            <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
+              Mersin Evden Eve Nakliyat Fiyatları
+            </h1>
+            <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Mersin genelinde ev taşıma maliyetlerini belirleyen tüm operasyonel etkenler ve güncel bütçe tarifeleri bu sayfada listelenmektedir. Mersin Uzman Eller Nakliyat olarak, tüm taşınma bütçelerinizi şeffaf bir şekilde analiz etmeniz için interaktif hesaplama robotumuzu sunuyoruz.
+            </p>
+          </div>
         </section>
 
         {/* Technical Definitions Section */}

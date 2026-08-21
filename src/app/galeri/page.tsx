@@ -204,17 +204,19 @@ export default function GalleryPage() {
       
       <main className="pt-24 bg-surface-muted min-h-screen">
         {/* Intro */}
-        <section className="py-16 bg-brand-primary text-white text-center space-y-4">
-          <span className="text-brand-accent font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1">
-            <Camera className="w-4 h-4 text-brand-accent" />
-            <span>Faaliyetlerimiz</span>
-          </span>
-          <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
-            Hizmet Galerisi
-          </h1>
-          <p className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Eşya paketleme, asansör kurulumu ve taşıma anlarına ait gerçek operasyon fotoğraflarımız.
-          </p>
+        <section className="py-16 bg-[url('/img/banner-bg.jpg')] bg-cover bg-center bg-no-repeat text-white text-center relative overflow-hidden before:absolute before:inset-0 before:bg-brand-primary/85 before:z-0">
+          <div className="relative z-10 space-y-4 max-w-4xl mx-auto px-4">
+            <span className="text-brand-accent font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1">
+              <Camera className="w-4 h-4 text-brand-accent" />
+              <span>Faaliyetlerimiz</span>
+            </span>
+            <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
+              Hizmet Galerisi
+            </h1>
+            <p className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+              Eşya paketleme, asansör kurulumu ve taşıma anlarına ait gerçek operasyon fotoğraflarımız.
+            </p>
+          </div>
         </section>
 
         {/* Gallery Grid */}

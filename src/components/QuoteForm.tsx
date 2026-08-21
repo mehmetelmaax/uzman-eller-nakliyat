@@ -124,6 +124,14 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
           tahminiFiyat: `${priceRange.min}-${priceRange.max}`
         });
 
+        // Automatically open WhatsApp with the quote details
+        const waText = `Merhaba, web sitenizden ev taşıma teklif talebi oluşturdum:\n\n👤 *İsim:* ${formData.name}\n📞 *Telefon:* ${formData.phone}\n📍 *Nereden:* ${formData.fromDistrict}\n📍 *Nereye:* ${formData.toDistrict}\n📦 *Oda Sayısı:* ${formData.rooms}\n🛗 *Asansör:* ${formData.elevator === 'evet' ? 'Evet' : 'Hayır'}\n\n🏷️ *Hesaplanan Tahmini Fiyat:* ₺${priceRange.min.toLocaleString('tr-TR')} - ₺${priceRange.max.toLocaleString('tr-TR')}`;
+        const waUrl = `${SITE.whatsappHref}?text=${encodeURIComponent(waText)}`;
+        
+        setTimeout(() => {
+          window.open(waUrl, '_blank');
+        }, 1500);
+
       } else {
         setStatus('error');
         setErrorMessage(data.message || 'Teklif talebi gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
