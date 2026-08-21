@@ -4,6 +4,6 @@ export const FACTS = {
   priceMin: 15000,
   priceMax: 31000,
   foundedYear: 1996,
-  insurer: 'Anadolu Sigorta',
+  insurer: 'Emtia Nakliyat Sigortası',
   districtCount: 13,
 } as const;

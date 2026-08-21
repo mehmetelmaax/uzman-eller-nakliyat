@@ -4,7 +4,7 @@ import BuildingAnalysis from '@/components/geo/BuildingAnalysis';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
-import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { serviceSchema, breadcrumbSchema, faqSchema, getPageSchemas } from '@/lib/schema';
 import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const cleanSlug = slug.replace('-evden-eve-nakliyat', '');
   const district = districtsDatabase[cleanSlug];
-  if (!district) {
+  if (!district || slug !== `${cleanSlug}-evden-eve-nakliyat`) {
     return {};
   }
   return {
@@ -44,15 +44,15 @@ export default async function DistrictPage({ params }: PageProps) {
   const { slug } = await params;
   const cleanSlug = slug.replace('-evden-eve-nakliyat', '');
   const d = districtsDatabase[cleanSlug];
-  if (!d) {
+  if (!d || slug !== `${cleanSlug}-evden-eve-nakliyat`) {
     notFound();
   }
 
   const sss = d.sss;
   
-  const schemas = {
-    '@context': 'https://schema.org',
-    '@graph': [
+  const schemas = getPageSchemas({
+    url: `/bolgeler/${d.slug}-evden-eve-nakliyat`,
+    nodes: [
       serviceSchema({
         name: (d.title.split('|')[0] || d.title).trim(),
         description: d.description,
@@ -66,7 +66,7 @@ export default async function DistrictPage({ params }: PageProps) {
       ]),
       faqSchema(sss)
     ]
-  };
+  });
 
   return (
     <>

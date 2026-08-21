@@ -14,7 +14,7 @@ Allow: /
 Disallow: /api/
 Allow: /_next/static/
 Disallow: /_next/
-Disallow: /*.json$
+Disallow: /_next/*.json
 Disallow: /admin/
 
 User-agent: Googlebot
@@ -44,6 +44,26 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
+# Apple Intelligence bot (allows showing up in Siri/Apple Intelligence answers)
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI bot (allows showing up in WhatsApp/Instagram AI answers)
+User-agent: meta-externalagent
+Allow: /
+
+# Google Cloud Vertex AI crawler
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# Amazon Alexa and search crawler
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance search crawler (TikTok search and AI integration)
+User-agent: Bytespider
+Allow: /
+
 User-agent: CCBot
 Disallow: /
 
@@ -56,7 +76,6 @@ Crawl-delay: 10
 User-agent: MJ12bot
 Crawl-delay: 10
 
-Host: ${SITE.url}
 Sitemap: ${SITE.url}/sitemap.xml
 Sitemap: ${SITE.url}/image-sitemap.xml
 

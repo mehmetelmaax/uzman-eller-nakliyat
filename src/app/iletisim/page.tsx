@@ -3,7 +3,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import { localBusinessSchema } from '@/lib/schema';
+import { localBusinessSchema, getPageSchemas, breadcrumbSchema } from '@/lib/schema';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -15,9 +15,20 @@ export const metadata: Metadata = {
 };
 
 export default function IletisimPage() {
+  const schemas = getPageSchemas({
+    url: '/iletisim',
+    nodes: [
+      localBusinessSchema(),
+      breadcrumbSchema([
+        { name: 'Ana Sayfa', url: '/' },
+        { name: 'İletişim', url: '/iletisim' }
+      ])
+    ]
+  });
+
   return (
     <>
-      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={schemas} />
       
       <main className="pt-24 bg-surface-muted">
         <Breadcrumb items={[{ name: 'İletişim', url: '/iletisim' }]} className="pt-4" />
@@ -50,7 +61,7 @@ export default function IletisimPage() {
                     <MapPin className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold text-brand-primary block mb-0.5">Adres:</span>
-                      <p>Gazi Mah. 1314. Sk. Yaylacıklıoğlu Apt. Kat 2 D:6, Yenişehir / Mersin</p>
+                      <p>{SITE.address.street}, {SITE.address.locality} / {SITE.address.region}</p>
                     </div>
                   </div>
 
@@ -59,7 +70,7 @@ export default function IletisimPage() {
                     <div>
                       <span className="font-bold text-brand-primary block mb-0.5">Telefon / GSM:</span>
                       <a href={SITE.phoneHref} className="hover:text-brand-accent transition-colors font-bold">
-                        0533 520 44 42
+                        {SITE.phoneDisplay}
                       </a>
                     </div>
                   </div>
@@ -78,7 +89,7 @@ export default function IletisimPage() {
                     <Clock className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold text-brand-primary block mb-0.5">Çalışma Saatleri:</span>
-                      <p>Hafta İçi ve Hafta Sonu: 07:00 – 22:00</p>
+                      <p>Hafta İçi ve Hafta Sonu: {SITE.hours.opens} – {SITE.hours.closes}</p>
                     </div>
                   </div>
                 </div>

@@ -24,7 +24,7 @@ Bu dosya, sitede uydurma veri kullanılmasını engellemek adına doğrulanması
 ## 2. Sosyal Medya ve Google Haritalar
 
 - **Google Business Profile (GBP) URL & Place ID**: Mersin Uzman Eller Nakliyat'ın resmi Google harita işletme linki hangisidir?
-  - *Durum*: Adana işletmesine ait olabilecek şüpheli harita kısa linkleri (`share.google/...`) geçici olarak temizlendi.
+  - *Durum*: Adana işletmesine ait olabilecek şüpheli harita kısa linkleri (`share.google/...`) geçici olarak temizlendi. Doğru GBP linki `https://www.google.com/maps?cid=<CID>` formatında (kısa `share.google` linki değil) alınıp buraya girilmeli.
   - *Değer*: `TODO-KULLANICI-ONAYI`
 - **Sosyal Medya Linkleri**:
   - Facebook: `TODO-KULLANICI-ONAYI`

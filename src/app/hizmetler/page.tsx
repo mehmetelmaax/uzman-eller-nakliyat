@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
+import { getPageSchemas, breadcrumbSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site-config';
 import { servicesDatabase } from '@/lib/services-data';
 import * as Icons from 'lucide-react';
@@ -24,19 +25,38 @@ const DynamicIcon = ({ name, className }: { name: string; className?: string }) 
 export default function HizmetlerPage() {
   const services = Object.values(servicesDatabase);
 
-  const schema = {
+  const collectionPage = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Hizmetlerimiz | Uzman Eller Nakliyat',
-    description: 'Mersin genelinde sunduğumuz profesyonel taşımacılık ve depolama hizmetleri.',
-    url: `${SITE.url}/hizmetler`,
-    hasPart: services.map(s => ({
-      '@type': 'Service',
-      name: s.name,
-      description: s.description,
-      url: `${SITE.url}/hizmetler/${s.slug}`
+    '@id': `${SITE.url}/hizmetler/#collection`,
+    'name': 'Hizmetlerimiz | Uzman Eller Nakliyat',
+    'description': 'Mersin genelinde sunduğumuz profesyonel taşımacılık ve depolama hizmetleri.',
+    'url': `${SITE.url}/hizmetler`
+  };
+
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': 'Uzman Eller Nakliyat Hizmet Listesi',
+    'itemListElement': services.map((s, idx) => ({
+      '@type': 'ListItem',
+      'position': idx + 1,
+      'name': s.name,
+      'url': `${SITE.url}/hizmetler/${s.slug}`
     }))
   };
+
+  const schema = getPageSchemas({
+    url: '/hizmetler',
+    nodes: [
+      collectionPage,
+      itemList,
+      breadcrumbSchema([
+        { name: 'Ana Sayfa', url: '/' },
+        { name: 'Hizmetlerimiz', url: '/hizmetler' }
+      ])
+    ]
+  });
 
   return (
     <>

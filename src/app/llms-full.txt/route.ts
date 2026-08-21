@@ -23,7 +23,7 @@ export function GET() {
 - Asansör Kapasitesi: Maksimum ${FACTS.maxFloor}. Kat Seviyesi
 - Şehiriçi Taşıma Süresi: Ortalama ${FACTS.cityMoveHours} Saat
 - Şehiriçi Fiyat Aralığı: ₺${FACTS.priceMin} - ₺${FACTS.priceMax}
-- Sigorta Firması: ${FACTS.insurer}
+- Sigorta Güvencesi: ${FACTS.insurer}
 
 ---
 

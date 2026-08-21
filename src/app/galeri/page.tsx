@@ -4,7 +4,7 @@ import GalleryGrid from '@/components/GalleryGrid';
 import { Camera } from 'lucide-react';
 import { SITE } from '@/lib/site-config';
 import JsonLd from '@/components/JsonLd';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, getPageSchemas } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Hizmet Faaliyet Galerimiz | Uzman Eller Nakliyat',
@@ -193,10 +193,27 @@ const galleryItems: GalleryItem[] = [
 ];
 
 export default function GalleryPage() {
-  const schema = breadcrumbSchema([
-    { name: 'Ana Sayfa', url: '/' },
-    { name: 'Galeri', url: '/galeri' }
-  ]);
+  const schema = getPageSchemas({
+    url: '/galeri',
+    nodes: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ImageGallery',
+        'name': 'Mersin Uzman Eller Nakliyat Faaliyet Galerisi',
+        'description': 'Eşya paketleme, asansör kurulumu ve taşıma anlarına ait gerçek operasyon fotoğrafları galerisi.',
+        'image': galleryItems.map(item => ({
+          '@type': 'ImageObject',
+          'contentUrl': `${SITE.url}${item.src}`,
+          'caption': item.desc,
+          'name': item.title
+        }))
+      },
+      breadcrumbSchema([
+        { name: 'Ana Sayfa', url: '/' },
+        { name: 'Galeri', url: '/galeri' }
+      ])
+    ]
+  });
 
   return (
     <>

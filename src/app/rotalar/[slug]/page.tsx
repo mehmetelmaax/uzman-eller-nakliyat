@@ -2,7 +2,7 @@ import QuoteForm from '@/components/QuoteForm';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
-import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, getPageSchemas } from '@/lib/schema';
 import { SITE } from '@/lib/site-config';
 import { FACTS } from '@/lib/facts';
 import { routesMetadataDatabase, getRouteDetails } from '@/content/routes';
@@ -49,9 +49,9 @@ export default async function RoutePage({ params }: PageProps) {
     notFound();
   }
 
-  const schemas = {
-    '@context': 'https://schema.org',
-    '@graph': [
+  const schemas = getPageSchemas({
+    url: `/rotalar/${route.slug}`,
+    nodes: [
       {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -73,6 +73,34 @@ export default async function RoutePage({ params }: PageProps) {
         ],
         'url': `${SITE.url}/rotalar/${route.slug}`
       },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Trip',
+        'name': `Mersin - ${route.city} Evden Eve Nakliyat Seferi`,
+        'description': `Mersin'den ${route.city}'ye asansörlü, sigortalı ve marangozlu şehirlerarası ev taşıma seyahati.`,
+        'itinerary': {
+          '@type': 'ItemList',
+          'numberOfItems': 2,
+          'itemListElement': [
+            {
+              '@type': 'ListItem',
+              'position': 1,
+              'item': {
+                '@type': 'Place',
+                'name': 'Mersin'
+              }
+            },
+            {
+              '@type': 'ListItem',
+              'position': 2,
+              'item': {
+                '@type': 'Place',
+                'name': route.city
+              }
+            }
+          ]
+        }
+      },
       breadcrumbSchema([
         { name: 'Ana Sayfa', url: '/' },
         { name: 'Şehirlerarası Rotalar', url: '/rotalar' },
@@ -80,7 +108,7 @@ export default async function RoutePage({ params }: PageProps) {
       ]),
       faqSchema(details.faq)
     ]
-  };
+  });
 
   return (
     <>

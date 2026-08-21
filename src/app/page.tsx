@@ -9,7 +9,7 @@ import ServicesGrid from '@/components/ServicesGrid';
 import FAQAccordion from '@/components/FAQAccordion';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import JsonLd from '@/components/JsonLd';
-import { organizationSchema, websiteSchema, faqSchema } from '@/lib/schema';
+import { organizationSchema, websiteSchema, faqSchema, webPageSchema, howToMovingSchema } from '@/lib/schema';
 import { faqs } from '@/lib/faq-data';
 import { Star, ShieldAlert, BadgeCheck, Users2, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
 
@@ -29,35 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface Review {
-  name: string;
-  location: string;
-  comment: string;
-  rating: number;
-}
 
-// TODO: Bu yorumlar placeholder. Gerçek Google Business Profile yorumlarıyla değiştirilmeli.
-// AggregateRating schema'sı SADECE doğrulanmış gerçek yorumlar bağlandıktan sonra eklenecek.
-const reviews: Review[] = [
-  {
-    name: 'Metin T.',
-    location: 'Mezitli / Mersin',
-    comment: 'Gerçekten söz verdikleri saatte geldiler, hiçbir eşyaya zarar gelmedi. Fiyatta ne anlaştıysak o oldu, teşekkürler.',
-    rating: 5,
-  },
-  {
-    name: 'Semih B.',
-    location: 'Yenişehir / Mersin',
-    comment: 'Mobilyaların sökümünü ve montajını çok hızlı yaptılar. Asansörlü taşıma sistemi gerçekten çok pratik.',
-    rating: 5,
-  },
-  {
-    name: 'Elif K.',
-    location: 'Akdeniz / Mersin',
-    comment: 'Paketleme kalitesi çok başarılıydı. Kırılacak eşyaların hepsini özenle sardılar. Güvenle tercih edebilirsiniz.',
-    rating: 5,
-  },
-];
 
 export default function Home() {
   const graphSchema = {
@@ -65,7 +37,9 @@ export default function Home() {
     '@graph': [
       organizationSchema(),
       websiteSchema(),
-      faqSchema(faqs)
+      webPageSchema({ url: '/' }),
+      faqSchema(faqs),
+      howToMovingSchema()
     ]
   };
 
@@ -236,72 +210,43 @@ export default function Home() {
 
         {/* Google Maps Reviews Section */}
         <section className="py-20 bg-brand-primary text-white border-t border-white/5" id="yorumlar">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-              <span className="text-brand-accent font-bold text-xs tracking-widest">
-                MÜŞTERİ DENEYİMLERİ
-              </span>
-              <h2 className="font-display font-black text-white text-3xl md:text-4xl tracking-tight leading-tight">
-                Google Harita Yorumlarımız
-              </h2>
-              
-              {/* Average rating badge */}
-              <div className="flex items-center justify-center gap-2 mt-4 bg-white/5 px-4 py-2 rounded-full w-fit mx-auto border border-white/10 shadow-sm">
-                <Star className="w-5 h-5 fill-brand-accent text-brand-accent" />
-                <span className="text-white font-bold text-sm">4.9 / 5.0</span>
-                <span className="text-gray-300 font-semibold text-xs border-l border-white/10 pl-2">184 Değerlendirme</span>
-              </div>
-            </div>
-
-            {/* Reviews Cards List */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {reviews.map((review, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-white/5 p-8 rounded-xl border border-white/10 shadow-sm space-y-4 flex flex-col justify-between"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span className="text-brand-accent font-bold text-xs tracking-widest block">
+              MÜŞTERİ DENEYİMLERİ
+            </span>
+            <h2 className="font-display font-black text-white text-3xl md:text-4xl tracking-tight leading-tight max-w-2xl mx-auto">
+              Müşterilerimizin Google Değerlendirmeleri
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+              Mersin genelinde sunduğumuz asansörlü evden eve nakliyat hizmetlerimizin kalitesini ve müşteri memnuniyetini doğrudan Google Haritalar profilimiz üzerinden inceleyebilirsiniz.
+            </p>
+            
+            {SITE.gbpUrl ? (
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+                <a
+                  href={SITE.gbpUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-accent hover:bg-white text-brand-primary font-black px-6 py-3.5 rounded-xl border border-brand-primary transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 shadow-md hover:shadow-lg cursor-pointer"
                 >
-                  <div className="space-y-3">
-                    {/* Stars */}
-                    <div className="flex gap-1 text-brand-accent">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                    {/* Comment */}
-                    <p className="text-gray-300 text-sm leading-relaxed font-semibold italic">
-                      "{review.comment}"
-                    </p>
-                  </div>
-                  {/* User Meta */}
-                  <div className="border-t border-white/10 pt-4 flex justify-between items-center text-xs">
-                    <span className="font-bold text-white">{review.name}</span>
-                    <span className="text-brand-accent-dark font-bold tracking-wider">{review.location}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Direct Google Review action */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
-              <a
-                href={SITE.gbpUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-brand-accent hover:bg-white text-brand-primary font-black px-6 py-3.5 rounded-xl border border-brand-primary transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 shadow-md hover:shadow-lg cursor-pointer"
-              >
-                <Star className="w-4 h-4 fill-current animate-spin-slow" />
-                <span>Google'da Yorum Yazın (Değerlendirin)</span>
-              </a>
-              <a
-                href={SITE.gbpUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-brand-accent font-bold text-sm flex items-center gap-1.5 transition-colors py-3"
-              >
-                <span>Tüm Yorumları Google Haritalar'da Oku</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+                  <Star className="w-4 h-4 fill-current" />
+                  <span>Google'da Bizi Değerlendirin</span>
+                </a>
+                <a
+                  href={SITE.gbpUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-brand-accent font-bold text-sm flex items-center gap-1.5 transition-colors py-3"
+                >
+                  <span>Tüm Yorumları Google'da Okuyun</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            ) : (
+              <p className="text-brand-accent text-xs italic pt-4">
+                * Google Harita profilimiz yakında hizmete girecektir.
+              </p>
+            )}
           </div>
         </section>
 

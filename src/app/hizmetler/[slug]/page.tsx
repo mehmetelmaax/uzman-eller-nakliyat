@@ -3,7 +3,7 @@ import PricingMatrix from '@/components/geo/PricingMatrix';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
-import { faqSchema, breadcrumbSchema, serviceSchema } from '@/lib/schema';
+import { faqSchema, breadcrumbSchema, serviceSchema, getPageSchemas } from '@/lib/schema';
 import { SITE } from '@/lib/site-config';
 import { FACTS } from '@/lib/facts';
 import React from 'react';
@@ -63,9 +63,9 @@ export default async function ServicePage({ params }: PageProps) {
 
   const sss = s.faqs;
   
-  const schemas = {
-    '@context': 'https://schema.org',
-    '@graph': [
+  const schemas = getPageSchemas({
+    url: `/hizmetler/${s.slug}`,
+    nodes: [
       serviceSchema({
         name: s.name,
         description: s.description,
@@ -79,7 +79,7 @@ export default async function ServicePage({ params }: PageProps) {
       ]),
       faqSchema(sss)
     ]
-  };
+  });
 
   return (
     <>
@@ -117,6 +117,29 @@ export default async function ServicePage({ params }: PageProps) {
               </p>
             </div>
           ))}
+
+          {s.slug === 'esya-depolama' && (
+            <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+              <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+                <Icons.Play className="w-6 h-6 text-brand-accent" />
+                <span>Mersin Depolama Tesisimiz</span>
+              </h2>
+              <div className="w-full aspect-video rounded-xl overflow-hidden border border-border-light shadow-inner bg-brand-primary/5 relative">
+                <video 
+                  src="/videos/merkezim.mp4" 
+                  controls 
+                  preload="metadata"
+                  poster="/img/slayt-1.jpg"
+                  className="w-full h-full object-cover"
+                >
+                  Tarayıcınız video oynatmayı desteklemiyor.
+                </video>
+              </div>
+              <p className="text-charcoal text-xs md:text-sm leading-relaxed font-semibold text-center italic text-gray-500">
+                * Mersin Yenişehir'de yer alan 7/24 kamera takipli, korunaklı eşya depolama tesisimiz.
+              </p>
+            </div>
+          )}
 
           {s.hasMatrix && <PricingMatrix />}
 

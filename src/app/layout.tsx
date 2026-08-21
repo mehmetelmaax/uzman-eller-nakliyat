@@ -141,7 +141,7 @@ export default function RootLayout({
                       { not: { href_matches: ['/api/*', '/_next/*', '/static/*'] } },
                     ],
                   },
-                  eagerly: true,
+                  eagerness: 'moderate',
                 },
               ],
             }),

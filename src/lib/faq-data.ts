@@ -26,7 +26,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: 'Şehirlerarası ev taşıma sigortası neleri kapsar?',
-    answer: 'Şehirlerarası nakliyat hizmetlerimizin tamamı Anadolu Sigorta güvencesiyle emtia taşımacılık poliçesi kapsamındadır. Bu poliçe, yolculuk boyunca kamyonun seyir halindeyken karşılaşabileceği kaza, yangın veya doğal afet gibi fiziksel hasarları güvenceye alır.',
+    answer: 'Şehirlerarası nakliyat hizmetlerimizin tamamı geniş kapsamlı nakliyat sigortası güvencesiyle emtia taşımacılık poliçesi kapsamındadır. Bu poliçe, yolculuk boyunca kamyonun seyir halindeyken karşılaşabileceği kaza, yangın veya doğal afet gibi fiziksel hasarları güvenceye alır.',
   },
   {
     question: 'Eşya paketleme hizmetine mutfak gereçleri dahil midir?',

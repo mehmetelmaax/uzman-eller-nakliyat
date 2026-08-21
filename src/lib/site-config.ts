@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Mersin Uzman Eller Nakliyat',
   legalName: 'Mersin Uzman Eller Evden Eve Nakliyat',
   shortName: 'Uzman Eller Nakliyat',
-  url: 'https://mersinuzmaneller.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mersinuzmaneller.com',
   locale: 'tr_TR',
   description: "Mersin'de sabit fiyat garantili, K3 belgeli, sigortalı asansörlü evden eve nakliyat.",
   phone: '+905335204442',
@@ -22,7 +22,7 @@ export const SITE = {
   hours: { opens: '08:00', closes: '20:00' },
   foundingYear: 1996,
   priceRange: '₺₺',
-  gbpUrl: 'https://share.google/Rg1zMeMaC4Cl2VzW4',
+  gbpUrl: '',
   social: { facebook: '', instagram: '', youtube: '' },
 } as const;
 

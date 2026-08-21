@@ -351,7 +351,7 @@ export const districtsDatabase: Record<string, DistrictData> = {
     "introSubtitle": "MERSİN YAYLA BÖLGESİ SERVİSİ",
     "introParagraph": "Gülnar’ın dik yokuşları ve taş mimarili yayla evlerinde, tecrübeli şoförlerimiz ve profesyonel ambalaj kadromuzla hasarsız nakliyat sağlıyoruz.",
     "block1Title": "Gülnar Sigortalı Ev ve Ofis Taşımacılığı",
-    "block1Paragraph": "Gülnar ilçesinde gerçekleştirdiğimiz tüm ev taşıma işlemlerinde, Anadolu Sigorta aracılığıyla emtia taşıma sigortası yapıyoruz. Taşınma gününde marangozumuz gardıropları özenle söker ve havalı ambalaj malzemeleriyle korur.",
+    "block1Paragraph": "Gülnar ilçesinde gerçekleştirdiğimiz tüm ev taşıma işlemlerinde, anlaşmalı kurumsal sigorta acentemiz aracılığıyla emtia taşıma sigortası yapıyoruz. Taşınma gününde marangozumuz gardıropları özenle söker ve havalı ambalaj malzemeleriyle korur.",
     "block3Title": "Gülnar Coğrafi Yapısı ve Taşıma Güvenliği",
     "block3Paragraph": "Gülnar’ın engebeli ve kayalık zemin yapısı, taşıma araçlarının yanaşma açısını etkiler. Ekiplerimiz fren takozları, hidrolik sabitleyiciler ve çelik halat gergileri kullanarak nakliye kamyonunun güvenliğini en üst seviyede sağlar.",
     "mahalleler": [

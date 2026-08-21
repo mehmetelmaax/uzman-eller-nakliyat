@@ -52,7 +52,7 @@ export default function PricingMatrix() {
       </div>
       
       <p className="text-[10px] text-charcoal/70 italic border-l-2 border-brand-accent pl-3">
-        * Tablodaki fiyatlar normal eşya yoğunluğuna sahip binalardaki asansör kurulumlarını kapsamaktadır. Giriş kat veya 1. kat taşımalarında asansör kurulmadığı için fiyatlar daha düşük seviyede uygulanır.
+        * Fiyatlar Ağustos 2026 itibarıyla tahminî aralıklardır; kesin fiyat ücretsiz ekspertiz sonrası sabitlenir. Tablodaki fiyatlar normal eşya yoğunluğuna sahip binalardaki asansör kurulumlarını kapsamaktadır. Giriş kat veya 1. kat taşımalarında asansör kurulmadığı için fiyatlar daha düşük seviyede uygulanır.
       </p>
     </div>
   );

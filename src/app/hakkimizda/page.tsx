@@ -4,23 +4,28 @@ import { Shield, Users, Award, Calendar } from 'lucide-react';
 import { SITE } from '@/lib/site-config';
 import { FACTS } from '@/lib/facts';
 import JsonLd from '@/components/JsonLd';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, getPageSchemas } from '@/lib/schema';
 import Breadcrumb from '@/components/Breadcrumb';
 import K3InfoBlock from '@/components/geo/K3InfoBlock';
 
 export const metadata: Metadata = {
   title: 'Hakkımızda | Mersin Uzman Eller Nakliyat',
-  description: `1996 yılından beri Mersin Yenişehir merkezli olarak K3 yetki belgesi ve özmal asansör filomuzla profesyonel evden eve nakliye hizmetleri sunuyoruz.`,
+  description: `uzun yıllardır Mersin Yenişehir merkezli olarak K3 yetki belgesi ve özmal asansör filomuzla profesyonel evden eve nakliye hizmetleri sunuyoruz.`,
   alternates: {
     canonical: '/hakkimizda',
   },
 };
 
 export default function HakkimizdaPage() {
-  const schema = breadcrumbSchema([
-    { name: 'Ana Sayfa', url: '/' },
-    { name: 'Hakkımızda', url: '/hakkimizda' }
-  ]);
+  const schema = getPageSchemas({
+    url: '/hakkimizda',
+    nodes: [
+      breadcrumbSchema([
+        { name: 'Ana Sayfa', url: '/' },
+        { name: 'Hakkımızda', url: '/hakkimizda' }
+      ])
+    ]
+  });
 
   const yearsServed = new Date().getFullYear() - FACTS.foundedYear;
 
@@ -83,6 +88,30 @@ export default function HakkimizdaPage() {
               <p className="text-charcoal text-sm md:text-base leading-relaxed">
                 Uzman Eller Nakliyat araç filosu, çelik kapalı kasa ev eşyası nakliye kamyonları ve {FACTS.maxFloor}. kata kadar ulaşabilen mobil dış cephe eşya asansörlerinden oluşmaktadır. Araçlarımızın tamamı logolu olup, periyodik temizlik ve bakımları düzenli olarak yapılmaktadır.
               </p>
+            </div>
+
+            {/* Block 5: Lojistik Uzmanımız & Blog Yazarımız */}
+            <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+              <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+                <Users className="w-6 h-6 text-brand-accent" />
+                <span>Lojistik Uzmanımız & Editörümüz</span>
+              </h2>
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="w-20 h-20 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-display font-black text-xl border-2 border-brand-accent shrink-0">
+                  MO
+                </div>
+                <div className="space-y-3 text-center md:text-left">
+                  <h3 className="font-display font-bold text-brand-primary text-lg">
+                    Mehmet Obuz
+                  </h3>
+                  <p className="text-brand-accent font-bold text-xs uppercase tracking-wider">
+                    Firma Ortağı & Ulaştırma ve Lojistik Uzmanı
+                  </p>
+                  <p className="text-charcoal text-sm md:text-base leading-relaxed">
+                    Mehmet Obuz, Mersin Uzman Eller Nakliyat bünyesinde taşımacılık operasyonlarının planlanması, K3 yetki belgeli sevk süreçlerinin yönetimi ve emtia nakliyat sigortalarının koordinasyonundan sorumludur. Web sitemizdeki tüm bilgilendirici rehberler, fiyat analizleri ve yasal taşımacılık makaleleri Mehmet Obuz'un mesleki tecrübeleri ve sektörel birikimi doğrultusunda hazırlanmaktadır.
+                  </p>
+                </div>
+              </div>
             </div>
 
           </div>

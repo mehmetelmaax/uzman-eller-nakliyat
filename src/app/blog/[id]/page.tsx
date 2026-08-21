@@ -7,7 +7,7 @@ import { Calendar, User, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { blogMetadataDatabase, getBlogPostContent } from '@/content/blog';
 import { SITE } from '@/lib/site-config';
 import JsonLd from '@/components/JsonLd';
-import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, getPageSchemas } from '@/lib/schema';
 import { IMAGE_BLURS } from '@/lib/image-blur';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
@@ -140,8 +140,8 @@ export default async function BlogPostPage({ params }: Props) {
     'headline': post.title,
     'description': post.desc,
     'image': `${SITE.url}${post.image}`,
-    'datePublished': post.date,
-    'dateModified': post.date,
+    'datePublished': `${post.date}T08:00:00+03:00`,
+    'dateModified': '2026-08-21T15:00:00+03:00',
     'wordCount': 650,
     'articleSection': 'Evden Eve Nakliyat',
     'inLanguage': 'tr-TR',
@@ -150,26 +150,40 @@ export default async function BlogPostPage({ params }: Props) {
       '@id': blogPostUrl
     },
     'author': {
-      '@type': 'Organization',
-      'name': post.author
+      '@type': 'Person',
+      '@id': `${SITE.url}/#author-mehmet-obuz`,
+      'name': 'Mehmet Obuz'
     },
     'publisher': {
       '@id': `${SITE.url}/#organization`
     }
   };
 
-  const graphSchema = {
+  const personNode = {
     '@context': 'https://schema.org',
-    '@graph': [
+    '@type': 'Person',
+    '@id': `${SITE.url}/#author-mehmet-obuz`,
+    'name': 'Mehmet Obuz',
+    'jobTitle': 'Ulaştırma ve Lojistik Uzmanı',
+    'worksFor': {
+      '@id': `${SITE.url}/#organization`
+    },
+    'url': `${SITE.url}/hakkimizda`
+  };
+
+  const graphSchema = getPageSchemas({
+    url: `/blog/${post.id}`,
+    nodes: [
       articleSchema,
       faqSchema(content.faqs),
       breadcrumbSchema([
         { name: 'Ana Sayfa', url: '/' },
         { name: 'Blog', url: '/blog' },
         { name: post.title, url: `/blog/${post.id}` }
-      ])
+      ]),
+      personNode
     ]
-  };
+  });
 
   return (
     <>
@@ -195,11 +209,15 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400 font-bold">
                 <span className="flex items-center gap-1">
                   <Calendar className="w-3.5 h-3.5 text-brand-accent" />
-                  {post.date}
+                  Yayınlanma: {post.date}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3.5 h-3.5 text-brand-accent" />
+                  Güncellenme: 21 Ağustos 2026
                 </span>
                 <span className="flex items-center gap-1">
                   <User className="w-3.5 h-3.5 text-brand-accent" />
-                  {post.author}
+                  Yazar: Mehmet Obuz (Lojistik Uzmanı)
                 </span>
               </div>
               <h1 className="font-display font-black text-brand-primary text-2xl md:text-4xl tracking-tight leading-tight">

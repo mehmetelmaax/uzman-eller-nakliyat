@@ -138,7 +138,7 @@ export default function FiyatlarPage() {
               Mersin'de Ev Taşıma Ne Kadar Tutar?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
-              Mersin'de ev taşıma maliyetleri 2026 yılı itibarıyla oda sayısına, asansör durumuna ve mesafeye bağlı olarak ortalama ₺{FACTS.priceMin.toLocaleString('tr-TR')} ile ₺{FACTS.priceMax.toLocaleString('tr-TR')} arasında değişmektedir. Eşyaların hacmi, taşınacak katların yükseklikleri, ambalajlama ve paketleme kalitesi ile marangozluk işçiliği bu bütçe aralığını doğrudan belirleyen temel bileşenlerdir.
+              Mersin'de ev taşıma maliyetleri Ağustos 2026 itibarıyla oda sayısına, asansör durumuna ve mesafeye bağlı olarak ortalama ₺{FACTS.priceMin.toLocaleString('tr-TR')} ile ₺{FACTS.priceMax.toLocaleString('tr-TR')} arasında değişmektedir. Bu fiyatlar tahminî aralıklar olup, kesin taşınma bütçesi ücretsiz ekspertiz sonrasında karşılıklı sözleşmeyle sabitlenmektedir. Eşyaların hacmi, taşınacak katların yükseklikleri, ambalajlama kalitesi ve marangozluk işçiliği bu bütçe aralığını doğrudan belirleyen temel bileşenlerdir.
             </p>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
               Daire büyüklüğü, nakliyat sürecinde görev alacak personel sayısını ve kullanılacak araç boyutunu belirler. Örneğin, küçük boyutlu 1+1 daireler genellikle 3 personel ve küçük boy bir kamyonet ile taşınabilirken, 3+1 ve daha büyük dairelerin transferi en az 5-6 kişilik profesyonel nakliye ekibini ve büyük boy çelik kapalı kasa kamyonları gerektirir. Bu durum, operasyon maliyetlerini ve ambalaj malzemesi sarfiyatını doğrudan etkiler.

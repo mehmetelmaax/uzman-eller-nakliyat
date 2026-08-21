@@ -3,12 +3,12 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const cspHeader = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://www.clarity.ms;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  img-src 'self' blob: data: https://mersinuzmaneller.com https://maps.googleapis.com https://maps.gstatic.com;
+  img-src 'self' blob: data: https://mersinuzmaneller.com https://maps.googleapis.com https://maps.gstatic.com https://*.clarity.ms;
   font-src 'self' data: https://fonts.gstatic.com;
-  connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
-  frame-src 'self' https://www.google.com https://maps.google.com;
+  connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.clarity.ms;
+  frame-src 'self' https://www.google.com https://maps.google.com https://*.clarity.ms;
   object-src 'none';
   base-uri 'self';
   form-action 'self';
@@ -26,6 +26,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  trailingSlash: false,
   async headers() {
     return [
       {
@@ -37,7 +38,7 @@ const nextConfig: NextConfig = {
         headers: [
           { key: 'Content-Security-Policy', value: cspHeader },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
@@ -49,6 +50,11 @@ const nextConfig: NextConfig = {
     return [
       { source: '/blog/mersinda-tasinmak-icin-en-uygun-zaman', destination: '/blog/mersinde-tasinmak-icin-en-uygun-zaman', permanent: true },
       { source: '/bolgeler/sehirlerarasi-evden-eve-nakliyat', destination: '/hizmetler/sehirlerarasi-evden-eve-nakliyat', permanent: true },
+      {
+        source: '/bolgeler/:slug(yenisehir|mezitli|toroslar|akdeniz|tarsus|erdemli|silifke|mut|anamur|bozyazi|aydincik|camliyayla|gulnar)',
+        destination: '/bolgeler/:slug-evden-eve-nakliyat',
+        permanent: true,
+      },
     ];
   },
 };
