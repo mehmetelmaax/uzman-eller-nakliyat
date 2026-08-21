@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0B2D5B; /* Gece laciverti */
-  --color-navy-dark: #061B36; /* Derin lacivert */
-  --color-green: #16A34A; /* Güven yeşili */
-  --color-green-light: #4ADE80; /* Ferah yeşil */
-  --color-orange: #16A34A; /* Mapping orange to green for compatibility with uzman-eller classes */
-  --color-orange-text: #15803D; /* Mapping orange-text to dark green */
+  --color-brand-primary: #0B2D5B; /* Gece laciverti */
+  --color-brand-primary-dark: #061B36; /* Derin lacivert */
+  --color-brand-accent: #16A34A; /* Güven yeşili / yeşil */
+  --color-brand-accent-light: #4ADE80; /* Ferah yeşil */
+  --color-brand-accent-dark: #15803D; /* Koyu yeşil */
   --color-charcoal: #1F2937; /* Antrasit */
-  --color-off-white: #F5F9F7; /* Buz beyazı */
-  --color-gray-light: #E0EBE4; /* Buz beyazı açık gri/yeşil */
+  --color-surface-muted: #F5F9F7; /* Buz beyazı */
+  --color-border-light: #E0EBE4; /* Buz beyazı açık gri/yeşil */
   --color-white: #FFFFFF;
   
   --font-sans: var(--font-sans);
@@ -25,7 +24,6 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
-  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
@@ -57,4 +55,9 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* Native View Transitions for smooth MPA/SPA page changes */
+@view-transition {
+  navigation: auto;
 }

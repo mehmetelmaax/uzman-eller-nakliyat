@@ -14,7 +14,9 @@ export function generateSlug(text: string): string {
   // Türkçe karakter eşleştirmesi
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
-    result += TR_MAP[char] !== undefined ? TR_MAP[char] : char;
+    if (char) {
+      result += TR_MAP[char] !== undefined ? TR_MAP[char] : char;
+    }
   }
   
   return result

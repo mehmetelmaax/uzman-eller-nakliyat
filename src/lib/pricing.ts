@@ -33,18 +33,18 @@ export interface PriceEstimate {
  * baz alarak tamamen yan etkisiz (pure) ve tutarlı bir fiyat aralığı hesaplar.
  */
 export function estimatePrice(input: PriceInput): PriceEstimate {
-  // Baz fiyatlar oda sayısına göre 12.000 TL - 23.000 TL aralığında belirlenir.
-  let baseMin = 12000;
-  let baseMax = 15000;
+  // Baz fiyatlar oda sayısına göre 15.000 TL - 31.000 TL aralığında belirlenir.
+  let baseMin = 15000;
+  let baseMax = 20000;
   if (input.rooms === '2+1') {
-    baseMin = 15000;
-    baseMax = 20000;
-  } else if (input.rooms === '3+1') {
     baseMin = 18000;
     baseMax = 23000;
+  } else if (input.rooms === '3+1') {
+    baseMin = 21000;
+    baseMax = 26000;
   } else if (input.rooms === '4+1+') {
-    baseMin = 22000;
-    baseMax = 28000;
+    baseMin = 25000;
+    baseMax = 31000;
   }
 
   // Kat artış yevmiyesi: Her kat yükseldiğinde personelin iş gücü katlandığı için kat başına 150 TL ek maliyet eklenir.
@@ -102,3 +102,31 @@ export function estimatePrice(input: PriceInput): PriceEstimate {
     disclaimer
   };
 }
+
+/**
+ * Müşteri teklif formu parametreleri ile ortak fiyat tahmini yapan adaptör fonksiyon.
+ * Hem client tarafındaki QuoteForm hem de server tarafındaki /api/teklif ucu bu fonksiyonu kullanır.
+ */
+export function estimatePriceFromForm(rooms: string, elevator: string, fromDistrict: string, toDistrict: string): { min: number; max: number } {
+  let basePrice = 15000;
+  if (rooms === '2+1') basePrice = 18000;
+  else if (rooms === '3+1') basePrice = 21000;
+  else if (rooms === '4+1+') basePrice = 25000;
+  else if (rooms === 'ofis') basePrice = 15000;
+
+  if (elevator === 'evet') {
+    basePrice += 2500;
+  }
+
+  const isIntercity = toDistrict.includes('Şehirlerarası') || 
+                      fromDistrict.includes('Şehirlerarası') ||
+                      toDistrict.includes('İl Dışı') ||
+                      fromDistrict.includes('İl Dışı');
+
+  if (isIntercity) {
+    return { min: basePrice + 17500, max: basePrice + 32000 };
+  }
+
+  return { min: basePrice, max: basePrice + 5000 };
+}
+

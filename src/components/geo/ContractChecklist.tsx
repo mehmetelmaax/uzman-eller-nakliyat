@@ -29,8 +29,8 @@ export default function ContractChecklist() {
   ];
 
   return (
-    <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6 text-charcoal">
-      <h2 className="font-display font-bold text-navy text-xl md:text-2xl border-b border-gray-light pb-3">
+    <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6 text-charcoal">
+      <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl border-b border-border-light pb-3">
         Nakliyat Sözleşmesinde Bulunması Gereken Maddeler Kontrol Listesi
       </h2>
       <p className="text-xs md:text-sm leading-relaxed">
@@ -41,16 +41,16 @@ export default function ContractChecklist() {
         <table className="w-full text-left border-collapse text-xs md:text-sm">
           <caption>Resmi Evden Eve Nakliyat Sözleşmesi Kontrol Kriterleri</caption>
           <thead>
-            <tr className="bg-navy text-white">
+            <tr className="bg-brand-primary text-white">
               <th scope="col" className="p-3 rounded-tl-lg">Sözleşme Maddesi</th>
               <th scope="col" className="p-3 rounded-tr-lg">Neden Gereklidir (Gerekçesi)</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-light">
+          <tbody className="divide-y divide-border-light">
             {items.map((item, idx) => (
-              <tr key={idx} className="hover:bg-off-white/50">
-                <th scope="row" className="p-3 font-bold text-navy flex items-center gap-2">
-                  <span className="bg-orange text-navy text-[10px] font-black w-4.5 h-4.5 rounded-full flex items-center justify-center">{idx + 1}</span>
+              <tr key={idx} className="hover:bg-surface-muted/50">
+                <th scope="row" className="p-3 font-bold text-brand-primary flex items-center gap-2">
+                  <span className="bg-brand-accent text-brand-primary text-[10px] font-black w-4.5 h-4.5 rounded-full flex items-center justify-center">{idx + 1}</span>
                   <span>{item.title}</span>
                 </th>
                 <td className="p-3 leading-relaxed text-charcoal/90">{item.reason}</td>

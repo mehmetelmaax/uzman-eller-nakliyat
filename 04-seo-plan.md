@@ -220,7 +220,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Sitemap: https://uzmanellernakliyat.com.tr/sitemap.xml
+Sitemap: https://mersinuzmaneller.com/sitemap.xml
 
 # Allow retrieval agents for citation
 User-agent: OAI-SearchBot

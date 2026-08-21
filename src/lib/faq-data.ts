@@ -6,7 +6,7 @@ export interface FAQItem {
 export const faqs: FAQItem[] = [
   {
     question: 'Mersin evden eve nakliyat fiyatları 2026 yılında ne kadar?',
-    answer: 'Mersin evden eve nakliyat fiyatları 2026 yılı itibarıyla taşınacak odaların sayısına, asansör ihtiyacına ve Yenişehir merkezli taşıma mesafesine göre ortalama 12.000 TL ile 28.000 TL arasında değişmektedir. Detaylı oda sayısı ve kat durumuna göre sabit fiyat garantisi veriyoruz.',
+    answer: 'Mersin evden eve nakliyat fiyatları 2026 yılı itibarıyla taşınacak odaların sayısına, asansör ihtiyacına ve Yenişehir merkezli taşıma mesafesine göre ortalama 15.000 TL ile 31.000 TL arasında değişmektedir. Detaylı oda sayısı ve kat durumuna göre sabit fiyat garantisi veriyoruz.',
   },
   {
     question: 'Yenişehir ve Mezitli ilçelerinde asansör kurulumunun kat sınırı nedir?',

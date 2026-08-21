@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, MessageCircle, Calculator, ChevronDown } from 'lucide-react';
-import { SITE } from '@/lib/site-config';
+import { SITE, DISTRICTS } from '@/lib/site-config';
 import { trackEvent } from '@/lib/analytics';
 
 export default function Header() {
@@ -74,11 +74,11 @@ export default function Header() {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       const nextIndex = (index + 1) % links.length;
-      links[nextIndex].focus();
+      links[nextIndex]?.focus();
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       const prevIndex = (index - 1 + links.length) % links.length;
-      links[prevIndex].focus();
+      links[prevIndex]?.focus();
     }
   };
 
@@ -94,13 +94,13 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           showSolidHeader
-            ? 'bg-navy shadow-lg py-3'
+            ? 'bg-brand-primary shadow-lg py-3'
             : 'bg-transparent py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-orange bg-white px-5 py-3 rounded-2xl shadow-xl border border-gray-light/20">
+          <Link href="/" className="flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-brand-accent bg-white px-5 py-3 rounded-2xl shadow-xl border border-border-light/20">
             <Image
               src="/img/logo.png"
               alt="Mersin Uzman Eller Evden Eve Nakliyat logosu"
@@ -113,8 +113,8 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6" aria-label="Ana Menü">
-            <Link href="/" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">Ana Sayfa</Link>
-            <Link href="/hakkimizda" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">Hakkımızda</Link>
+            <Link href="/" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">Ana Sayfa</Link>
+            <Link href="/hakkimizda" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">Hakkımızda</Link>
             
             {/* Services Dropdown */}
             <div 
@@ -128,7 +128,7 @@ export default function Header() {
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
                 aria-controls="services-menu"
-                className="text-white hover:text-orange font-medium transition-colors text-sm py-2 flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-orange rounded bg-transparent border-none cursor-pointer"
+                className="text-white hover:text-brand-accent font-medium transition-colors text-sm py-2 flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-brand-accent rounded bg-transparent border-none cursor-pointer"
               >
                 <span>Hizmetlerimiz</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -137,19 +137,19 @@ export default function Header() {
                 id="services-menu"
                 role="menu"
                 onKeyDown={(e) => handleDropdownKeyDown(e, 'services')}
-                className={`absolute top-full left-0 mt-2 w-64 bg-navy border border-white/10 rounded-lg shadow-xl p-2 space-y-1 transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 w-64 bg-brand-primary border border-white/10 rounded-lg shadow-xl p-2 space-y-1 transition-all duration-200 ${
                   servicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                 }`}
               >
-                <Link role="menuitem" href="/hizmetler/sehirici-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">1. Şehiriçi Evden Eve Nakliyat</Link>
-                <Link role="menuitem" href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">2. Şehirlerarası Evden Eve Nakliyat</Link>
-                <Link role="menuitem" href="/hizmetler/asansorlu-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">3. Asansörlü Evden Eve Nakliyat</Link>
-                <Link role="menuitem" href="/hizmetler/ofis-ve-isyeri-tasimaciligi" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">4. İşyeri ve Ofis Taşıma</Link>
-                <Link role="menuitem" href="/hizmetler/profesyonel-esya-paketleme" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">5. Profesyonel Eşya Paketleme</Link>
-                <Link role="menuitem" href="/hizmetler/ucretsiz-ekspertiz" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">6. Ücretsiz Ekspertiz</Link>
-                <Link role="menuitem" href="/hizmetler/esya-depolama" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">7. Kiralık Eşya Depolama</Link>
-                <Link role="menuitem" href="/hizmetler/parca-esya-tasima" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">8. Parça Eşya Taşıma</Link>
-                <Link role="menuitem" href="/hizmetler/piyano-ve-kasa-tasima" className="text-white hover:bg-white/5 hover:text-orange block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">9. Piyano ve Ağır Kasa Taşıma</Link>
+                <Link role="menuitem" href="/hizmetler/sehirici-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">1. Şehiriçi Evden Eve Nakliyat</Link>
+                <Link role="menuitem" href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">2. Şehirlerarası Evden Eve Nakliyat</Link>
+                <Link role="menuitem" href="/hizmetler/asansorlu-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">3. Asansörlü Evden Eve Nakliyat</Link>
+                <Link role="menuitem" href="/hizmetler/ofis-ve-isyeri-tasimaciligi" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">4. İşyeri ve Ofis Taşıma</Link>
+                <Link role="menuitem" href="/hizmetler/profesyonel-esya-paketleme" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">5. Profesyonel Eşya Paketleme</Link>
+                <Link role="menuitem" href="/hizmetler/ucretsiz-ekspertiz" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">6. Ücretsiz Ekspertiz</Link>
+                <Link role="menuitem" href="/hizmetler/esya-depolama" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">7. Kiralık Eşya Depolama</Link>
+                <Link role="menuitem" href="/hizmetler/parca-esya-tasima" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">8. Parça Eşya Taşıma</Link>
+                <Link role="menuitem" href="/hizmetler/piyano-ve-kasa-tasima" className="text-white hover:bg-white/5 hover:text-brand-accent block px-3 py-2 rounded text-xs font-semibold focus:outline-none focus:bg-white/5">9. Piyano ve Ağır Kasa Taşıma</Link>
               </div>
             </div>
 
@@ -165,7 +165,7 @@ export default function Header() {
                 aria-expanded={districtsOpen}
                 aria-haspopup="true"
                 aria-controls="districts-menu"
-                className="text-white hover:text-orange font-medium transition-colors text-sm py-2 flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-orange rounded bg-transparent border-none cursor-pointer"
+                className="text-white hover:text-brand-accent font-medium transition-colors text-sm py-2 flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-brand-accent rounded bg-transparent border-none cursor-pointer"
               >
                 <span>Bölgelerimiz</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${districtsOpen ? 'rotate-180' : ''}`} />
@@ -174,34 +174,28 @@ export default function Header() {
                 id="districts-menu"
                 role="menu"
                 onKeyDown={(e) => handleDropdownKeyDown(e, 'districts')}
-                className={`absolute top-full left-0 mt-2 w-72 bg-navy border border-white/10 rounded-lg shadow-xl p-2 grid grid-cols-2 gap-1 transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 w-72 bg-brand-primary border border-white/10 rounded-lg shadow-xl p-2 grid grid-cols-2 gap-1 transition-all duration-200 ${
                   districtsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                 }`}
               >
-                <Link role="menuitem" href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-orange-text hover:bg-white/5 block px-2.5 py-1.5 rounded text-[11px] font-bold col-span-2 border-b border-white/10 focus:outline-none focus:bg-white/5">→ Şehirlerarası Taşımacılık</Link>
-                <Link role="menuitem" href="/bolgeler/yenisehir-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Yenişehir</Link>
-                <Link role="menuitem" href="/bolgeler/mezitli-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Mezitli</Link>
-                <Link role="menuitem" href="/bolgeler/toroslar-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Toroslar</Link>
-                <Link role="menuitem" href="/bolgeler/akdeniz-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Akdeniz</Link>
-                <Link role="menuitem" href="/bolgeler/tarsus-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Tarsus</Link>
-                <Link role="menuitem" href="/bolgeler/erdemli-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Erdemli</Link>
-                <Link role="menuitem" href="/bolgeler/silifke-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Silifke</Link>
-                <Link role="menuitem" href="/bolgeler/karatas-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Karataş</Link>
-                <Link role="menuitem" href="/bolgeler/karaisali-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Karaisalı</Link>
-                <Link role="menuitem" href="/bolgeler/aladag-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Aladağ</Link>
-                <Link role="menuitem" href="/bolgeler/feke-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Feke</Link>
-                <Link role="menuitem" href="/bolgeler/imamoglu-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">İmamoğlu</Link>
-                <Link role="menuitem" href="/bolgeler/saimbeyli-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Saimbeyli</Link>
-                <Link role="menuitem" href="/bolgeler/tufanbeyli-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Tufanbeyli</Link>
-                <Link role="menuitem" href="/bolgeler/yumurtalik-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Yumurtalık</Link>
-                <Link role="menuitem" href="/bolgeler/toroslar-evden-eve-nakliyat" className="text-white hover:bg-white/5 hover:text-orange block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5">Toroslar</Link>
+                <Link role="menuitem" href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-brand-accent-dark hover:bg-white/5 block px-2.5 py-1.5 rounded text-[11px] font-bold col-span-2 border-b border-white/10 focus:outline-none focus:bg-white/5">→ Şehirlerarası Taşımacılık</Link>
+                {DISTRICTS.filter(d => d.indexable).map((d) => (
+                  <Link 
+                    key={d.slug}
+                    role="menuitem" 
+                    href={`/bolgeler/${d.slug}`} 
+                    className="text-white hover:bg-white/5 hover:text-brand-accent block px-2.5 py-1.5 rounded text-[11px] font-semibold focus:outline-none focus:bg-white/5"
+                  >
+                    {d.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
-            <Link href="/hizmetler/sehirlerarasi-evden-eve-nakliyat#rotalar" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">Rotalar</Link>
-            <Link href="/blog" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">Blog</Link>
-            <Link href="/galeri" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">Galeri</Link>
-            <Link href="/iletisim" className="text-white hover:text-orange font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-orange rounded">İletişim</Link>
+            <Link href="/hizmetler/sehirlerarasi-evden-eve-nakliyat#rotalar" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">Rotalar</Link>
+            <Link href="/blog" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">Blog</Link>
+            <Link href="/galeri" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">Galeri</Link>
+            <Link href="/iletisim" className="text-white hover:text-brand-accent font-medium transition-colors text-sm focus-visible:ring-1 focus-visible:ring-brand-accent rounded">İletişim</Link>
           </nav>
 
           {/* Desktop Right Panel */}
@@ -209,15 +203,15 @@ export default function Header() {
             <a
               href={SITE.phoneHref}
               onClick={() => trackEvent('telefon_tikla', { konum: 'header', sayfa: pathname })}
-              className="flex items-center gap-2 text-white hover:text-orange font-bold transition-colors focus-visible:ring-1 focus-visible:ring-orange rounded px-2 py-1"
+              className="flex items-center gap-2 text-white hover:text-brand-accent font-bold transition-colors focus-visible:ring-1 focus-visible:ring-brand-accent rounded px-2 py-1"
             >
-              <Phone className="w-4 h-4 text-orange" />
+              <Phone className="w-4 h-4 text-brand-accent" />
               <span className="text-sm">{SITE.phoneDisplay}</span>
             </a>
             
             <Link
               href="/mersin-nakliyat-fiyatlari"
-              className="bg-orange hover:bg-white text-navy font-bold px-4 py-2.5 rounded border border-navy transition-all duration-200 shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-orange text-xs uppercase tracking-wider flex items-center gap-2 active:scale-95 cursor-pointer"
+              className="bg-brand-accent hover:bg-white text-brand-primary font-bold px-4 py-2.5 rounded border border-brand-primary transition-all duration-200 shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-brand-accent text-xs uppercase tracking-wider flex items-center gap-2 active:scale-95 cursor-pointer"
             >
               <Calculator className="w-4 h-4" />
               <span>Fiyat Hesapla</span>
@@ -227,7 +221,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-orange focus:outline-none p-1 focus-visible:ring-2 focus-visible:ring-orange rounded"
+            className="lg:hidden text-white hover:text-brand-accent focus:outline-none p-3 focus-visible:ring-2 focus-visible:ring-brand-accent rounded cursor-pointer"
             aria-label="Menüyü aç/kapat"
             aria-expanded={isOpen}
           >
@@ -238,14 +232,14 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed inset-0 z-30 bg-navy/95 lg:hidden transition-transform duration-300 ${
+        className={`fixed inset-0 z-30 bg-brand-primary/95 lg:hidden transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full justify-start items-center gap-5 px-6 overflow-y-auto pt-24 pb-10">
-          <Link onClick={toggleMenu} href="/" className="text-white text-base font-bold hover:text-orange transition-colors">Ana Sayfa</Link>
-          <Link onClick={toggleMenu} href="/hakkimizda" className="text-white text-base font-bold hover:text-orange transition-colors">Hakkımızda</Link>
-          <Link onClick={toggleMenu} href="/galeri" className="text-white text-base font-bold hover:text-orange transition-colors">Galeri</Link>
+          <Link onClick={toggleMenu} href="/" className="text-white text-base font-bold hover:text-brand-accent transition-colors">Ana Sayfa</Link>
+          <Link onClick={toggleMenu} href="/hakkimizda" className="text-white text-base font-bold hover:text-brand-accent transition-colors">Hakkımızda</Link>
+          <Link onClick={toggleMenu} href="/galeri" className="text-white text-base font-bold hover:text-brand-accent transition-colors">Galeri</Link>
           
           {/* Hizmetlerimiz Mobile Dropdown */}
           <div className="w-full max-w-xs text-center border-t border-b border-white/10 py-3.5 space-y-2">
@@ -254,20 +248,20 @@ export default function Header() {
               className="w-full flex items-center justify-between px-4 py-2 bg-white/5 hover:bg-white/10 text-white rounded-xl text-xs font-bold transition-all focus:outline-none cursor-pointer"
             >
               <span>Hizmetlerimiz</span>
-              <ChevronDown className={`w-4 h-4 text-orange transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`w-4 h-4 text-brand-accent transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {mobileServicesOpen && (
               <div className="grid grid-cols-2 gap-1.5 pt-2">
-                <Link onClick={toggleMenu} href="/hizmetler/sehirici-evden-eve-nakliyat" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Şehiriçi</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Şehirlerarası</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/asansorlu-evden-eve-nakliyat" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Asansörlü</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/ofis-ve-isyeri-tasimaciligi" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Ofis / İşyeri</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/profesyonel-esya-paketleme" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Paketleme</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/ucretsiz-ekspertiz" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Ekspertiz</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/esya-depolama" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Depolama</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/parca-esya-tasima" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Parça Eşya</Link>
-                <Link onClick={toggleMenu} href="/hizmetler/piyano-ve-kasa-tasima" className="text-white hover:text-orange text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Piyano & Kasa</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/sehirici-evden-eve-nakliyat" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Şehiriçi</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Şehirlerarası</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/asansorlu-evden-eve-nakliyat" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Asansörlü</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/ofis-ve-isyeri-tasimaciligi" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Ofis / İşyeri</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/profesyonel-esya-paketleme" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Paketleme</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/ucretsiz-ekspertiz" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Ekspertiz</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/esya-depolama" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Depolama</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/parca-esya-tasima" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1">Parça Eşya</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/piyano-ve-kasa-tasima" className="text-white hover:text-brand-accent text-[10px] font-semibold border border-white/10 rounded px-2 py-1 col-span-2">Piyano & Kasa</Link>
               </div>
             )}
           </div>
@@ -279,48 +273,43 @@ export default function Header() {
               className="w-full flex items-center justify-between px-4 py-2 bg-white/5 hover:bg-white/10 text-white rounded-xl text-xs font-bold transition-all focus:outline-none cursor-pointer"
             >
               <span>Hizmet Bölgelerimiz</span>
-              <ChevronDown className={`w-4 h-4 text-orange transition-transform duration-200 ${mobileDistrictsOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`w-4 h-4 text-brand-accent transition-transform duration-200 ${mobileDistrictsOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {mobileDistrictsOpen && (
               <div className="grid grid-cols-2 gap-1.5 pt-2">
-                <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1 col-span-2">Şehirlerarası</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/yenisehir-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Yenişehir</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/mezitli-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Mezitli</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/toroslar-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Toroslar</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/akdeniz-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Akdeniz</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/tarsus-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Tarsus</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/erdemli-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Erdemli</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/silifke-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Silifke</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/karatas-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Karataş</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/karaisali-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Karaisalı</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/aladag-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Aladağ</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/feke-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Feke</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/imamoglu-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">İmamoğlu</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/saimbeyli-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Saimbeyli</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/tufanbeyli-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1">Tufanbeyli</Link>
-                <Link onClick={toggleMenu} href="/bolgeler/yumurtalik-evden-eve-nakliyat" className="text-white hover:text-orange text-[9px] font-semibold border border-white/10 rounded py-1 col-span-2">Yumurtalık</Link>
+                <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat" className="text-white hover:text-brand-accent text-[9px] font-semibold border border-white/10 rounded py-1 col-span-2">Şehirlerarası</Link>
+                {DISTRICTS.filter(d => d.indexable).map((d) => (
+                  <Link 
+                    key={d.slug}
+                    onClick={toggleMenu} 
+                    href={`/bolgeler/${d.slug}`} 
+                    className="text-white hover:text-brand-accent text-[9px] font-semibold border border-white/10 rounded py-1"
+                  >
+                    {d.name}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat#rotalar" className="text-white text-base font-bold hover:text-orange transition-colors">Rotalar</Link>
-          <Link onClick={toggleMenu} href="/blog" className="text-white text-base font-bold hover:text-orange transition-colors">Blog</Link>
-          <Link onClick={toggleMenu} href="/iletisim" className="text-white text-base font-bold hover:text-orange transition-colors">İletişim</Link>
+          <Link onClick={toggleMenu} href="/hizmetler/sehirlerarasi-evden-eve-nakliyat#rotalar" className="text-white text-base font-bold hover:text-brand-accent transition-colors">Rotalar</Link>
+          <Link onClick={toggleMenu} href="/blog" className="text-white text-base font-bold hover:text-brand-accent transition-colors">Blog</Link>
+          <Link onClick={toggleMenu} href="/iletisim" className="text-white text-base font-bold hover:text-brand-accent transition-colors">İletişim</Link>
 
           <div className="flex flex-col items-center gap-2 mt-4 w-full max-w-xs">
             <a
               href={SITE.phoneHref}
               onClick={() => trackEvent('telefon_tikla', { konum: 'header', sayfa: pathname })}
-              className="flex items-center justify-center gap-2 bg-navy border border-white text-white font-bold py-2.5 w-full rounded hover:text-orange transition-colors text-xs"
+              className="flex items-center justify-center gap-2 bg-brand-primary border border-white text-white font-bold py-2.5 w-full rounded hover:text-brand-accent transition-colors text-xs"
             >
-              <Phone className="w-4 h-4 text-orange" />
+              <Phone className="w-4 h-4 text-brand-accent" />
               <span>{SITE.phoneDisplay}</span>
             </a>
             <Link
               onClick={toggleMenu}
               href="/mersin-nakliyat-fiyatlari"
-              className="flex items-center justify-center gap-2 bg-orange text-navy font-bold py-2.5 w-full rounded hover:bg-white transition-colors text-xs border border-navy"
+              className="flex items-center justify-center gap-2 bg-brand-accent text-brand-primary font-bold py-2.5 w-full rounded hover:bg-white transition-colors text-xs border border-brand-primary"
             >
               <Calculator className="w-4 h-4" />
               <span>Fiyat Hesapla</span>

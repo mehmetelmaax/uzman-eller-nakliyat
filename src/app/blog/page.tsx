@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { blogDatabase } from '@/lib/blog-data';
+import { blogMetadataDatabase } from '@/content/blog';
 import Breadcrumb from '@/components/Breadcrumb';
 import BlogClient from './BlogClient';
 
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   },
 };
 
-const posts = Object.values(blogDatabase);
+const posts = Object.values(blogMetadataDatabase);
 
 export default function BlogPage() {
   return (
     <>
-      <main className="pt-24 bg-off-white">
+      <main className="pt-24 bg-surface-muted">
         <Breadcrumb items={[{ name: 'Blog', url: '/blog' }]} className="pt-4" />
         {/* Intro */}
-        <section className="py-16 bg-navy text-white text-center space-y-4">
-          <span className="text-orange-text font-bold text-xs tracking-widest font-sans">
+        <section className="py-16 bg-brand-primary text-white text-center space-y-4">
+          <span className="text-brand-accent-dark font-bold text-xs tracking-widest font-sans">
             FAYDALI BİLGİLER
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">

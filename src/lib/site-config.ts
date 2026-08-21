@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Mersin Uzman Eller Nakliyat',
   legalName: 'Mersin Uzman Eller Evden Eve Nakliyat',
   shortName: 'Uzman Eller Nakliyat',
-  url: 'https://www.uzmanellernakliyat.com.tr',
+  url: 'https://mersinuzmaneller.com',
   locale: 'tr_TR',
   description: "Mersin'de sabit fiyat garantili, K3 belgeli, sigortalı asansörlü evden eve nakliyat.",
   phone: '+905335204442',
@@ -10,7 +10,7 @@ export const SITE = {
   phoneHref: 'tel:+905335204442',
   whatsapp: '905335204442',
   whatsappHref: 'https://wa.me/905335204442',
-  email: 'info@uzmanellernakliyat.com.tr',
+  email: 'info@mersinuzmaneller.com',
   address: {
     street: 'Gazi Mah. 1314. Sk. Yaylacıklıoğlu Apt. Kat 2 D:6',
     locality: 'Yenişehir',
@@ -22,6 +22,7 @@ export const SITE = {
   hours: { opens: '08:00', closes: '20:00' },
   foundingYear: 1996,
   priceRange: '₺₺',
+  gbpUrl: 'https://share.google/Rg1zMeMaC4Cl2VzW4',
   social: { facebook: '', instagram: '', youtube: '' },
 } as const;
 
@@ -163,7 +164,7 @@ export const DISTRICTS = [
     tier: 'ilce',
     neighbors: ['silifke', 'gulnar', 'camliyayla'],
     distanceKm: 160,
-    indexable: false
+    indexable: true
   },
   {
     slug: 'anamur-evden-eve-nakliyat',
@@ -179,7 +180,7 @@ export const DISTRICTS = [
     tier: 'ilce',
     neighbors: ['anamur', 'aydincik', 'gulnar'],
     distanceKm: 205,
-    indexable: false
+    indexable: true
   },
   {
     slug: 'aydincik-evden-eve-nakliyat',
@@ -187,7 +188,7 @@ export const DISTRICTS = [
     tier: 'ilce',
     neighbors: ['bozyazi', 'anamur', 'silifke'],
     distanceKm: 170,
-    indexable: false
+    indexable: true
   },
   {
     slug: 'camliyayla-evden-eve-nakliyat',
@@ -195,7 +196,7 @@ export const DISTRICTS = [
     tier: 'ilce',
     neighbors: ['tarsus', 'toroslar', 'mut'],
     distanceKm: 60,
-    indexable: false
+    indexable: true
   },
   {
     slug: 'gulnar-evden-eve-nakliyat',
@@ -203,100 +204,6 @@ export const DISTRICTS = [
     tier: 'ilce',
     neighbors: ['silifke', 'mut', 'bozyazi'],
     distanceKm: 150,
-    indexable: false
-  }
-] as const;
-
-export interface RouteConfig {
-  slug: string;
-  city: string;
-  distanceKm: number;
-  durationHours: number;
-  priceRangeMin: number;
-  priceRangeMax: number;
-  viaRoute: string;
-  notes: string;
-}
-
-export const ROUTES: readonly RouteConfig[] = [
-  {
-    slug: 'mersin-istanbul-evden-eve-nakliyat',
-    city: 'İstanbul',
-    distanceKm: 950,
-    durationHours: 12,
-    priceRangeMin: 34500,
-    priceRangeMax: 44000,
-    viaRoute: 'O-21 Otoyolu ve Kuzey Marmara Otoyolu',
-    notes: 'İstanbul girişinde nakliye kamyonları için uygulanan Yavuz Sultan Selim Köprüsü zorunluluğu ve şehir içi saat kısıtlamaları dikkate alınmalıdır.'
-  },
-  {
-    slug: 'mersin-ankara-evden-eve-nakliyat',
-    city: 'Ankara',
-    distanceKm: 500,
-    durationHours: 6.5,
-    priceRangeMin: 18000,
-    priceRangeMax: 27000,
-    viaRoute: 'O-21 Otoyolu (Niğde-Ankara Otoyolu doğrudan hat)',
-    notes: 'Ankara genelinde yüksek katlı konutlarda asansörlü taşımacılık yaygın olarak tercih edilmektedir.'
-  },
-  {
-    slug: 'mersin-mersin-evden-eve-nakliyat',
-    city: 'Mersin',
-    distanceKm: 75,
-    durationHours: 1,
-    priceRangeMin: 9000,
-    priceRangeMax: 12000,
-    viaRoute: 'O-51 Otoyolu (Mersin-Mersin Otoyolu)',
-    notes: 'Kısa mesafe avantajı sayesinde yükleme ve boşaltma işlemleri aynı gün içerisinde, hızlıca tamamlanır.'
-  },
-  {
-    slug: 'mersin-gaziantep-evden-eve-nakliyat',
-    city: 'Gaziantep',
-    distanceKm: 300,
-    durationHours: 3.5,
-    priceRangeMin: 21500,
-    priceRangeMax: 32500,
-    viaRoute: 'O-52 Otoyolu (Mersin-Mersin-Gaziantep TAG Otoyolu)',
-    notes: 'TAG Otoyolu kullanılarak hızlı teslimat sağlanır. Gaziantep dik ve yokuşlu sokaklarında asansör kurulum alanı önceden tespit edilmelidir.'
-  },
-  {
-    slug: 'mersin-izmir-evden-eve-nakliyat',
-    city: 'İzmir',
-    distanceKm: 920,
-    durationHours: 11,
-    priceRangeMin: 33500,
-    priceRangeMax: 43000,
-    viaRoute: 'Konya - Afyonkarahisar - Uşak - Manisa - İzmir karayolu hattı',
-    notes: 'Ege Bölgesi taşımalarında uzun yol nedeniyle eşyaların tır içinde sarsıntılara karşı mükemmel sabitlenmesi ve ambalajlanması zorunludur.'
-  },
-  {
-    slug: 'mersin-antalya-evden-eve-nakliyat',
-    city: 'Antalya',
-    distanceKm: 480,
-    durationHours: 7,
-    priceRangeMin: 18500,
-    priceRangeMax: 27500,
-    viaRoute: 'Mersin - Silifke - Anamur - Alanya sahil yolu veya Mut-Karaman geçişli iç hat',
-    notes: 'Antalya sahil yolundaki dar virajlı yollar veya Toros geçişleri nedeniyle deneyimli şoförler sevk edilmelidir.'
-  },
-  {
-    slug: 'mersin-kayseri-evden-eve-nakliyat',
-    city: 'Kayseri',
-    distanceKm: 360,
-    durationHours: 4.5,
-    priceRangeMin: 15500,
-    priceRangeMax: 24500,
-    viaRoute: 'Silifke - Niğde - Kayseri karayolu hattı',
-    notes: 'İç Anadolu kış şartlarında kış lastiği ve zincir donanımlı araçlarımızla güvenli geçiş sağlanmaktadır.'
-  },
-  {
-    slug: 'mersin-bursa-evden-eve-nakliyat',
-    city: 'Bursa',
-    distanceKm: 860,
-    durationHours: 10.5,
-    priceRangeMin: 30500,
-    priceRangeMax: 39500,
-    viaRoute: 'O-21 Otoyolu, Eskişehir ve İnegöl geçişli kuzeybatı güzergâhı',
-    notes: 'Bursa Osmangazi ve Yıldırım gibi dar sokaklı merkez ilçeler için mobil asansör desteği verilmektedir.'
+    indexable: true
   }
 ] as const;

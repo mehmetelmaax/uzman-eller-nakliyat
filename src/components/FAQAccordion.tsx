@@ -12,7 +12,7 @@ export default function FAQAccordion() {
     const isOpening = openIndex !== index;
     setOpenIndex(isOpening ? index : null);
     if (isOpening) {
-      trackEvent('sss_acildi', { soru: faqs[index].question });
+      trackEvent('sss_acildi', { soru: faqs[index]?.question || '' });
     }
   };
 
@@ -22,10 +22,10 @@ export default function FAQAccordion() {
         
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <span className="text-orange-text font-bold text-xs tracking-widest">
+          <span className="text-brand-accent-dark font-bold text-xs tracking-widest">
             AKLINIZA TAKILANLAR
           </span>
-          <h2 className="font-display font-black text-navy text-3xl md:text-4xl tracking-tight leading-tight">
+          <h2 className="font-display font-black text-brand-primary text-3xl md:text-4xl tracking-tight leading-tight">
             Sıkça Sorulan Sorular
           </h2>
           <p className="text-charcoal text-sm md:text-base max-w-xl mx-auto">
@@ -40,7 +40,7 @@ export default function FAQAccordion() {
             return (
               <div 
                 key={idx}
-                className="border border-gray-light rounded-lg overflow-hidden bg-off-white hover:bg-white hover:border-orange/20 transition-all duration-200"
+                className="border border-border-light rounded-lg overflow-hidden bg-surface-muted hover:bg-white hover:border-brand-accent/20 transition-all duration-200"
               >
                 {/* Accordion Trigger button */}
                 <button
@@ -48,12 +48,12 @@ export default function FAQAccordion() {
                   onClick={() => toggleFAQ(idx)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${idx}`}
-                  className="w-full flex justify-between items-center px-6 py-5 text-left text-navy font-display font-bold text-base md:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-orange select-none cursor-pointer"
+                  className="w-full flex justify-between items-center px-6 py-5 text-left text-brand-primary font-display font-bold text-base md:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent select-none cursor-pointer"
                 >
                   <span>{faq.question}</span>
                   <ChevronDown 
-                    className={`w-5 h-5 text-navy/70 transition-transform duration-200 ${
-                      isOpen ? 'transform rotate-180 text-orange-text' : ''
+                    className={`w-5 h-5 text-brand-primary/70 transition-transform duration-200 ${
+                      isOpen ? 'transform rotate-180 text-brand-accent-dark' : ''
                     }`} 
                   />
                 </button>
@@ -64,7 +64,7 @@ export default function FAQAccordion() {
                   role="region"
                   aria-labelledby={`faq-btn-${idx}`}
                   className={`grid transition-all duration-200 ease-in-out ${
-                    isOpen ? 'grid-rows-[1fr] opacity-100 border-t border-gray-light' : 'grid-rows-[0fr] opacity-0'
+                    isOpen ? 'grid-rows-[1fr] opacity-100 border-t border-border-light' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
                   <div className="overflow-hidden">
@@ -79,12 +79,12 @@ export default function FAQAccordion() {
         </div>
 
         {/* Written Guarantee Box */}
-        <div className="border border-orange/20 bg-orange/5 rounded-xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
-          <div className="bg-orange/15 text-orange-text p-4 rounded-full flex-shrink-0">
-            <CheckCircle2 className="w-8 h-8 text-orange-text" />
+        <div className="border border-brand-accent/20 bg-brand-accent/5 rounded-xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+          <div className="bg-brand-accent/15 text-brand-accent-dark p-4 rounded-full flex-shrink-0">
+            <CheckCircle2 className="w-8 h-8 text-brand-accent-dark" />
           </div>
           <div className="space-y-2 text-center md:text-left">
-            <h3 className="font-display font-bold text-navy text-lg">
+            <h3 className="font-display font-bold text-brand-primary text-lg">
               Uzman Eller Hasar Güvence Taahhütnamesi
             </h3>
             <p className="text-charcoal text-sm md:text-base leading-relaxed font-medium">

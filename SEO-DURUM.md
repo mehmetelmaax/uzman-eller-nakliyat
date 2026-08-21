@@ -1,64 +1,187 @@
-# SEO Durum Raporu (SEO-DURUM.md)
+# SEO ve Site Sağlığı Durum Raporu (SEO-DURUM.md)
 
-*Bu rapor Next.js build çıktısı üzerinden otomatik olarak üretilmiştir. Son Güncelleme: 09.08.2026*
+*Rapor Oluşturulma Tarihi:* 21.08.2026 14:20:25
+*Taranan Sayfa Sayısı:* 64
 
-| Sayfa Yolu | Başlık (Title) | Açıklama (Description) | Canonical Link | Yapısal Şemalar (Schema Types) | Kelime Sayısı | İç Link Sayısı |
-| :--- | :--- | :--- | :--- | :--- | :---: | :---: |
-| `/` | Mersin Evden Eve Nakliyat | Uzman Eller Nakliyat Sabit Fiyat | Mersin'de taşınma günü ek ücret çıkarmayan, sabit fiyat garantili asansörlü evden eve nakliyat firması. Yenişehir ve Mezitli ilçelerinde sigortalı taşıma. | `https://uzmanellernakliyat.com.tr` | MovingCompany, ImageObject, PostalAddress, GeoCoordinates, OpeningHoursSpecification, AdministrativeArea, OfferCatalog, Offer, Service, WebSite, FAQPage, Question, Answer | **1624** | **102** |
-| `/mersin-nakliyat-firmalari` | Mersin En İyi Evden Eve Nakliyat Firmaları Seçim Rehberi | Mersin'de ev taşırken korsan ve yetkisiz firmalardan korunma yolları. K3 yetki belgesi sorgulama, sigorta poliçesi doğrulama and 12 altın kural. | `https://uzmanellernakliyat.com.tr/mersin-nakliyat-firmalari` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **902** | **86** |
-| `/mersin-nakliyat-fiyatlari` | Mersin Evden Eve Nakliyat Fiyatları 2026 | Uzman Eller Nakliyat | Mersin'de ev taşıma maliyetlerini ücretsiz hesaplayın. Yenişehir, Mezitli, Toroslar oda sayıları ve kat durumlarına göre güncel asansörlü nakliye fiyat listesi. | `https://uzmanellernakliyat.com.tr/mersin-nakliyat-fiyatlari` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1122** | **85** |
-| `/blog` | Lojistik İpuçları ve Blog | Uzman Eller Nakliyat | Mersin'de ev taşırken dikkat edilmesi gerekenler, nakliye fiyatları, paketleme rehberleri ve asansörlü taşıma hakkında lojistik tavsiyeleri. | `https://uzmanellernakliyat.com.tr/blog` | BreadcrumbList, ListItem | **351** | **88** |
-| `/blog/mersin-nakliyat-fiyatlari` | Mersin Evden Eve Nakliyat Fiyatları Nasıl Belirlenir? | Mersin'de ev taşıma maliyetlerini etkileyen oda sayısı, kat yükseklikleri ve asansör gereksinimlerini detaylıca inceliyoruz. | `https://uzmanellernakliyat.com.tr/blog/mersin-nakliyat-fiyatlari` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **240** | **87** |
-| `/blog/mersin-semt-rehberi` | Mersin'de Hangi Semtte Oturmalı? Taşınma Öncesi Semt Rehberi | Mersin semt rehberi. Taşınma öncesinde Mezitli, Yenişehir ve Akdeniz ilçelerinin mahalleleri, ulaşım olanakları ve yaşam standartları karşılaştırması. | `https://uzmanellernakliyat.com.tr/blog/mersin-semt-rehberi` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1341** | **102** |
-| `/blog/mersin-tasinma-maliyeti-2026` | Mersin Taşınma Maliyeti 2026: Fiyatlar & Masraflar | Mersin evden eve nakliyat fiyatları 2026 maliyet rehberi. Yenişehir ve Mezitli taşınma giderleri, asansör kiralama ve gizli nakliye masrafları dökümü. | `https://uzmanellernakliyat.com.tr/blog/mersin-tasinma-maliyeti-2026` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1318** | **98** |
-| `/blog/mersinda-tasinmak-icin-en-uygun-zaman` | Mersin'de Taşınmak İçin En Uygun Zaman Hangisi? | Mersin'de taşınmak için en uygun zaman analizi. Yaz sıcakları, okul dönemleri, hafta içi/hafta sonu fiyat farkları ve taşınma tarihi seçimi tüyoları. | `https://uzmanellernakliyat.com.tr/blog/mersinda-tasinmak-icin-en-uygun-zaman` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1211** | **101** |
-| `/blog/asansorlu-nakliyat-mi-merdivenle-mi` | Asansörlü Nakliyat mı Merdiven mi? Karşılaştırma | Asansörlü nakliyat ile merdivenle taşıma karşılaştırması. Mersin'de taşınırken maliyet, süre, güvenlik ve bina içi eşya hasarı karşılaştırma analizi. | `https://uzmanellernakliyat.com.tr/blog/asansorlu-nakliyat-mi-merdivenle-mi` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1224** | **99** |
-| `/blog/asansorlu-tasima-avantajlari` | Yüksek Katlı Binalarda Mobil Asansörlü Nakliyat Avantajları | Yenişehir ve Mezitli bölgelerindeki yüksek katlı rezidanslarda dış cephe teleskopik mobil asansör sistemlerinin sağladığı eşya hasarsızlık avantajları. | `https://uzmanellernakliyat.com.tr/blog/asansorlu-tasima-avantajlari` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **196** | **87** |
-| `/blog/beyaz-esya-tasima-rehberi` | Beyaz Eşya Taşıma Rehberi & Dinlendirme Süresi | Buzdolabı, çamaşır makinesi ve televizyon taşıma rehberi. Taşınma sonrası buzdolabının fişini takmadan önce neden 4 saat beklenmelidir? | `https://uzmanellernakliyat.com.tr/blog/beyaz-esya-tasima-rehberi` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1251** | **99** |
-| `/blog/esya-paketleme-rehberi` | Taşınma Öncesi Pratik Eşya Paketleme Yöntemleri | Kırılacak mutfak gereçleri, cam eşyalar ve mobilyaların taşınırken zarar görmemesi için kullanılan ambalajlama standartları ve pratik paketleme rehberi. | `https://uzmanellernakliyat.com.tr/blog/esya-paketleme-rehberi` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **197** | **87** |
-| `/blog/k3-yetki-belgesi-nedir` | K3 Yetki Belgesi Nedir, Nasıl Sorgulanır? | K3 yetki belgesi nedir, nasıl sorgulanır? Ev ve ofis taşımacılığında zorunlu olan Ulaştırma Bakanlığı K3 belgesi sorgulama adımları ve cezai yaptırımlar. | `https://uzmanellernakliyat.com.tr/blog/k3-yetki-belgesi-nedir` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1234** | **98** |
-| `/blog/kapora-tuzagi-ucuz-nakliyat` | Kapora Tuzağı: Ucuz Nakliye Teklifleri Analizi | Ucuz nakliyat firmalarının kapora tuzağı ve taşınma günü dolandırıcılığı rehberi. Güvenli nakliyat sözleşmesi ve doğru fiyat analizi. | `https://uzmanellernakliyat.com.tr/blog/kapora-tuzagi-ucuz-nakliyat` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1247** | **101** |
-| `/blog/nakliyat-sigortasi-nedir` | Nakliyat Sigortası Nedir, Neleri Kapsamaz? | Evden eve nakliyat sigortası rehberi. Taşınma sigortası poliçe okuma adımları, emtia taşıma sigortası kapsamı ve nelerin garanti dışı kaldığı. | `https://uzmanellernakliyat.com.tr/blog/nakliyat-sigortasi-nedir` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1307** | **100** |
-| `/blog/ofis-tasima-plani` | Ofis Taşıma Planı: İş Kaybı Yaşamadan Hafta Sonu Taşınma | Mersin kurumsal ofis ve işyeri taşıma planı rehberi. İş kaybı yaşamadan, hafta sonu kesintisiz ofis taşımacılığı adımları ve etiketli kutulama teknikleri. | `https://uzmanellernakliyat.com.tr/blog/ofis-tasima-plani` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1275** | **100** |
-| `/blog/sehirlerarasi-tasimada-esya-hasari` | Şehirlerarası Taşımada Eşya Hasar Görürse Ne Yapılır? | Şehirlerarası ev taşımada eşya hasarı durumunda yapılması gerekenler. Hasar tespit tutanağı hazırlama, sigorta talep adımları ve yasal haklar. | `https://uzmanellernakliyat.com.tr/blog/sehirlerarasi-tasimada-esya-hasari` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1229** | **99** |
-| `/blog/tasinirken-yapilan-yasal-hatalar` | Kiracıdan Ev Sahibine: Taşınırken Yapılan 8 Yasal Hata | Kiracı ve ev sahiplerinin taşınma sürecinde yaptığı yasal hatalar. Kira sözleşmesi feshi, depozito iadesi, ikametgah bildirimi ve yasal haklar. | `https://uzmanellernakliyat.com.tr/blog/tasinirken-yapilan-yasal-hatalar` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1248** | **99** |
-| `/blog/tasinmadan-30-gun-once-hazirlik` | Taşınmadan 30 Gün Önce Başlayan Hazırlık Takvimi | Taşınma hazırlığı takvimi. Ev taşımadan 30 gün önce yapılması gereken abonelik iptalleri, koli hazırlığı, nakliye firması seçimi ve taşınma günü planı. | `https://uzmanellernakliyat.com.tr/blog/tasinmadan-30-gun-once-hazirlik` | BlogPosting, WebPage, Person, FAQPage, Question, Answer, BreadcrumbList, ListItem | **1283** | **99** |
-| `/bolgeler/aladag-evden-eve-nakliyat` | Aladağ Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Aladağ Sinanpaşa ve Mansurlu mahallelerinde Toros dağları geçişli sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/aladag-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **261** | **90** |
-| `/bolgeler/tarsus-evden-eve-nakliyat` | Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Tarsus Cumhuriyet, Namık Kemal, Muradiye ve Şahin Özbilen mahallelerinde sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/tarsus-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **962** | **94** |
-| `/bolgeler/mezitli-evden-eve-nakliyat` | Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Mezitli Huzurevleri, Güzelyalı, Toros, Yurt ve Mahfesığmaz mahallelerinde yüksek katlı siteler için sigortalı ve asansörlü ev taşıma. | `https://uzmanellernakliyat.com.tr/bolgeler/mezitli-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **944** | **94** |
-| `/bolgeler/feke-evden-eve-nakliyat` | Feke Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Feke Karadere, İslam ve Karasakal mahallelerinde dağ yolları geçişli sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/feke-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **242** | **90** |
-| `/bolgeler/imamoglu-evden-eve-nakliyat` | İmamoğlu Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin İmamoğlu ilçesi Fatih, Cumhuriyet ve Tuna mahallelerinde sigortalı marangozlu ev taşıma ve dış cephe asansörlü nakliyat hizmeti. | `https://uzmanellernakliyat.com.tr/bolgeler/imamoglu-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **243** | **90** |
-| `/bolgeler/karaisali-evden-eve-nakliyat` | Karaisalı Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Karaisalı Karapınar, Selampınar ve Yeni Mahalle mahallelerinde sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/karaisali-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **253** | **90** |
-| `/bolgeler/karatas-evden-eve-nakliyat` | Karataş Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Karataş Kemaliye, Yeni Mahalle ve Karşıyaka mahallelerinde deniz esintili sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/karatas-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **253** | **90** |
-| `/bolgeler/erdemli-evden-eve-nakliyat` | Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Erdemli Tufanpaşa, Karacaoğlan, Varsaklar ve Şevkiye mahallelerinde sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/erdemli-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **964** | **94** |
-| `/bolgeler/silifke-evden-eve-nakliyat` | Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Silifke Zafer, İstiklal ve Kurtuluş mahallelerinde Toros dağları geçişli sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/silifke-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **956** | **94** |
-| `/bolgeler/saimbeyli-evden-eve-nakliyat` | Saimbeyli Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Saimbeyli Fatih ve Yeşilbağ mahallelerinde dağ yolları geçişli sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/saimbeyli-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **251** | **90** |
-| `/bolgeler/akdeniz-evden-eve-nakliyat` | Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Akdeniz Çarkıpare, Beyceli, Yeşiltepe, Mehmet Akif Ersoy ve Şahintepe mahallelerinde rezidanslar ve TOKİ konutları için sigortalı ev taşıma. | `https://uzmanellernakliyat.com.tr/bolgeler/akdeniz-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **930** | **94** |
-| `/bolgeler/yenisehir-evden-eve-nakliyat` | Yenişehir Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Yenişehir Cemalpaşa, Gürselpaşa, Reşatbey ve Gazipaşa mahallelerinde K3 belgeli kapalı kasa araçlarımızla sabit fiyatlı asansörlü ev taşıma. | `https://uzmanellernakliyat.com.tr/bolgeler/yenisehir-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1030** | **94** |
-| `/bolgeler/tufanbeyli-evden-eve-nakliyat` | Tufanbeyli Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Tufanbeyli İstiklal ve Cumhuriyet mahallelerinde dağ yolları geçişli sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/tufanbeyli-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **256** | **90** |
-| `/bolgeler/yumurtalik-evden-eve-nakliyat` | Yumurtalık Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Yumurtalık Ayas, Kemalpaşa ve Devrişiye mahallelerinde deniz esintili sigortalı marangozlu ev taşıma ve asansörlü nakliyat. | `https://uzmanellernakliyat.com.tr/bolgeler/yumurtalik-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **261** | **90** |
-| `/bolgeler/toroslar-evden-eve-nakliyat` | Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin Toroslar Karşıyaka, Yavuzlar, Sinanpaşa, Serinevler ve PTT Evleri mahallelerinde dar sokaklara uygun eşya asansörlü ve marangozlu ev taşıma. | `https://uzmanellernakliyat.com.tr/bolgeler/toroslar-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **938** | **94** |
-| `/galeri` | Hizmet Faaliyet Galerimiz | Uzman Eller Nakliyat | Mersin Uzman Eller Nakliyat asansörlü taşıma araçları, paketleme işlemleri ve ekip çalışmalarına ait gerçek operasyon fotoğrafları galerisi. | `https://uzmanellernakliyat.com.tr/galeri` | BreadcrumbList, ListItem | **37** | **79** |
-| `/hakkimizda` | Hakkımızda | Mersin Uzman Eller Nakliyat | 2006 yılından beri Mersin Yenişehir merkezli olarak K3 yetki belgesi ve özmal asansör filomuzla profesyonel evden eve nakliye hizmetleri sunuyoruz. | `https://uzmanellernakliyat.com.tr/hakkimizda` | BreadcrumbList, ListItem | **179** | **79** |
-| `/hizmetler/asansorlu-evden-eve-nakliyat` | Mersin Asansörlü Ev Taşıma | Uzman Eller Nakliyat | Mersin'de yüksek katlı daireler için 25. kata kadar ulaşan mobil dış cephe eşya asansörü kiralama ve güvenli asansörlü evden eve nakliye hizmeti. | `https://uzmanellernakliyat.com.tr/hizmetler/asansorlu-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **300** | **89** |
-| `/hizmetler/esya-depolama` | Mersin Eşya Depolama Hizmeti | Uzman Eller Depolama | Mersin'de aylık kiralık eşya depolama çözümleri. Güvenlik kameralı, rutubetsiz ve sigortalı konteyner depolarımızda eşyalarınızı güvenle saklayın. | `https://uzmanellernakliyat.com.tr/hizmetler/esya-depolama` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **971** | **87** |
-| `/hizmetler/ofis-ve-isyeri-tasimaciligi` | Mersin Ofis ve İşyeri Taşıma | Uzman Eller Nakliyat | Mersin'de kurumsal ofis, arşiv, büro ve işyeri taşıma hizmeti. Numaralı etiketli kutulama, asansörlü taşıma ve sigorta güvencesiyle sıfır kayıp. | `https://uzmanellernakliyat.com.tr/hizmetler/ofis-ve-isyeri-tasimaciligi` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **301** | **89** |
-| `/hizmetler/parca-esya-tasima` | Mersin Parça Eşya Taşıma | Uzman Eller Nakliyat | Mersin'de tek parça, az eşya veya öğrenci evi taşımacılığı. Uygun fiyatlı parça eşya nakliye tır ve kamyonetlerimizle hızlı taşıma hizmeti. | `https://uzmanellernakliyat.com.tr/hizmetler/parca-esya-tasima` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **958** | **87** |
-| `/hizmetler/piyano-ve-kasa-tasima` | Mersin Piyano ve Kasa Taşıma | Uzman Eller Nakliyat | Mersin'de kuyruklu/duvar piyanosu, çelik para kasası ve hassas ağır yük taşımacılığı. Özel liftli araçlar and askı sistemleriyle hasarsız transfer. | `https://uzmanellernakliyat.com.tr/hizmetler/piyano-ve-kasa-tasima` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **945** | **87** |
-| `/hizmetler/profesyonel-esya-paketleme` | Profesyonel Eşya Paketleme Hizmeti | Uzman Eller Nakliyat | Mersin'de ev taşırken mobilya, beyaz eşya ve kırılacak cam eşyaların çift kat balonlu naylon, Kraft kağıt ve koruma kutularıyla ambalajlanması. | `https://uzmanellernakliyat.com.tr/hizmetler/profesyonel-esya-paketleme` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **340** | **89** |
-| `/hizmetler/sehirici-evden-eve-nakliyat` | Mersin Şehir İçi Ev Taşıma | Uzman Eller Nakliyat | Mersin merkez ilçelerinde aynı gün içinde asansörlü, sigortalı ve marangoz montaj dahil şehir içi evden eve nakliyat hizmeti. Hemen sabit fiyat alın. | `https://uzmanellernakliyat.com.tr/hizmetler/sehirici-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **312** | **89** |
-| `/hizmetler/sehirlerarasi-evden-eve-nakliyat` | Mersin Şehirlerarası Ev Taşıma | Uzman Eller Nakliyat | Mersin'den Türkiye genelinde 81 ile sigortalı, marangozlu ve sözleşmeli şehirlerarası evden eve nakliyat hizmeti. Sabit fiyat garantisiyle taşının. | `https://uzmanellernakliyat.com.tr/hizmetler/sehirlerarasi-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **585** | **97** |
-| `/hizmetler/ucretsiz-ekspertiz` | Ücretsiz Ekspertiz Hizmeti | Uzman Eller Nakliyat | Mersin'de taşınma öncesinde eşya hacmini, bina kat durumunu ve asansör kurulum açısını yerinde veya görüntülü inceleyerek sabit fiyat teklifi çıkarma süreci. | `https://uzmanellernakliyat.com.tr/hizmetler/ucretsiz-ekspertiz` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **305** | **89** |
-| `/iletisim` | İletişim | Mersin Uzman Eller Nakliyat | Mersin Uzman Eller Nakliyat Yenişehir ofis iletişim bilgileri. Fiyat teklifi almak, rezervasyon yapmak veya bilgi edinmek için bize ulaşın. | `https://uzmanellernakliyat.com.tr/iletisim` | ContactPage, BreadcrumbList, ListItem | **76** | **79** |
-| `/rotalar/mersin-ankara-evden-eve-nakliyat` | Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Ankara'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-ankara-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1080** | **90** |
-| `/rotalar/mersin-antalya-evden-eve-nakliyat` | Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Antalya'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-antalya-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1047** | **90** |
-| `/rotalar/mersin-bursa-evden-eve-nakliyat` | Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Bursa'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-bursa-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1044** | **90** |
-| `/rotalar/mersin-gaziantep-evden-eve-nakliyat` | Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Gaziantep'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-gaziantep-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1036** | **90** |
-| `/rotalar/mersin-istanbul-evden-eve-nakliyat` | Mersin İstanbul Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den İstanbul'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-istanbul-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1160** | **90** |
-| `/rotalar/mersin-izmir-evden-eve-nakliyat` | Mersin İzmir Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den İzmir'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-izmir-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1066** | **90** |
-| `/rotalar/mersin-kayseri-evden-eve-nakliyat` | Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Kayseri'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-kayseri-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1036** | **90** |
-| `/rotalar/mersin-mersin-evden-eve-nakliyat` | Mersin Mersin Evden Eve Nakliyat | Uzman Eller Nakliyat | Mersin'den Mersin'e sigortalı, marangozlu ve K3 belgeli şehirlerarası evden eve nakliyat. Sabit fiyat garantisiyle güvenle taşının. | `https://uzmanellernakliyat.com.tr/rotalar/mersin-mersin-evden-eve-nakliyat` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1030** | **90** |
-| `/tasinma-kontrol-listesi` | İnteraktif Taşınma Kontrol Listesi ve Planlayıcı | Uzman Eller | Mersin'de sorunsuz taşınmak için 30 günlük interaktif kontrol listesi. Adres değişikliği, internet, elektrik ve su abonelik nakil prosedürleri rehberi. | `https://uzmanellernakliyat.com.tr/tasinma-kontrol-listesi` | Service, AdministrativeArea, BreadcrumbList, ListItem, FAQPage, Question, Answer | **1307** | **86** |
-| `/teklif-al` | Mersin Evden Eve Nakliyat Fiyat Hesaplama | Uzman Eller Nakliyat | Mersin'de ev taşıma maliyetlerini ücretsiz hesaplayın. Yenişehir ve Mezitli ilçeleri için sabit fiyat garantili asansörlü nakliye teklifi alın. | `https://uzmanellernakliyat.com.tr/teklif-al` | FAQPage, Question, Answer, BreadcrumbList, ListItem | **202** | **79** |
-| `/yasal/gizlilik` | Gizlilik Politikası | Uzman Eller Nakliyat | Mersin Uzman Eller Evden Eve Nakliyat evden eve taşımacılık gizlilik ve güvenlik politikaları hakkında bilgilendirme sayfası. | `https://uzmanellernakliyat.com.tr/yasal/gizlilik` | BreadcrumbList, ListItem | **116** | **81** |
-| `/yasal/kvkk` | KVKK Aydınlatma Metni | Uzman Eller Nakliyat | Mersin Uzman Eller Evden Eve Nakliyat Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca veri işleme faaliyetlerimiz hakkında veri sorumlusu aydınlatma metni. | `https://uzmanellernakliyat.com.tr/yasal/kvkk` | BreadcrumbList, ListItem | **140** | **81** |
+---
+
+## 1. Sayfa Analiz Detayları
+
+| Rota | Durum | H1 Sayısı | Kelime Sayısı | Kırık Linkler | A11y / Meta Uyarıları |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **/blog/asansorlu-nakliyat-mi-merdivenle-mi** | ✅ PASS | 1 | 1228 | 0 | - |
+| /blog/asansorlu-tasima-avantajlari | ✅ PASS | 1 | 219 | 0 | Temiz |
+| /blog/beyaz-esya-tasima-rehberi | ✅ PASS | 1 | 1249 | 0 | Temiz |
+| /blog/esya-paketleme-rehberi | ✅ PASS | 1 | 216 | 0 | Temiz |
+| /blog/k3-yetki-belgesi-nedir | ✅ PASS | 1 | 1223 | 0 | Temiz |
+| /blog/kapora-tuzagi-ucuz-nakliyat | ✅ PASS | 1 | 1242 | 0 | Temiz |
+| /blog/mersin-nakliyat-fiyatlari | ✅ PASS | 1 | 329 | 0 | Başlık uzun (>60: 62) |
+| /blog/mersin-semt-rehberi | ✅ PASS | 1 | 1293 | 0 | Başlık uzun (>60: 65) |
+| /blog/mersin-tasinma-maliyeti-2026 | ✅ PASS | 1 | 589 | 0 | Temiz |
+| /blog/mersinde-tasinmak-icin-en-uygun-zaman | ✅ PASS | 1 | 1201 | 0 | Temiz |
+| /blog/nakliyat-sigortasi-nedir | ✅ PASS | 1 | 1303 | 0 | Temiz |
+| /blog/ofis-tasima-plani | ✅ PASS | 1 | 1272 | 0 | Temiz |
+| /blog/sehirlerarasi-tasimada-esya-hasari | ✅ PASS | 1 | 1216 | 0 | Temiz |
+| /blog/tasinirken-yapilan-yasal-hatalar | ✅ PASS | 1 | 1235 | 0 | Temiz |
+| /blog/tasinmadan-30-gun-once-hazirlik | ✅ PASS | 1 | 1287 | 0 | Temiz |
+| /blog | ✅ PASS | 1 | 401 | 0 | Temiz |
+| /bolgeler/akdeniz-evden-eve-nakliyat | ✅ PASS | 1 | 759 | 0 | Temiz |
+| /bolgeler/anamur-evden-eve-nakliyat | ✅ PASS | 1 | 732 | 0 | Temiz |
+| /bolgeler/aydincik-evden-eve-nakliyat | ✅ PASS | 1 | 669 | 0 | Temiz |
+| /bolgeler/bozyazi-evden-eve-nakliyat | ✅ PASS | 1 | 657 | 0 | Temiz |
+| /bolgeler/camliyayla-evden-eve-nakliyat | ✅ PASS | 1 | 674 | 0 | Temiz |
+| /bolgeler/erdemli-evden-eve-nakliyat | ✅ PASS | 1 | 752 | 0 | Temiz |
+| /bolgeler/gulnar-evden-eve-nakliyat | ✅ PASS | 1 | 669 | 0 | Temiz |
+| /bolgeler/mezitli-evden-eve-nakliyat | ✅ PASS | 1 | 790 | 0 | Temiz |
+| /bolgeler/mut-evden-eve-nakliyat | ✅ PASS | 1 | 691 | 0 | Temiz |
+| /bolgeler/silifke-evden-eve-nakliyat | ✅ PASS | 1 | 750 | 0 | Temiz |
+| /bolgeler/tarsus-evden-eve-nakliyat | ✅ PASS | 1 | 752 | 0 | Temiz |
+| /bolgeler/toroslar-evden-eve-nakliyat | ✅ PASS | 1 | 758 | 0 | Temiz |
+| /bolgeler/yenisehir-evden-eve-nakliyat | ✅ PASS | 1 | 823 | 0 | Temiz |
+| /bolgeler | ✅ PASS | 1 | 301 | 0 | Temiz |
+| /galeri | ✅ PASS | 1 | 457 | 0 | Hiyerarşi hatası (1 adet) |
+| /hakkimizda | ✅ PASS | 1 | 296 | 0 | Temiz |
+| /hizmetler/asansorlu-evden-eve-nakliyat | ✅ PASS | 1 | 449 | 0 | Temiz |
+| /hizmetler/esya-depolama | ✅ PASS | 1 | 922 | 0 | Temiz |
+| /hizmetler/ofis-ve-isyeri-tasimaciligi | ✅ PASS | 1 | 498 | 0 | Temiz |
+| /hizmetler/parca-esya-tasima | ✅ PASS | 1 | 989 | 0 | Temiz |
+| /hizmetler/piyano-ve-kasa-tasima | ✅ PASS | 1 | 984 | 0 | Temiz |
+| /hizmetler/profesyonel-esya-paketleme | ✅ PASS | 1 | 389 | 0 | Temiz |
+| /hizmetler/sehirici-evden-eve-nakliyat | ✅ PASS | 1 | 441 | 0 | Temiz |
+| /hizmetler/sehirlerarasi-evden-eve-nakliyat | ✅ PASS | 1 | 453 | 0 | Temiz |
+| /hizmetler/ucretsiz-ekspertiz | ✅ PASS | 1 | 387 | 0 | Temiz |
+| /hizmetler | ✅ PASS | 1 | 228 | 0 | Temiz |
+| /iletisim | ✅ PASS | 1 | 87 | 0 | Temiz |
+| / | ✅ PASS | 1 | 1641 | 0 | Temiz |
+| /mersin-nakliyat-firmalari | ✅ PASS | 1 | 1125 | 0 | Temiz |
+| /mersin-nakliyat-fiyatlari | ✅ PASS | 1 | 1808 | 0 | Başlık uzun (>60: 63), Açıklama uzun (>160: 165) |
+| /rotalar/mersin-adana-evden-eve-nakliyat | ✅ PASS | 1 | 1037 | 0 | Temiz |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | ✅ PASS | 1 | 1226 | 0 | Temiz |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | ✅ PASS | 1 | 1192 | 0 | Temiz |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | ✅ PASS | 1 | 1183 | 0 | Temiz |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | ✅ PASS | 1 | 1177 | 0 | Temiz |
+| /rotalar/mersin-hatay-evden-eve-nakliyat | ✅ PASS | 1 | 1195 | 0 | Temiz |
+| /rotalar/mersin-istanbul-evden-eve-nakliyat | ✅ PASS | 1 | 1285 | 0 | Temiz |
+| /rotalar/mersin-izmir-evden-eve-nakliyat | ✅ PASS | 1 | 1213 | 0 | Temiz |
+| /rotalar/mersin-karaman-evden-eve-nakliyat | ✅ PASS | 1 | 1116 | 0 | Temiz |
+| /rotalar/mersin-kayseri-evden-eve-nakliyat | ✅ PASS | 1 | 1177 | 0 | Temiz |
+| /rotalar/mersin-konya-evden-eve-nakliyat | ✅ PASS | 1 | 1150 | 0 | Temiz |
+| /rotalar/mersin-nigde-evden-eve-nakliyat | ✅ PASS | 1 | 1120 | 0 | Temiz |
+| /rotalar/mersin-osmaniye-evden-eve-nakliyat | ✅ PASS | 1 | 1112 | 0 | Temiz |
+| /rotalar | ✅ PASS | 1 | 474 | 0 | Temiz |
+| /tasinma-kontrol-listesi | ✅ PASS | 1 | 1149 | 0 | Başlık uzun (>60: 62) |
+| /teklif-al | ✅ PASS | 1 | 224 | 0 | Başlık uzun (>60: 64) |
+| /yasal/gizlilik | ✅ PASS | 1 | 121 | 0 | Temiz |
+| /yasal/kvkk | ✅ PASS | 1 | 148 | 0 | Temiz |
+
+---
+
+## 2. Kanibalizasyon Riskleri (>70% Başlık Benzerliği)
+
+| Sayfa A | Sayfa B | Benzerlik Oranı | Başlık A | Başlık B |
+| :--- | :--- | :---: | :--- | :--- |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/anamur-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/bozyazi-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/erdemli-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/mezitli-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/mut-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/akdeniz-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Akdeniz Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/bozyazi-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/erdemli-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/mezitli-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/mut-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/anamur-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Anamur Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/erdemli-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/mezitli-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/mut-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/bozyazi-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Bozyazı Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/erdemli-evden-eve-nakliyat | /bolgeler/mezitli-evden-eve-nakliyat | 71% | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/erdemli-evden-eve-nakliyat | /bolgeler/mut-evden-eve-nakliyat | 71% | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/erdemli-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/erdemli-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/erdemli-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Erdemli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mezitli-evden-eve-nakliyat | /bolgeler/mut-evden-eve-nakliyat | 71% | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mezitli-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mezitli-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mezitli-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Mezitli Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mut-evden-eve-nakliyat | /bolgeler/silifke-evden-eve-nakliyat | 71% | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mut-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/mut-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Mut Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/silifke-evden-eve-nakliyat | /bolgeler/tarsus-evden-eve-nakliyat | 71% | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/silifke-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Silifke Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /bolgeler/tarsus-evden-eve-nakliyat | /bolgeler/toroslar-evden-eve-nakliyat | 71% | `Tarsus Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Toroslar Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| / | /teklif-al | 78% | `Mersin Evden Eve Nakliyat | Uzman Eller Nakliyat Sabit Fiyat` | `Mersin Evden Eve Nakliyat Fiyat Hesaplama | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-ankara-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-antalya-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-bursa-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-gaziantep-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-hatay-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-adana-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-antalya-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-bursa-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-gaziantep-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-hatay-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-ankara-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Ankara Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-bursa-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-gaziantep-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-hatay-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-antalya-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Antalya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-gaziantep-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-hatay-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-bursa-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Bursa Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | /rotalar/mersin-hatay-evden-eve-nakliyat | 75% | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-gaziantep-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Gaziantep Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-hatay-evden-eve-nakliyat | /rotalar/mersin-karaman-evden-eve-nakliyat | 75% | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-hatay-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-hatay-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-hatay-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Hatay Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-istanbul-evden-eve-nakliyat | /rotalar/mersin-izmir-evden-eve-nakliyat | 78% | `Mersin İstanbul Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin İzmir Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-karaman-evden-eve-nakliyat | /rotalar/mersin-kayseri-evden-eve-nakliyat | 75% | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-karaman-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-karaman-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Karaman Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-kayseri-evden-eve-nakliyat | /rotalar/mersin-konya-evden-eve-nakliyat | 75% | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-kayseri-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+| /rotalar/mersin-konya-evden-eve-nakliyat | /rotalar/mersin-osmaniye-evden-eve-nakliyat | 75% | `Mersin Konya Evden Eve Nakliyat | Uzman Eller Nakliyat` | `Mersin Osmaniye Evden Eve Nakliyat | Uzman Eller Nakliyat` |
+
+---
+
+## 3. Anchor Metin Çeşitliliği (İlk 15 Hedef)
+
+| Hedef Rota | Benzersiz Anchor Sayısı | Örnek Çapa Metinleri |
+| :--- | :---: | :--- |
+| / | 2 | Ana Sayfa, ← Ana Sayfaya Dön |
+| /hakkimizda | 1 | Hakkımızda |
+| /hizmetler/sehirici-evden-eve-nakliyat | 22 | 1. Şehiriçi Evden Eve Nakliyat, ➔Mersin Şehiriçi Evden Eve Nakliyat çözümleri, ➔Profesyonel Şehiriçi Evden Eve Nakliyat, Şehiriçi Evden Eve Nakliyat, ➔Sözleşmeli Şehiriçi Evden Eve Nakliyat süreci |
+| /hizmetler/sehirlerarasi-evden-eve-nakliyat | 30 | 2. Şehirlerarası Evden Eve Nakliyat, → Şehirlerarası Taşımacılık, Rotalar, ➔ Şehirlerarası Lojistik Rotalar, → Şehirlerarası Lojistik Rotalar |
+| /hizmetler/asansorlu-evden-eve-nakliyat | 23 | 3. Asansörlü Evden Eve Nakliyat, Asansörlü Evden Eve Nakliyat, Asansörlü Nakliyat, ➔Sözleşmeli Akdeniz Asansörlü Evden Eve Nakliyat süreci, ➔Anamur Asansörlü Evden Eve Nakliyat firmaları |
+| /hizmetler/ofis-ve-isyeri-tasimaciligi | 22 | 4. İşyeri ve Ofis Taşıma, Ofis ve İşyeri Taşımacılığı, İşyeri ve Ofis Taşıma, Ofis Taşıma, ➔Mersin Akdeniz Ofis ve İşyeri Taşımacılığı çözümleri |
+| /hizmetler/profesyonel-esya-paketleme | 18 | 5. Profesyonel Eşya Paketleme, Profesyonel Eşya Paketleme, Paketleme Hizmeti, ➔Akdeniz Profesyonel Eşya Paketleme firmaları, ➔Profesyonel Anamur Profesyonel Eşya Paketleme |
+| /hizmetler/ucretsiz-ekspertiz | 17 | 6. Ücretsiz Ekspertiz, Ücretsiz Ekspertiz, ➔Güvenilir Akdeniz Ücretsiz Ekspertiz hizmeti, ➔Sözleşmeli Anamur Ücretsiz Ekspertiz süreci, ➔Sözleşmeli Aydıncık Ücretsiz Ekspertiz süreci |
+| /hizmetler/esya-depolama | 2 | 7. Kiralık Eşya Depolama, Hizmet Detayını İnceleyin |
+| /hizmetler/parca-esya-tasima | 2 | 8. Parça Eşya Taşıma, Hizmet Detayını İnceleyin |
+| /hizmetler/piyano-ve-kasa-tasima | 2 | 9. Piyano ve Ağır Kasa Taşıma, Hizmet Detayını İnceleyin |
+| /bolgeler/yenisehir-evden-eve-nakliyat | 11 | Yenişehir, 📍 Yenişehir, Yenişehir Evden Eve Nakliyat, ➔Yenişehir ev taşıma çözümleri, ➔Yenişehir asansörlü ev taşıma |
+| /bolgeler/mezitli-evden-eve-nakliyat | 11 | Mezitli, 📍 Mezitli, Mezitli Evden Eve Nakliyat, ➔Mezitli evden eve nakliyat firması, ➔Mezitli sigortalı nakliye hizmeti |
+| /bolgeler/toroslar-evden-eve-nakliyat | 11 | Toroslar, 📍 Toroslar, Toroslar Evden Eve Nakliyat, ➔Toroslar uygun fiyatlı nakliyat, ➔Toroslar ev taşıma çözümleri |
+| /bolgeler/akdeniz-evden-eve-nakliyat | 11 | Akdeniz, 📍 Akdeniz, Akdeniz Evden Eve Nakliyat, ➔Akdeniz asansörlü ev taşıma, ➔Akdeniz ev taşıma çözümleri |

@@ -63,7 +63,7 @@ function countInternalLinks(html) {
   let count = 0;
   for (const match of linkMatches) {
     const href = match[1].trim();
-    const isInternal = href.startsWith('/') || href.startsWith('https://adanaevdeneveasansorlunakliyat.com.tr');
+    const isInternal = href.startsWith('/') || href.startsWith('https://mersinuzmaneller.com');
     const isExcluded = href.startsWith('//') || href.startsWith('mailto:') || href.startsWith('tel:') || href === '#';
     if (isInternal && !isExcluded) {
       count++;
@@ -129,7 +129,7 @@ function calculateGeoScore(html, wordCount) {
   const firstParagraphMatch = html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
   if (firstParagraphMatch) {
     const text = firstParagraphMatch[1].replace(/<[^>]*>/g, '');
-    const hasBrand = text.includes('Adana Esenler') || text.includes('Esenler Nakliyat');
+    const hasBrand = text.includes('Mersin Uzman Eller') || text.includes('Uzman Eller Nakliyat');
     const hasNumbers = /[0-9]/.test(text);
     if (hasBrand || hasNumbers) {
       score += 1;
@@ -149,16 +149,16 @@ function getPageType(route) {
 }
 
 function getKeywordsForPage(route) {
-  if (route === '/') return 'adana evden eve nakliyat, adana nakliyat';
+  if (route === '/') return 'mersin evden eve nakliyat, mersin nakliyat';
   if (route.includes('cukurova')) return 'çukurova evden eve nakliyat, çukurova nakliyat fiyatları';
   if (route.includes('seyhan')) return 'seyhan evden eve nakliyat, seyhan nakliyat';
   if (route.includes('yuregir')) return 'yüreğir evden eve nakliyat';
   if (route.includes('saricam')) return 'sarıçam evden eve nakliyat';
   if (route.includes('asansorlu')) return 'adana asansörlü nakliyat, kiralık asansör adana';
   if (route.includes('fiyatlari')) return 'adana nakliyat fiyatları, ev taşıma fiyatları adana';
-  if (route.includes('firmalari')) return 'adana nakliyat firmaları, en iyi adana nakliye';
-  if (route.includes('sehirlerarasi')) return 'adana şehirlerarası nakliyat, adana şehirler arası ev taşıma';
-  return 'adana nakliyat rehberleri';
+  if (route.includes('firmalari')) return 'mersin nakliyat firmaları, en iyi mersin nakliye';
+  if (route.includes('sehirlerarasi')) return 'mersin şehirlerarası nakliyat, mersin şehirler arası ev taşıma';
+  return 'mersin nakliyat rehberleri';
 }
 
 function generateSeoReport() {

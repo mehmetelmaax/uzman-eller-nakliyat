@@ -1,9 +1,13 @@
 import { SITE, SERVICES, DISTRICTS } from './site-config';
 import { FACTS } from './facts';
+import { estimatePriceFromForm } from './pricing';
 
 export function organizationSchema() {
   const socialFiltered = (Object.values(SITE.social) as string[])
     .filter((value) => value && value.trim() !== '');
+
+  // 1+1 standard move price estimate as base price representation
+  const basePrice1to1 = estimatePriceFromForm('1+1', 'hayir', 'Mersin', 'Mersin').min;
 
   const organization = {
     '@context': 'https://schema.org',
@@ -12,6 +16,11 @@ export function organizationSchema() {
     'name': SITE.name,
     'alternateName': SITE.shortName,
     'url': SITE.url,
+    'sameAs': [
+      ...socialFiltered,
+      ...(SITE.gbpUrl ? [SITE.gbpUrl] : [])
+    ],
+    'hasMap': SITE.gbpUrl,
     'logo': {
       '@type': 'ImageObject',
       'url': `${SITE.url}/img/logo.png`,
@@ -21,7 +30,7 @@ export function organizationSchema() {
     'image': `${SITE.url}/img/slayt-1.jpg`,
     'telephone': SITE.phone,
     'email': SITE.email,
-    'description': `${SITE.name}, Mersin genelinde K3 yetki belgesi ve mobil dış cephe asansörleri ile 2006 yılından bu yana sabit fiyat garantili ve sigortalı evden eve taşımacılık hizmeti sunmaktadır.`,
+    'description': `${SITE.name}, Mersin genelinde K3 yetki belgesi ve mobil dış cephe asansörleri ile ${FACTS.foundedYear} yılından bu yana sabit fiyat garantili ve sigortalı evden eve taşımacılık hizmeti sunmaktadır.`,
     'slogan': 'Sabit fiyat garantisiyle sigortalı ve asansörlü evden eve nakliyat.',
     'address': {
       '@type': 'PostalAddress',
@@ -63,12 +72,10 @@ export function organizationSchema() {
       '@type': 'AdministrativeArea',
       'name': `${district.name}, Mersin`
     })),
-    'foundingDate': `${FACTS.foundedYear}-03-15`,
-    'priceRange': '$$',
+    'foundingDate': FACTS.foundedYear.toString(),
+    'priceRange': SITE.priceRange,
     'currenciesAccepted': 'TRY',
     'paymentAccepted': 'Nakit, Kredi Kartı, Havale/EFT',
-    // TODO: K3 belge numarası temin edilince eklenecek (hasCredential)
-    // TODO: Çalışan sayısı temin edilince eklenecek (numberOfEmployees)
     'knowsAbout': [
       'evden eve nakliyat',
       'asansörlü nakliyat',
@@ -80,20 +87,40 @@ export function organizationSchema() {
       'eşya depolama',
       'ücretsiz ekspertiz'
     ],
-    'makesOffer': SERVICES.map((service) => ({
-      '@type': 'Offer',
-      'itemOffered': {
-        '@type': 'Service',
-        'name': service.name,
-        'description': service.description,
-        'url': `${SITE.url}/hizmetler/${service.slug}`
-      }
-    })),
+    'makesOffer': SERVICES.map((service) => {
+      // Calculate dynamic price spec for each service type if applicable
+      const basePrice = estimatePriceFromForm('1+1', 'hayir', 'Mersin', 'Mersin').min;
+      return {
+        '@type': 'Offer',
+        'priceCurrency': 'TRY',
+        'price': basePrice,
+        'priceSpecification': {
+          '@type': 'UnitPriceSpecification',
+          'price': basePrice,
+          'priceCurrency': 'TRY',
+          'unitText': 'Hizmet Başlangıç'
+        },
+        'itemOffered': {
+          '@type': 'Service',
+          'name': service.name,
+          'description': service.description,
+          'url': `${SITE.url}/hizmetler/${service.slug}`
+        }
+      };
+    }),
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',
       'name': 'Uzman Eller Nakliyat Hizmetleri',
       'itemListElement': SERVICES.map((service) => ({
         '@type': 'Offer',
+        'priceCurrency': 'TRY',
+        'price': basePrice1to1,
+        'priceSpecification': {
+          '@type': 'UnitPriceSpecification',
+          'price': basePrice1to1,
+          'priceCurrency': 'TRY',
+          'unitText': 'Hizmet Başlangıç'
+        },
         'itemOffered': {
           '@type': 'Service',
           'name': service.name,
@@ -101,14 +128,12 @@ export function organizationSchema() {
           'url': `${SITE.url}/hizmetler/${service.slug}`
         }
       }))
-    },
-    ...(socialFiltered.length > 0 ? { 'sameAs': socialFiltered } : {})
+    }
   };
 
   return organization;
 }
 
-// 2b) websiteSchema() -> WebSite
 export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
@@ -123,9 +148,10 @@ export function websiteSchema() {
   };
 }
 
-// 2c) serviceSchema({ name, description, slug, areaName? }) -> '@type': 'Service'
 export function serviceSchema({ name, description, slug, areaName }: { name: string; description: string; slug: string; areaName?: string }) {
   const cleanSlug = slug.startsWith('/') ? slug : `/${slug}`;
+  const basePrice = estimatePriceFromForm('1+1', 'hayir', 'Mersin', 'Mersin').min;
+  
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -139,11 +165,21 @@ export function serviceSchema({ name, description, slug, areaName }: { name: str
       '@type': 'AdministrativeArea',
       'name': areaName ? `${areaName}, Mersin` : 'Mersin'
     },
+    'offers': {
+      '@type': 'Offer',
+      'priceCurrency': 'TRY',
+      'price': basePrice,
+      'priceSpecification': {
+        '@type': 'UnitPriceSpecification',
+        'price': basePrice,
+        'priceCurrency': 'TRY',
+        'unitText': 'Hizmet Başlangıç'
+      }
+    },
     'url': `${SITE.url}${cleanSlug}`
   };
 }
 
-// 2d) breadcrumbSchema(items: {name, url}[]) -> BreadcrumbList
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -162,7 +198,6 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
-// 2e) faqSchema(faqs: {question, answer}[]) -> FAQPage
 export function faqSchema(faqsList: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -178,7 +213,6 @@ export function faqSchema(faqsList: { question: string; answer: string }[]) {
   };
 }
 
-// 2f) localBusinessSchema() -> only for /iletisim, mainEntity organization @id
 export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',

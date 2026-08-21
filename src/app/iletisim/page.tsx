@@ -19,11 +19,11 @@ export default function IletisimPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       
-      <main className="pt-24 bg-off-white">
+      <main className="pt-24 bg-surface-muted">
         <Breadcrumb items={[{ name: 'İletişim', url: '/iletisim' }]} className="pt-4" />
         {/* Intro */}
-        <section className="py-16 bg-navy text-white text-center space-y-4">
-          <span className="text-orange-text font-bold text-xs tracking-widest">
+        <section className="py-16 bg-brand-primary text-white text-center space-y-4">
+          <span className="text-brand-accent-dark font-bold text-xs tracking-widest">
             BİZE ULAŞIN
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
@@ -40,44 +40,44 @@ export default function IletisimPage() {
             
             {/* Left Column: Direct Info */}
             <div className="lg:col-span-5 space-y-8">
-              <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6">
-                <h2 className="font-display font-bold text-navy text-xl border-b border-gray-light pb-3">
+              <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+                <h2 className="font-display font-bold text-brand-primary text-xl border-b border-border-light pb-3">
                   Ofis ve İletişim Detayları
                 </h2>
                 
                 <div className="space-y-4 text-sm text-charcoal">
                   <div className="flex gap-4 items-start">
-                    <MapPin className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-navy block mb-0.5">Adres:</span>
+                      <span className="font-bold text-brand-primary block mb-0.5">Adres:</span>
                       <p>Gazi Mah. 1314. Sk. Yaylacıklıoğlu Apt. Kat 2 D:6, Yenişehir / Mersin</p>
                     </div>
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <Phone className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
+                    <Phone className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-navy block mb-0.5">Telefon / GSM:</span>
-                      <a href={SITE.phoneHref} className="hover:text-orange transition-colors font-bold">
+                      <span className="font-bold text-brand-primary block mb-0.5">Telefon / GSM:</span>
+                      <a href={SITE.phoneHref} className="hover:text-brand-accent transition-colors font-bold">
                         0533 520 44 42
                       </a>
                     </div>
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <Mail className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
+                    <Mail className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-navy block mb-0.5">E-Posta:</span>
-                      <a href={`mailto:${SITE.email}`} className="hover:text-orange transition-colors">
+                      <span className="font-bold text-brand-primary block mb-0.5">E-Posta:</span>
+                      <a href={`mailto:${SITE.email}`} className="hover:text-brand-accent transition-colors">
                         {SITE.email}
                       </a>
                     </div>
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <Clock className="w-5 h-5 text-orange flex-shrink-0 mt-0.5" />
+                    <Clock className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-navy block mb-0.5">Çalışma Saatleri:</span>
+                      <span className="font-bold text-brand-primary block mb-0.5">Çalışma Saatleri:</span>
                       <p>Hafta İçi ve Hafta Sonu: 07:00 – 22:00</p>
                     </div>
                   </div>
@@ -86,9 +86,9 @@ export default function IletisimPage() {
             </div>
 
             {/* Right Column: Google Maps Location Embed */}
-            <div className="lg:col-span-7 bg-white rounded-xl p-8 border border-gray-light shadow-sm space-y-6 flex flex-col justify-between">
+            <div className="lg:col-span-7 bg-white rounded-xl p-8 border border-border-light shadow-sm space-y-6 flex flex-col justify-between">
               <div className="space-y-4">
-                <h2 className="font-display font-bold text-navy text-xl border-b border-gray-light pb-3">
+                <h2 className="font-display font-bold text-brand-primary text-xl border-b border-border-light pb-3">
                   Google Haritalar Ofis Konumumuz
                 </h2>
                 <p className="text-charcoal text-xs md:text-sm leading-relaxed font-semibold">
@@ -97,10 +97,10 @@ export default function IletisimPage() {
               </div>
 
               {/* Map Iframe */}
-              <div className="w-full aspect-video rounded-xl overflow-hidden border border-gray-light shadow-inner bg-navy/5 relative">
+              <div className="w-full aspect-video rounded-xl overflow-hidden border border-border-light shadow-inner bg-brand-primary/5 relative">
                 <iframe
                   title="Mersin Uzman Eller Nakliyat Google Harita Konumu"
-                  src="https://maps.google.com/maps?q=Mersin%20Uzman Eller%20Evden%20Eve%20Nakliyat&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=36.7844771,34.6004798&z=15&output=embed"
                   className="absolute inset-0 w-full h-full border-0"
                   allowFullScreen
                   loading="lazy"
@@ -110,10 +110,10 @@ export default function IletisimPage() {
 
               {/* Yol Tarifi Button */}
               <a
-                href="https://share.google/YoiHqgk0tx65LVd0H"
+                href={SITE.gbpUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-orange hover:bg-navy text-navy hover:text-white font-black py-3.5 px-6 rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md w-full text-center"
+                className="bg-brand-accent hover:bg-brand-primary text-brand-primary hover:text-white font-black py-3.5 px-6 rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md w-full text-center"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Google Haritalar'da Yol Tarifi Alın</span>

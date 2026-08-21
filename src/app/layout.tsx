@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { SITE } from '@/lib/site-config';
 import Header from '@/components/Header';
@@ -7,14 +7,36 @@ import Footer from '@/components/Footer';
 import FloatingCTAs from '@/components/FloatingCTAs';
 import Analytics from '@/components/Analytics';
 
-const inter = Inter({
-  subsets: ['latin-ext'],
+const inter = localFont({
+  src: [
+    {
+      path: './fonts/Inter-Variable-Ext.woff2',
+      weight: '100 900',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Inter-Variable.woff2',
+      weight: '100 900',
+      style: 'normal',
+    }
+  ],
   variable: '--font-sans',
   display: 'swap',
 });
 
-const outfit = Outfit({
-  subsets: ['latin-ext'],
+const outfit = localFont({
+  src: [
+    {
+      path: './fonts/Outfit-Variable-Ext.woff2',
+      weight: '100 900',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-Variable.woff2',
+      weight: '100 900',
+      style: 'normal',
+    }
+  ],
   variable: '--font-display',
   display: 'swap',
 });
@@ -95,15 +117,39 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} h-full scroll-smooth antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  source: 'list',
+                  urls: ['/teklif-al', '/mersin-nakliyat-fiyatlari', '/iletisim'],
+                },
+              ],
+              prefetch: [
+                {
+                  source: 'document',
+                  where: {
+                    and: [
+                      { href_matches: '/*' },
+                      { not: { href_matches: ['/api/*', '/_next/*', '/static/*'] } },
+                    ],
+                  },
+                  eagerly: true,
+                },
+              ],
+            }),
+          }}
+        />
       </head>
-      <body className="min-h-full flex flex-col bg-off-white text-charcoal">
-        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-orange focus:text-navy focus:px-4 focus:py-2 focus:rounded focus:font-bold focus:text-sm">Ana içeriğe atla</a>
+      <body className="min-h-full flex flex-col bg-surface-muted text-charcoal">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-brand-accent focus:text-brand-primary focus:px-4 focus:py-2 focus:rounded focus:font-bold focus:text-sm">Ana içeriğe atla</a>
         <Header />
         {children}
         <Footer />

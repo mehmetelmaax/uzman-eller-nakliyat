@@ -66,12 +66,12 @@ export default function TasinmaListesiPage() {
     <>
       <JsonLd data={schemas} />
       
-      <main className="pt-24 bg-off-white min-h-screen">
+      <main className="pt-24 bg-surface-muted min-h-screen">
         <Breadcrumb items={[{ name: 'Taşınma Listesi', url: '/tasinma-kontrol-listesi' }]} className="pt-4" />
         
         {/* Intro Section */}
-        <section className="py-20 bg-navy text-white text-center space-y-4 print:hidden">
-          <span className="text-orange-text font-bold text-xs tracking-widest">
+        <section className="py-20 bg-brand-primary text-white text-center space-y-4 print:hidden">
+          <span className="text-brand-accent-dark font-bold text-xs tracking-widest">
             ADIM ADIM PLANLAMA REHBERİ
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
@@ -86,9 +86,9 @@ export default function TasinmaListesiPage() {
         <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section 1: Giriş Yazısı */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4 print:hidden">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Shield className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4 print:hidden">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Shield className="w-6 h-6 text-brand-accent" />
               <span>Taşınma Sürecini Planlamanın Önemi</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -102,9 +102,9 @@ export default function TasinmaListesiPage() {
           </section>
 
           {/* Section 3: Abonelik İptal ve Nakil Süreçleri */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6 print:page-break-before">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <ClipboardList className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6 print:page-break-before">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <ClipboardList className="w-6 h-6 text-brand-accent" />
               <span>Abonelik Kapatma, Nakil ve İptal Süreçleri</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -112,36 +112,36 @@ export default function TasinmaListesiPage() {
             </p>
             
             <div className="space-y-6 text-sm text-charcoal">
-              <div className="border-l-4 border-orange pl-4 space-y-2">
-                <span className="font-bold text-navy text-base block">1. Elektrik Aboneliği (Enerjisa / Toroslar EPSAŞ)</span>
+              <div className="border-l-4 border-brand-accent pl-4 space-y-2">
+                <span className="font-bold text-brand-primary text-base block">1. Elektrik Aboneliği (Enerjisa / Toroslar EPSAŞ)</span>
                 <p className="leading-relaxed text-charcoal/90">
                   Eski eviniz için taşınmadan 3 gün önce Enerjisa müşteri işlem merkezlerinden veya e-Devlet kapısı üzerinden sözleşme fesih başvurusunda bulunun. Başvuru esnasında sayaç üzerindeki son endeks fotoğrafını çekerek kaydetmeniz faydalı olacaktır. Yeni eviniz için ise taşınma gününden en az 2 gün önce aynı kanallar üzerinden yeni sözleşme imzalayarak elektriğinizin açılmasını sağlayın.
                 </p>
               </div>
 
-              <div className="border-l-4 border-orange pl-4 space-y-2">
-                <span className="font-bold text-navy text-base block">2. Su Aboneliği (Mersin ASKİ Genel Müdürlüğü)</span>
+              <div className="border-l-4 border-brand-accent pl-4 space-y-2">
+                <span className="font-bold text-brand-primary text-base block">2. Su Aboneliği (Mersin ASKİ Genel Müdürlüğü)</span>
                 <p className="leading-relaxed text-charcoal/90">
                   ASKİ şubelerine giderek veya e-Devlet ASKİ hizmetleri sekmesinden eski su aboneliğinizin kapatılmasını ve depozito iade talebinizi iletin. Yeni evinizin su sayacının açılması ve üzerinize kaydedilmesi için tapu veya kira kontratı örneği ile ASKİ şubelerine başvurarak yeni sözleşme bedelini yatırın.
                 </p>
               </div>
 
-              <div className="border-l-4 border-orange pl-4 space-y-2">
-                <span className="font-bold text-navy text-base block">3. Doğalgaz Aboneliği (Aksa Doğalgaz)</span>
+              <div className="border-l-4 border-brand-accent pl-4 space-y-2">
+                <span className="font-bold text-brand-primary text-base block">3. Doğalgaz Aboneliği (Aksa Doğalgaz)</span>
                 <p className="leading-relaxed text-charcoal/90">
                   Aksa Doğalgaz bürolarına giderek veya online işlemler kanalıyla gaz kesim ve güvence bedeli iadesi talebinde bulunun. Yeni evde doğalgazın aktif edilebilmesi için gaz açma randevusu alınması gerekmektedir. Ekipler gelene kadar tesisatta sızıntı veya onay belgesi eksikliği olmadığından emin olun.
                 </p>
               </div>
 
-              <div className="border-l-4 border-orange pl-4 space-y-2">
-                <span className="font-bold text-navy text-base block">4. İnternet ve Sabit Hat Nakli</span>
+              <div className="border-l-4 border-brand-accent pl-4 space-y-2">
+                <span className="font-bold text-brand-primary text-base block">4. İnternet ve Sabit Hat Nakli</span>
                 <p className="leading-relaxed text-charcoal/90">
                   Kullandığınız servis sağlayıcısının (Superonline, Türk Telekom, Kablonet vb.) müşteri hizmetlerini arayarak yeni adresinizdeki fiber veya ADSL altyapı hızını sorgulatın. Eğer yeni adreste altyapı bulunmuyorsa, yasal olarak taahhüt cezası ödemeden sözleşmenizi iptal etme hakkınız mevcuttur. Altyapı varsa, taşınmadan en az 7 gün önce nakil randevusu oluşturun.
                 </p>
               </div>
 
-              <div className="border-l-4 border-orange pl-4 space-y-2">
-                <span className="font-bold text-navy text-base block">5. Resmi İkametgah Adres Beyanı (Nüfus Müdürlüğü)</span>
+              <div className="border-l-4 border-brand-accent pl-4 space-y-2">
+                <span className="font-bold text-brand-primary text-base block">5. Resmi İkametgah Adres Beyanı (Nüfus Müdürlüğü)</span>
                 <p className="leading-relaxed text-charcoal/90">
                   5490 sayılı Nüfus Hizmetleri Kanunu uyarınca, yeni adresinize taşındıktan sonra en geç 20 iş günü içerisinde adres beyanında bulunmanız yasal zorunluluktur. Bu işlemi e-Devlet kapısı üzerinden mobil imza veya SMS doğrulaması ile saniyeler içinde yapabilir ya da ilçe nüfus müdürlüklerinden randevu alarak şahsen tamamlayabilirsiniz.
                 </p>
@@ -150,9 +150,9 @@ export default function TasinmaListesiPage() {
           </div>
 
           {/* Section 4: Paketleme İpuçları */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4 print:hidden">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Info className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4 print:hidden">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Info className="w-6 h-6 text-brand-accent" />
               <span>Hasarsız Taşınma İçin 3 Kritik Paketleme İpucu</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -171,9 +171,9 @@ export default function TasinmaListesiPage() {
             </div>
           </div>
           {/* Section 5: Okul Nakil Süreci */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4 print:hidden">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Info className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4 print:hidden">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Info className="w-6 h-6 text-brand-accent" />
               <span>Okul Nakil ve Öğrenci Kayıt Taşıma Adımları</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -182,9 +182,9 @@ export default function TasinmaListesiPage() {
           </div>
 
           {/* Section 6: Evcil Hayvan Taşınma Yönetimi */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4 print:hidden">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Info className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4 print:hidden">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Info className="w-6 h-6 text-brand-accent" />
               <span>Evcil Hayvanların Taşınma Günü Stres Yönetimi</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -196,15 +196,15 @@ export default function TasinmaListesiPage() {
           <RelatedLinks currentSlug="tasinma-kontrol-listesi" type="blog" title="Yararlı Bağlantılar ve Rehberler" />
 
           {/* FAQ Section */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6 print:hidden">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <HelpCircle className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6 print:hidden">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <HelpCircle className="w-6 h-6 text-brand-accent" />
               <span>Taşınma Süreci Hakkında Sıkça Sorulanlar</span>
             </h2>
             <div className="space-y-4 text-sm text-charcoal">
               {checklistFaqs.map((item, idx) => (
-                <div key={idx} className={idx > 0 ? "border-t border-gray-light/60 pt-4" : ""}>
-                  <span className="font-bold text-navy block mb-1">{item.question}</span>
+                <div key={idx} className={idx > 0 ? "border-t border-border-light/60 pt-4" : ""}>
+                  <span className="font-bold text-brand-primary block mb-1">{item.question}</span>
                   <p className="text-charcoal/95 leading-relaxed">{item.answer}</p>
                 </div>
               ))}
@@ -212,12 +212,12 @@ export default function TasinmaListesiPage() {
           </div>
 
           {/* CTA Box */}
-          <div className="bg-navy rounded-xl p-8 text-center text-white space-y-6 print:hidden">
+          <div className="bg-brand-primary rounded-xl p-8 text-center text-white space-y-6 print:hidden">
             <h3 className="font-display font-bold text-xl md:text-2xl">
               Planlı ve Güvenli Taşınma Teklifi Alın
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/teklif-al" className="bg-orange hover:bg-white text-navy font-black px-6 py-3 rounded border border-navy transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 cursor-pointer">
+              <Link href="/teklif-al" className="bg-brand-accent hover:bg-white text-brand-primary font-black px-6 py-3 rounded border border-brand-primary transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 cursor-pointer">
                 <span>Fiyat Hesapla</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>

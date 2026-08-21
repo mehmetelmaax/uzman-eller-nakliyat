@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, User, ArrowLeft, ShieldCheck } from 'lucide-react';
-import { blogDatabase } from '@/lib/blog-data';
+import { blogMetadataDatabase, getBlogPostContent } from '@/content/blog';
 import { SITE } from '@/lib/site-config';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbSchema, faqSchema } from '@/lib/schema';
@@ -14,7 +14,7 @@ import RelatedLinks from '@/components/RelatedLinks';
 import ScrollDepth from '@/components/ScrollDepth';
 
 export function generateStaticParams() {
-  return Object.keys(blogDatabase).map((id) => ({ id }));
+  return Object.keys(blogMetadataDatabase).map((id) => ({ id }));
 }
 
 type Props = {
@@ -23,7 +23,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const post = blogDatabase[resolvedParams.id];
+  const post = blogMetadataDatabase[resolvedParams.id];
   if (!post) {
     return {
       title: 'Yazı Bulunamadı',
@@ -68,9 +68,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const resolvedParams = await params;
-  const post = blogDatabase[resolvedParams.id];
+  const post = blogMetadataDatabase[resolvedParams.id];
 
   if (!post) {
+    notFound();
+  }
+
+  const content = await getBlogPostContent(resolvedParams.id);
+  if (!content) {
     notFound();
   }
 
@@ -99,7 +104,7 @@ export default async function BlogPostPage({ params }: Props) {
     },
     'esya-paketleme-rehberi': {
       blogs: [
-        { title: 'Mersin Evden Eve Nakliyat Fiyatları Nasıl Belirlenir?', href: '/blog/mersin-nakliyat-fiyatlari' },
+        { title: 'Mersin Nakliyat Bütçesi ve Ev Taşıma Maliyet Hesaplama Rehberi', href: '/blog/mersin-nakliyat-fiyatlari' },
         { title: 'Mobil Asansörlü Taşımacılık Avantajları', href: '/blog/asansorlu-tasima-avantajlari' }
       ],
       services: [
@@ -113,7 +118,7 @@ export default async function BlogPostPage({ params }: Props) {
     },
     'asansorlu-tasima-avantajlari': {
       blogs: [
-        { title: 'Mersin Evden Eve Nakliyat Fiyatları Nasıl Belirlenir?', href: '/blog/mersin-nakliyat-fiyatlari' },
+        { title: 'Mersin Nakliyat Bütçesi ve Ev Taşıma Maliyet Hesaplama Rehberi', href: '/blog/mersin-nakliyat-fiyatlari' },
         { title: 'Pratik Eşya Paketleme Yöntemleri Rehberi', href: '/blog/esya-paketleme-rehberi' }
       ],
       services: [
@@ -145,7 +150,7 @@ export default async function BlogPostPage({ params }: Props) {
       '@id': blogPostUrl
     },
     'author': {
-      '@type': 'Person',
+      '@type': 'Organization',
       'name': post.author
     },
     'publisher': {
@@ -157,7 +162,7 @@ export default async function BlogPostPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@graph': [
       articleSchema,
-      faqSchema(post.faqs),
+      faqSchema(content.faqs),
       breadcrumbSchema([
         { name: 'Ana Sayfa', url: '/' },
         { name: 'Blog', url: '/blog' },
@@ -171,40 +176,40 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd data={graphSchema} />
       <ScrollDepth />
       
-      <main className="pt-24 bg-off-white min-h-screen">
+      <main className="pt-24 bg-surface-muted min-h-screen">
         <Breadcrumb items={[{ name: 'Blog', url: '/blog' }, { name: post.title, url: `/blog/${post.id}` }]} className="pt-4" />
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           
           {/* Back to Blog index link */}
           <Link
             href="/blog"
-            className="text-navy hover:text-orange font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 mb-8 w-fit"
+            className="text-brand-primary hover:text-brand-accent font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 mb-8 w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Tüm Yazılar</span>
           </Link>
 
-          <div className="bg-white rounded-2xl border border-gray-light overflow-hidden shadow-sm p-6 md:p-10 space-y-8">
+          <div className="bg-white rounded-2xl border border-border-light overflow-hidden shadow-sm p-6 md:p-10 space-y-8">
             {/* Meta Tags */}
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400 font-bold">
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5 text-orange" />
+                  <Calendar className="w-3.5 h-3.5 text-brand-accent" />
                   {post.date}
                 </span>
                 <span className="flex items-center gap-1">
-                  <User className="w-3.5 h-3.5 text-orange" />
+                  <User className="w-3.5 h-3.5 text-brand-accent" />
                   {post.author}
                 </span>
               </div>
-              <h1 className="font-display font-black text-navy text-2xl md:text-4xl tracking-tight leading-tight">
+              <h1 className="font-display font-black text-brand-primary text-2xl md:text-4xl tracking-tight leading-tight">
                 {post.title}
               </h1>
             </div>
 
             {/* Featured Image */}
-            <div className="relative aspect-video w-full rounded-xl bg-navy/5 overflow-hidden border border-gray-light flex items-center justify-center">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-navy/20">
+            <div className="relative aspect-video w-full rounded-xl bg-brand-primary/5 overflow-hidden border border-border-light flex items-center justify-center">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-brand-primary/20">
                 <ImageIcon className="w-16 h-16" />
                 <span className="text-xs font-semibold mt-2">[Blog Görseli: {post.image.split('/').pop()}]</span>
               </div>
@@ -222,20 +227,20 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Post Content */}
             <div 
-              className="text-charcoal text-sm md:text-base leading-relaxed space-y-6 prose prose-navy"
-              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+              className="text-charcoal text-sm md:text-base leading-relaxed space-y-6 prose prose-brand-primary"
+              dangerouslySetInnerHTML={{ __html: content.contentHtml }}
             />
 
             {/* Customized Blog FAQ */}
-            <div className="border-t border-gray-light pt-8 space-y-6">
-              <h2 className="font-display font-bold text-navy text-lg md:text-xl flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-orange" />
+            <div className="border-t border-border-light pt-8 space-y-6">
+              <h2 className="font-display font-bold text-brand-primary text-lg md:text-xl flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-brand-accent" />
                 <span>Bu Konuda Sıkça Sorulanlar (SSS)</span>
               </h2>
               <div className="space-y-4 text-sm text-charcoal">
-                {post.faqs.map((faq, idx) => (
-                  <div key={idx} className="bg-off-white p-5 rounded-lg border border-gray-light/60">
-                    <span className="font-bold text-navy block mb-1">{faq.question}</span>
+                {content.faqs.map((faq, idx) => (
+                  <div key={idx} className="bg-surface-muted p-5 rounded-lg border border-border-light/60">
+                    <span className="font-bold text-brand-primary block mb-1">{faq.question}</span>
                     <p>{faq.answer}</p>
                   </div>
                 ))}
@@ -243,7 +248,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             {/* Related Content (İlgili İçerikler) */}
-            <div className="border-t border-gray-light pt-8">
+            <div className="border-t border-border-light pt-8">
               <RelatedLinks currentSlug={post.id} type="blog" title="İlgili İçerikler ve Faydalı Bağlantılar" />
             </div>
 

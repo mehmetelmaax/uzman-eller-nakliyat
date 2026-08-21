@@ -16,11 +16,11 @@ export default function Error({ error, reset }: ErrorProps) {
   }, [error]);
 
   return (
-    <main className="pt-24 bg-off-white min-h-screen flex flex-col justify-between">
+    <main className="pt-24 bg-surface-muted min-h-screen flex flex-col justify-between">
       {/* Error Hero */}
-      <section className="py-16 bg-navy text-white text-center space-y-4">
+      <section className="py-16 bg-brand-primary text-white text-center space-y-4">
         <div className="flex justify-center">
-          <AlertTriangle className="w-16 h-16 text-orange animate-pulse" />
+          <AlertTriangle className="w-16 h-16 text-brand-accent animate-pulse" />
         </div>
         <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">
           Bir Hata Oluştu
@@ -32,14 +32,14 @@ export default function Error({ error, reset }: ErrorProps) {
 
       {/* User Actions */}
       <section className="py-12 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center space-y-8">
-        <div className="bg-white p-8 rounded-2xl border border-gray-light shadow-sm space-y-6">
+        <div className="bg-white p-8 rounded-2xl border border-border-light shadow-sm space-y-6">
           <p className="text-charcoal text-sm md:text-base">
             Lütfen aşağıdaki butona tıklayarak sayfayı yeniden yüklemeyi deneyin.
           </p>
           <div className="flex justify-center">
             <button
               onClick={() => reset()}
-              className="bg-orange hover:bg-navy text-navy hover:text-white font-black px-6 py-3.5 rounded-xl border border-orange hover:border-navy transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer"
+              className="bg-brand-accent hover:bg-brand-primary text-brand-primary hover:text-white font-black px-6 py-3.5 rounded-xl border border-brand-accent hover:border-brand-primary transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer"
             >
               <RefreshCw className="w-5 h-5" />
               <span>Yeniden Dene</span>
@@ -48,15 +48,15 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
 
         {/* Alternative Support Call */}
-        <div className="bg-orange/10 p-6 rounded-xl border border-orange/20 space-y-4">
-          <span className="font-bold text-navy block">Sorun Devam Ediyor Mu?</span>
+        <div className="bg-brand-accent/10 p-6 rounded-xl border border-brand-accent/20 space-y-4">
+          <span className="font-bold text-brand-primary block">Sorun Devam Ediyor Mu?</span>
           <p className="text-charcoal text-xs md:text-sm">
             Eğer hata almaya devam ediyorsanız, bizimle doğrudan telefon veya WhatsApp hattımız üzerinden iletişime geçebilirsiniz.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a
               href={SITE.phoneHref}
-              className="bg-navy hover:bg-orange text-white hover:text-navy font-bold px-5 py-3 rounded-lg text-sm flex items-center gap-2 shadow-sm transition-all"
+              className="bg-brand-primary hover:bg-brand-accent text-white hover:text-brand-primary font-bold px-5 py-3 rounded-lg text-sm flex items-center gap-2 shadow-sm transition-all"
             >
               <Phone className="w-4 h-4" />
               <span>{SITE.phoneDisplay}</span>

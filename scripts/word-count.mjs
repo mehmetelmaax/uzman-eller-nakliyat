@@ -96,7 +96,7 @@ function runWordCount() {
       '/hizmetler/sehirici-evden-eve-nakliyat',
       '/hizmetler/sehirlerarasi-evden-eve-nakliyat',
       '/hizmetler/ucretsiz-ekspertiz',
-      '/blog/adana-nakliyat-fiyatlari',
+      '/blog/mersin-nakliyat-fiyatlari',
       '/blog/asansorlu-tasima-avantajlari',
       '/blog/esya-paketleme-rehberi'
     ];

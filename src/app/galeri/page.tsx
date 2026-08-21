@@ -32,13 +32,19 @@ const galleryItems: GalleryItem[] = [
     src: '/img/slayt-2.jpg',
     title: 'Dış Cephe Asansör Kurulumu',
     desc: 'Rezidans tipi binalarda balkondan eşya transferi yapan teleskopik asansörümüz.',
-    alt: "Mersin Yenişehir'da yüksek katlı bir rezidansın dış cephesine kurulmuş teleskopik yük ve eşya taşıma asansörü",
+    alt: "Mersin Yenişehir'de yüksek katlı bir rezidansın dış cephesine kurulmuş teleskopik yük ve eşya taşıma asansörü",
   },
   {
     src: '/img/slayt-3.jpg',
     title: 'Asansörlü Nakliye Aracımız',
     desc: 'Mobil asansör kasalı taşıma kamyonetimiz dar sokakta operasyonda.',
-    alt: "Mersin Mezitli'da dar sokaklarda pratik ve hızlı asansörlü nakliyat hizmeti veren mobil asansörlü nakliye aracı",
+    alt: "Asansörlü nakliyat taşıma hizmeti veren teleskopik asansör sistemli Mersin Uzman Eller Nakliyat taşıma aracı",
+  },
+  {
+    src: '/img/arac-filosu.jpg',
+    title: 'Kapalı Kasa Ev Eşyası Kamyonumuz',
+    desc: 'Rüzgardan, yağmurdan korunaklı özel yapım mobilya kasalı aracımız.',
+    alt: "Eşyaların yolda zarar görmemesi için içi MDF kaplı kapalı kasa evden eve taşımacılık nakliye kamyonu",
   },
   {
     src: '/img/paketleme-detay.jpg',
@@ -50,8 +56,140 @@ const galleryItems: GalleryItem[] = [
     src: '/img/ekip.jpg',
     title: 'Profesyonel Nakliye Ekibimiz',
     desc: 'Uzman Eller logolu kurumsal kıyafetli kadrolu taşıma personellerimiz.',
-    alt: "Mersin Uzman Eller Evden Eve Nakliyat kurumsal logolu iş elbiseleriyle uzman ve sigortalı profesyonel taşıma ekibimiz",
+    alt: "Mersin Uzman Eller Nakliyat kurumsal logolu iş elbiseleriyle uzman ve sigortalı profesyonel taşıma ekibimiz",
   },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-1.jpeg',
+    title: 'Eşya Yükleme ve İstifleme',
+    desc: 'Kapalı kasa nakliyat tırımıza eşyaların hasar görmeyecek şekilde düzenli istiflenmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait eşya yükleme ve i̇stifleme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-2.jpeg',
+    title: 'Profesyonel Ambalajlama İşlemi',
+    desc: 'Eşyaların taşınma esnasında çizilmesini önleyen kalın balonlu patpat naylon sarımı.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait profesyonel ambalajlama i̇şlemi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-3.jpeg',
+    title: 'Asansörlü Nakliye Kurulumu',
+    desc: 'Yüksek katlı binalarda güvenli taşıma sağlayan mobil asansör sistemimiz.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait asansörlü nakliye kurulumu gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-4.jpeg',
+    title: 'Marangozlu De-montaj Hizmeti',
+    desc: 'Mobilyalarınızın taşınma öncesinde uzman marangozumuzca sökülmesi ve numaralandırılması.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait marangozlu de-montaj hizmeti gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-5.jpeg',
+    title: 'Hassas Eşya Paketleme',
+    desc: 'Kırılacak cam ve mutfak eşyalarının Kraft kağıtlarla sarılıp kolilere yerleştirilmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait hassas eşya paketleme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-6.jpeg',
+    title: 'Şehirlerarası Nakliye Sevk',
+    desc: 'Mersin Yenişehir merkezimizden diğer illere yola çıkmaya hazır kapalı kasa taşıma aracımız.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait şehirlerarası nakliye sevk gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-7.jpeg',
+    title: 'Güvenli Taşımacılık Ekibi',
+    desc: 'Mersin Uzman Eller Nakliyat güvencesiyle uzman kadromuz iş başında.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait güvenli taşımacılık ekibi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-8.jpeg',
+    title: 'Evden Eve Eşya Transferi',
+    desc: 'Eşyaların oda oda tasnif edilip yeni evinizde istenen yerlere yerleştirilmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait evden eve eşya transferi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-9.jpeg',
+    title: 'Asansörlü Eşya İndirme',
+    desc: 'Apartman içi merdivenleri kullanmadan balkondan doğrudan araca yükleme yapılması.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait asansörlü eşya i̇ndirme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-10.jpeg',
+    title: 'Kaliteli Ambalaj Malzemeleri',
+    desc: 'Koli, köşe koruyucu bentler ve özel ambalaj ipleriyle yapılan kurumsal paketleme.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait kaliteli ambalaj malzemeleri gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-11.jpeg',
+    title: 'Eşya Yükleme ve İstifleme',
+    desc: 'Kapalı kasa nakliyat tırımıza eşyaların hasar görmeyecek şekilde düzenli istiflenmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait eşya yükleme ve i̇stifleme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-12.jpeg',
+    title: 'Profesyonel Ambalajlama İşlemi',
+    desc: 'Eşyaların taşınma esnasında çizilmesini önleyen kalın balonlu patpat naylon sarımı.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait profesyonel ambalajlama i̇şlemi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-13.jpeg',
+    title: 'Asansörlü Nakliye Kurulumu',
+    desc: 'Yüksek katlı binalarda güvenli taşıma sağlayan mobil asansör sistemimiz.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait asansörlü nakliye kurulumu gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-14.jpeg',
+    title: 'Marangozlu De-montaj Hizmeti',
+    desc: 'Mobilyalarınızın taşınma öncesinde uzman marangozumuzca sökülmesi ve numaralandırılması.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait marangozlu de-montaj hizmeti gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-15.jpeg',
+    title: 'Hassas Eşya Paketleme',
+    desc: 'Kırılacak cam ve mutfak eşyalarının Kraft kağıtlarla sarılıp kolilere yerleştirilmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait hassas eşya paketleme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-16.jpeg',
+    title: 'Şehirlerarası Nakliye Sevk',
+    desc: 'Mersin Yenişehir merkezimizden diğer illere yola çıkmaya hazır kapalı kasa taşıma aracımız.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait şehirlerarası nakliye sevk gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-17.jpeg',
+    title: 'Güvenli Taşımacılık Ekibi',
+    desc: 'Mersin Uzman Eller Nakliyat güvencesiyle uzman kadromuz iş başında.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait güvenli taşımacılık ekibi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-18.jpeg',
+    title: 'Evden Eve Eşya Transferi',
+    desc: 'Eşyaların oda oda tasnif edilip yeni evinizde istenen yerlere yerleştirilmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait evden eve eşya transferi gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-19.jpeg',
+    title: 'Asansörlü Eşya İndirme',
+    desc: 'Apartman içi merdivenleri kullanmadan balkondan doğrudan araca yükleme yapılması.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait asansörlü eşya i̇ndirme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-20.jpeg',
+    title: 'Kaliteli Ambalaj Malzemeleri',
+    desc: 'Koli, köşe koruyucu bentler ve özel ambalaj ipleriyle yapılan kurumsal paketleme.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait kaliteli ambalaj malzemeleri gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-21.jpeg',
+    title: 'Eşya Yükleme ve İstifleme',
+    desc: 'Kapalı kasa nakliyat tırımıza eşyaların hasar görmeyecek şekilde düzenli istiflenmesi.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait eşya yükleme ve i̇stifleme gerçek faaliyet fotoğrafı",
+  },
+  {
+    src: '/img/mersin-nakliyat-faaliyet-22.jpeg',
+    title: 'Profesyonel Ambalajlama İşlemi',
+    desc: 'Eşyaların taşınma esnasında çizilmesini önleyen kalın balonlu patpat naylon sarımı.',
+    alt: "Mersin Uzman Eller Nakliyat firmasına ait profesyonel ambalajlama i̇şlemi gerçek faaliyet fotoğrafı",
+  }
 ];
 
 export default function GalleryPage() {
@@ -64,11 +202,11 @@ export default function GalleryPage() {
     <>
       <JsonLd data={schema} />
       
-      <main className="pt-24 bg-off-white min-h-screen">
+      <main className="pt-24 bg-surface-muted min-h-screen">
         {/* Intro */}
-        <section className="py-16 bg-navy text-white text-center space-y-4">
-          <span className="text-orange font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1">
-            <Camera className="w-4 h-4 text-orange" />
+        <section className="py-16 bg-brand-primary text-white text-center space-y-4">
+          <span className="text-brand-accent font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1">
+            <Camera className="w-4 h-4 text-brand-accent" />
             <span>Faaliyetlerimiz</span>
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight">

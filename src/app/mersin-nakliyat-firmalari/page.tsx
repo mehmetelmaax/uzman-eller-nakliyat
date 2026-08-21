@@ -82,11 +82,11 @@ export default function FirmalarRehberiPage() {
     <>
       <JsonLd data={schemas} />
       
-      <main className="pt-24 bg-off-white min-h-screen">
+      <main className="pt-24 bg-surface-muted min-h-screen">
         <Breadcrumb items={[{ name: 'Firma Seçim Rehberi', url: '/mersin-nakliyat-firmalari' }]} className="pt-4" />
         {/* Intro Section */}
-        <section className="py-20 bg-navy text-white text-center space-y-4">
-          <span className="text-orange font-bold text-xs tracking-widest">
+        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
+          <span className="text-brand-accent font-bold text-xs tracking-widest">
             BİLİNÇLİ TÜKETİCİ REHBERİ
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
@@ -101,9 +101,9 @@ export default function FirmalarRehberiPage() {
         <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section 1: Giriş */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Shield className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Shield className="w-6 h-6 text-brand-accent" />
               <span>Güvenli Nakliyat Firması Seçimi</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -112,9 +112,9 @@ export default function FirmalarRehberiPage() {
           </div>
 
           {/* Section 2: 12 Altın Kontrol Maddesi */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <ClipboardList className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <ClipboardList className="w-6 h-6 text-brand-accent" />
               <span>Nakliyat Firması Seçerken 12 Kontrol Maddesi</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -122,8 +122,8 @@ export default function FirmalarRehberiPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-charcoal">
               {kontrolMaddeleri.map((madde, idx) => (
-                <div key={idx} className="flex gap-2 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                  <CheckCircle2 className="w-4 h-4 text-orange shrink-0 mt-0.5" />
+                <div key={idx} className="flex gap-2 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                  <CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0 mt-0.5" />
                   <span>{madde}</span>
                 </div>
               ))}
@@ -137,9 +137,9 @@ export default function FirmalarRehberiPage() {
           <ContractChecklist />
 
           {/* Section 4: Sigorta ve Sözleşme Riskleri */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <AlertOctagon className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <AlertOctagon className="w-6 h-6 text-brand-accent" />
               <span>Sözleşmesiz ve Sigortasız Taşınmanın Büyük Riskleri</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -148,9 +148,9 @@ export default function FirmalarRehberiPage() {
           </div>
 
           {/* Section 5: Tüketici Hakları ve Şikayet */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Scale className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Scale className="w-6 h-6 text-brand-accent" />
               <span>Tüketici Hakları ve Yasal Şikayet Kanalları</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -159,9 +159,9 @@ export default function FirmalarRehberiPage() {
           </div>
 
           {/* Section 6: Komisyoncu Siteler */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <AlertOctagon className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <AlertOctagon className="w-6 h-6 text-brand-accent" />
               <span>Komisyoncu Acente Sitelerinin Gizli Tehlikeleri</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -170,9 +170,9 @@ export default function FirmalarRehberiPage() {
           </div>
 
           {/* Section 7: Fatura ve Vergilendirme */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <FileText className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <FileText className="w-6 h-6 text-brand-accent" />
               <span>Resmi Taşıma Faturası ve KDV Zorunluluğu</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -184,15 +184,15 @@ export default function FirmalarRehberiPage() {
           <RelatedLinks currentSlug="mersin-nakliyat-firmalari" type="blog" title="Yararlı Bağlantılar ve Rehberler" />
 
           {/* FAQ Section */}
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <HelpCircle className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <HelpCircle className="w-6 h-6 text-brand-accent" />
               <span>Ev Taşıma Firmaları Hakkında Sıkça Sorulanlar</span>
             </h2>
             <div className="space-y-4 text-sm text-charcoal">
               {firmalarFaqs.map((item, idx) => (
-                <div key={idx} className={idx > 0 ? "border-t border-gray-light/60 pt-4" : ""}>
-                  <span className="font-bold text-navy block mb-1">{item.question}</span>
+                <div key={idx} className={idx > 0 ? "border-t border-border-light/60 pt-4" : ""}>
+                  <span className="font-bold text-brand-primary block mb-1">{item.question}</span>
                   <p className="text-charcoal/95 leading-relaxed">{item.answer}</p>
                 </div>
               ))}
@@ -200,12 +200,12 @@ export default function FirmalarRehberiPage() {
           </div>
 
           {/* CTA Box */}
-          <div className="bg-navy rounded-xl p-8 text-center text-white space-y-6">
+          <div className="bg-brand-primary rounded-xl p-8 text-center text-white space-y-6">
             <h3 className="font-display font-bold text-xl md:text-2xl">
               Yazılı Sözleşmeli Ev Taşıma Teklifi Alın
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/teklif-al" className="bg-orange hover:bg-white text-navy font-black px-6 py-3 rounded border border-navy transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 cursor-pointer">
+              <Link href="/teklif-al" className="bg-brand-accent hover:bg-white text-brand-primary font-black px-6 py-3 rounded border border-brand-primary transition-all duration-200 text-sm flex items-center gap-2 active:scale-95 cursor-pointer">
                 <span>Fiyat Hesapla</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>

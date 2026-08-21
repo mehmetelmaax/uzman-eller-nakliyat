@@ -34,7 +34,7 @@
 
 ### Logo Vectorization Plan
 The logo assets provided by the user are raster graphics. Before production, they must be converted to optimized inline SVGs to avoid fuzzy scaling on high-density mobile screens:
-1. **Desktop Header & Footer**: Horizontal lockmark containing the stylized house-arrow glyph followed by the typography `ESENLER EVDEN EVE NAKLİYAT`. Recommended layout height is `48px` to fit inside the `64px` header with proper padding.
+1. **Desktop Header & Footer**: Horizontal lockmark containing the stylized house-arrow glyph followed by the typography `UZMAN ELLER EVDEN EVE NAKLİYAT`. Recommended layout height is `48px` to fit inside the `64px` header with proper padding.
 2. **Mobile Header (<= 430px)**: The standalone house+arrow icon, scaled to `32px` square, leaving maximal header width for click-to-call items.
 3. **Reversed Single-Color Logo**: Pure `#FFFFFF` fill for contrast against footer `--navy` backgrounds.
 4. **Favicon Assets**:
@@ -164,18 +164,18 @@ This script is generated server-side and injected into `/` and respective direct
   "@graph": [
     {
       "@type": "MovingCompany",
-      "@id": "https://uzmanellernakliyat.com.tr/#organization",
+      "@id": "https://mersinuzmaneller.com/#organization",
       "name": "Mersin Uzman Eller Nakliyat",
       "alternateName": "Uzman Eller Evden Eve Nakliyat",
-      "url": "https://uzmanellernakliyat.com.tr",
+      "url": "https://mersinuzmaneller.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://uzmanellernakliyat.com.tr/img/logo.png",
+        "url": "https://mersinuzmaneller.com/img/logo.png",
         "width": "200",
         "height": "60"
       },
       "telephone": "+905335204442",
-      "email": "info@uzmanellernakliyat.com.tr",
+      "email": "info@mersinuzmaneller.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Gazi Mah. 1314. Sk. Yaylacıklıoğlu Apt. Kat 2 D:6",
@@ -224,10 +224,10 @@ This script is generated server-side and injected into `/` and respective direct
     },
     {
       "@type": "Service",
-      "@id": "https://uzmanellernakliyat.com.tr/#service-asansorlu",
+      "@id": "https://mersinuzmaneller.com/#service-asansorlu",
       "name": "Asansörlü Evden Eve Nakliyat",
       "provider": {
-        "@id": "https://uzmanellernakliyat.com.tr/#organization"
+        "@id": "https://mersinuzmaneller.com/#organization"
       },
       "areaServed": {
         "@type": "AdministrativeArea",

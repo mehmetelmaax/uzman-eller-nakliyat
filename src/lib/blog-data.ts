@@ -14,11 +14,11 @@ export interface BlogPostData {
 export const blogDatabase: Record<string, BlogPostData> = {
   'mersin-nakliyat-fiyatlari': {
     id: 'mersin-nakliyat-fiyatlari',
-    title: 'Mersin Evden Eve Nakliyat Fiyatları Nasıl Belirlenir?',
-    desc: "Mersin'de ev taşıma maliyetlerini etkileyen oda sayısı, kat yükseklikleri ve asansör gereksinimlerini detaylıca inceliyoruz.",
-    excerpt: 'Ev taşıma maliyetlerini etkileyen oda sayısı, kat durumları, asansör kurulumu ve yol mesafesi gibi temel parametreleri inceliyoruz.',
+    title: 'Ev Taşıma Maliyetleri Nasıl Hesaplanır? (Fiyat Belirleme Mantığı)',
+    desc: "Mersin'de ev taşırken nakliyat maliyetini belirleyen faktörler ve hesaplama mantığı. Eşya hacmi, kat yükseklikleri ve asansör gereksinimi analizi.",
+    excerpt: 'Ev taşıma bütçenizi planlarken oda sayısı, kat yükseklikleri, asansör gereksinimi gibi maliyet bileşenlerinin nasıl hesaplandığını öğrenin.',
     date: '2026-08-01',
-    author: 'Tedik Lojistik Ekibi',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-1.jpg',
     category: 'Fiyat',
     faqs: [
@@ -47,7 +47,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: 'Kırılacak mutfak gereçleri, cam eşyalar ve mobilyaların taşınırken zarar görmemesi için kullanılan ambalajlama standartları ve pratik paketleme rehberi.',
     excerpt: 'Kırılacak cam eşyalar ve mobilyaların zarar görmemesi için kullanılan çift kat balonlu naylon ve Kraft kutu paketleme teknikleri.',
     date: '2026-07-28',
-    author: 'Marangoz Mehmet Usta',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/paketleme-detay.jpg',
     category: 'Rehber',
     faqs: [
@@ -76,7 +76,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: 'Yenişehir ve Mezitli bölgelerindeki yüksek katlı rezidanslarda dış cephe teleskopik mobil asansör sistemlerinin sağladığı eşya hasarsızlık avantajları.',
     excerpt: 'Yenişehir ve Mezitli gibi apartman yoğunluğu yüksek bölgelerde dış cephe eşya asansörlerinin hasarı önleme ve zaman tasarrufu faydaları.',
     date: '2026-07-15',
-    author: 'Operatör Caner Usta',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-2.jpg',
     category: 'Teknik',
     faqs: [
@@ -102,17 +102,17 @@ export const blogDatabase: Record<string, BlogPostData> = {
 
   'mersin-tasinma-maliyeti-2026': {
     id: 'mersin-tasinma-maliyeti-2026',
-    title: "Mersin Taşınma Maliyeti 2026: Fiyatlar & Masraflar",
-    desc: "Mersin evden eve nakliyat fiyatları 2026 maliyet rehberi. Yenişehir ve Mezitli taşınma giderleri, asansör kiralama ve gizli nakliye masrafları dökümü.",
-    excerpt: "2026 yılı Mersin evden eve nakliyat fiyatları, gizli masraflar, asansör kurulum maliyetleri ve taşınma bütçesi hazırlama rehberi.",
+    title: '2026 Taşınma Bütçesi Planlama Rehberi ve Maliyet Kalemleri',
+    desc: "Mersin evden eve nakliyat bütçe hazırlama kılavuzu. Nakliye maliyet kalemleri, asansör kiralama esasları ve gizli masraflardan kaçınma yöntemleri.",
+    excerpt: '2026 yılında taşınma planlarken sürpriz masraflarla karşılaşmamanın yolları ve bütçe planlama teknikleri.',
     date: '2026-02-10',
-    author: 'Uzman Eller Lojistik Editör',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-1.jpg',
     category: 'Fiyat',
     faqs: [
       {
         question: "Mersin şehir içi nakliyat fiyatları 2026 yılında ortalama ne kadardır?",
-        answer: "2026 yılı itibarıyla Mersin'de 2+1 bir dairenin şehir içi taşınma bedeli, kat durumuna ve asansör ihtiyacına bağlı olarak ortalama 12.000 TL ile 16.000 TL arasında değişmektedir."
+        answer: "2026 yılı itibarıyla Mersin'de 2+1 bir dairenin şehir içi taşınma bedeli, kat durumuna ve asansör ihtiyacına bağlı olarak ortalama 21.000 TL ile 16.000 TL arasında değişmektedir."
       },
       {
         question: "Nakliye firmalarının teklif ettiği fiyatlara asansör kurulumu dahil midir?",
@@ -137,9 +137,9 @@ export const blogDatabase: Record<string, BlogPostData> = {
       <h2>1. Mersin Evden Eve Nakliyat Fiyat Matrisi (2026 Güncel)</h2>
       <p>Taşınma maliyetini belirleyen en temel unsur eşya hacmi, yani dairenin oda sayısıdır. Oda sayısı arttıkça kullanılacak ambalaj malzemesi miktarı, taşıma kamyonunun boyutu ve çalışacak personel sayısı artar. İşte Yenişehir merkezli operasyonlarımızda uyguladığımız ortalama 2026 fiyat aralıkları:</p>
       <ul>
-        <li><strong>1+1 Daire Taşımacılığı:</strong> 12.000 TL - 15.000 TL (3 personel, 1 küçük boy kamyon)</li>
-        <li><strong>2+1 Daire Taşımacılığı:</strong> 15.000 TL - 20.000 TL (4 personel, 1 orta boy kamyon)</li>
-        <li><strong>3+1 Daire Taşımacılığı:</strong> 18.000 TL - 23.000 TL (5 personel, 1 büyük boy kamyon)</li>
+        <li><strong>1+1 Daire Taşımacılığı:</strong> 21.000 TL - 21.000 TL (3 personel, 1 küçük boy kamyon)</li>
+        <li><strong>2+1 Daire Taşımacılığı:</strong> 21.000 TL - 20.000 TL (4 personel, 1 orta boy kamyon)</li>
+        <li><strong>3+1 Daire Taşımacılığı:</strong> 21.000 TL - 23.000 TL (5 personel, 1 büyük boy kamyon)</li>
         <li><strong>4+1 ve Üzeri Daireler:</strong> 25.000 TL - 32.000 TL (6-7 personel, 2 kamyon veya büyük tır)</li>
       </ul>
       <p>Yukarıdaki fiyatlar, binaların 1. ila 3. katlar arasında olduğu ve dış cephe asansörünün kurulmadığı standart durumlar için geçerlidir. Kat yükseklikleri arttıkça asansör maliyetleri devreye girmektedir. Güncel fiyat detayları için <a href="/mersin-nakliyat-fiyatlari">Mersin Nakliyat Fiyatları</a> sayfamızı ziyaret edebilirsiniz.</p>
@@ -160,7 +160,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
         <li><strong>Bina İçi Asansör Kullanım Cezası:</strong> Bina asansörünü kullanmak üzere anlaşıldığı halde taşınma günü site yönetiminin asansör kullanımına izin vermemesi durumunda acil olarak mobil asansör çağrılması gerekir. Bu da anlık ek maliyet demektir.</li>
         <li><strong>Standart Dışı Mobilyalar ve Ek Demontaj:</strong> Özel yapım gardıroplar, piyano, para kasası gibi ağır yüklerin taşınması standart taşınma fiyatına dahil değildir. Bu tarz eşyalarınız için önceden bilgi vermelisiniz. Detaylı bilgi için <a href="/hizmetler/piyano-ve-kasa-tasima">Piyano ve Kasa Taşıma</a> hizmetimizi inceleyebilirsiniz.</li>
         <li><strong>Yetersiz Paketleme Bilgisi:</strong> Eşyaların müşteri tarafından paketleneceği söylenip taşınma günü paketlenmemiş olması durumunda, firmanın acil malzeme ve işçilik desteği sağlaması gerekir. Bu durum ek ambalajlama ücreti doğurur.</li>
-        <li><strong>Şehir İçi İlçe Mesafeleri:</strong> Yenişehir'dan Erdemli'a veya Silifke'ya yapılacak taşımalar şehir içi fiyat tarifesine tabi değildir. İlçe geçişlerindeki yakıt ve süre maliyetleri fiyata eklenir.</li>
+        <li><strong>Şehir İçi İlçe Mesafeleri:</strong> Yenişehir'den Erdemli'a veya Silifke'ya yapılacak taşımalar şehir içi fiyat tarifesine tabi değildir. İlçe geçişlerindeki yakıt ve süre maliyetleri fiyata eklenir.</li>
       </ul>
 
       <h2>4. Ekstra Hizmetlerin Fiyatlandırması (Opsiyonel)</h2>
@@ -190,7 +190,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 `,
   },
@@ -200,7 +200,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Evden eve nakliyat sigortası rehberi. Taşınma sigortası poliçe okuma adımları, emtia taşıma sigortası kapsamı ve nelerin garanti dışı kaldığı.",
     excerpt: "Ev taşırken eşyalarınızı güvenceye alan nakliyat sigortasının türleri, kapsam dışı kalan durumlar ve poliçe doğrulama yöntemleri.",
     date: '2026-03-05',
-    author: 'Tesisat ve Güvence Uzmanı',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-2.jpg',
     category: 'Yasal',
     faqs: [
@@ -272,7 +272,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -285,7 +285,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "K3 yetki belgesi nedir, nasıl sorgulanır? Ev ve ofis taşımacılığında zorunlu olan Ulaştırma Bakanlığı K3 belgesi sorgulama adımları ve cezai yaptırımlar.",
     excerpt: "Evden eve nakliyat firmalarında bulunması zorunlu olan K3 yetki belgesinin önemi, sorgulama aşamaları ve korsan firmaların riskleri.",
     date: '2026-04-18',
-    author: 'Yasal Uyum ve Lojistik Müdürü',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-3.jpg',
     category: 'Yasal',
     faqs: [
@@ -324,7 +324,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
       </ul>
 
       <h2>3. Korsan (Belgesiz) Nakliyat Firmalarıyla Çalışmanın Yasal Riskleri</h2>
-      <p>K3 yetki belgesi bulunmayan nakliyat kamyonları, trafik polisleri ve ulaştırma bakanlığı denetleme ekipleri tarafından durdurulduğunda ağır yasal işlemler uygulanır. Araç plakasına karayolu taşıma kanununa muhalefetten yüksek miktarda para cezası kesilir ve araç en yakın emniyet otoparkına çekilerek bağlanır. Araç içindeki ev eşyaları ise yediemin deposuna alınabilir veya müşterinin yol kenarında kendi imkanlarıyla yeni bir yasal kamyon bulması istenir. Bu durum taşınma sürecinizi kabusa çevirebilir. Aladağ ve diğer çevre ilçelere yaptığımız yasal operasyonlar hakkında bilgi edinmek için <a href="/bolgeler/aladag-evden-eve-nakliyat">Aladağ Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>K3 yetki belgesi bulunmayan nakliyat kamyonları, trafik polisleri ve ulaştırma bakanlığı denetleme ekipleri tarafından durdurulduğunda ağır yasal işlemler uygulanır. Araç plakasına karayolu taşıma kanununa muhalefetten yüksek miktarda para cezası kesilir ve araç en yakın emniyet otoparkına çekilerek bağlanır. Araç içindeki ev eşyaları ise yediemin deposuna alınabilir veya müşterinin yol kenarında kendi imkanlarıyla yeni bir yasal kamyon bulması istenir. Bu durum taşınma sürecinizi kabusa çevirebilir. Çamlıyayla ve diğer çevre ilçelere yaptığımız yasal operasyonlar hakkında bilgi edinmek için <a href="/bolgeler/camliyayla-evden-eve-nakliyat">Çamlıyayla Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
 
       <h2>4. e-Devlet Kapısı Üzerinden K3 Belgesi Doğrulama Adımları</h2>
       <p>Bir nakliyat firmasının beyan ettiği K3 belgesini e-Devlet kapısı üzerinden doğrulamak oldukça basittir. e-Devlet'e T.C. kimlik numaranızla giriş yaptıktan sonra arama kısmına "Yetki Belgesi Sorgulama" yazın. Çıkan ekranda nakliyat firmasının resmi unvanını veya ticaret sicil numarasını/vergi numarasını girerek aktif yetki belgesi olup olmadığını, araç sayısını ve araçların plakalarını sorgulayın. Size gönderileceği söylenen kamyon plakasının bu sorgulama listesinde kayıtlı olması yasal bir zorunluluktur.</p>
@@ -345,7 +345,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -358,7 +358,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Taşınma hazırlığı takvimi. Ev taşımadan 30 gün önce yapılması gereken abonelik iptalleri, koli hazırlığı, nakliye firması seçimi ve taşınma günü planı.",
     excerpt: "Taşınma gününü stressiz atlatmak için 4 hafta öncesinden başlayan, gün gün detaylandırılmış ev taşıma hazırlık rehberi.",
     date: '2026-05-12',
-    author: 'Uzman Eller Nakliyat Operasyon Koordinatörü',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/paketleme-detay.jpg',
     category: 'Rehber',
     faqs: [
@@ -417,7 +417,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -434,7 +434,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Asansörlü nakliyat ile merdivenle taşıma karşılaştırması. Mersin'de taşınırken maliyet, süre, güvenlik ve bina içi eşya hasarı karşılaştırma analizi.",
     excerpt: "Ev taşırken modüler dış cephe asansörü kullanmak ile insan gücüyle merdivenden taşımanın maliyet, zaman ve hasar açısından detaylı karşılaştırması.",
     date: '2026-06-02',
-    author: 'Uzman Eller Nakliyat Baş Operatörü',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-2.jpg',
     category: 'Teknik',
     faqs: [
@@ -503,7 +503,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -518,7 +518,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Buzdolabı, çamaşır makinesi ve televizyon taşıma rehberi. Taşınma sonrası buzdolabının fişini takmadan önce neden 4 saat beklenmelidir?",
     excerpt: "Hassas beyaz eşyaların taşınma öncesi hazırlıkları, tambur kilidi kullanımı, paketleme detayları ve taşınma sonrası kompresör dinlendirme süresi.",
     date: '2026-06-25',
-    author: 'Teknik Destek ve Kurulum Şefi',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/paketleme-detay.jpg',
     category: 'Teknik',
     faqs: [
@@ -583,7 +583,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -599,7 +599,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Kiracı ve ev sahiplerinin taşınma sürecinde yaptığı yasal hatalar. Kira sözleşmesi feshi, depozito iadesi, ikametgah bildirimi ve yasal haklar.",
     excerpt: "Kira sözleşmesinin feshinden depozito iadesine, resmi adres bildirim sürelerinden apartman yönetim yasalarına kadar taşınmanın hukuki boyutları.",
     date: '2026-07-01',
-    author: 'Hukuk Müşaviri Av. Selim Can',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-3.jpg',
     category: 'Yasal',
     faqs: [
@@ -659,7 +659,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -675,7 +675,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Şehirlerarası ev taşımada eşya hasarı durumunda yapılması gerekenler. Hasar tespit tutanağı hazırlama, sigorta talep adımları ve yasal haklar.",
     excerpt: "Uzun yol taşımacılığında kırılan, çizilen veya kaybolan eşyalar için hukuki süreç, hasar tutanağı yazımı ve sigorta şirketi başvuru rehberi.",
     date: '2026-07-20',
-    author: 'Uzman Eller Nakliyat Hasar Destek Masası',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-1.jpg',
     category: 'Rehber',
     faqs: [
@@ -738,7 +738,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -755,7 +755,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Mersin kurumsal ofis ve işyeri taşıma planı rehberi. İş kaybı yaşamadan, hafta sonu kesintisiz ofis taşımacılığı adımları ve etiketli kutulama teknikleri.",
     excerpt: "Kurumsal firmaların iş kaybı ve zaman zararı yaşamadan, cuma akşamından pazartesi sabahına kadar tamamlanan ofis nakliyesi planlama adımları.",
     date: '2026-07-02',
-    author: 'Kurumsal Lojistik Danışmanı',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-3.jpg',
     category: 'Rehber',
     faqs: [
@@ -826,7 +826,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -842,7 +842,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Mersin semt rehberi. Taşınma öncesinde Mezitli, Yenişehir ve Akdeniz ilçelerinin mahalleleri, ulaşım olanakları ve yaşam standartları karşılaştırması.",
     excerpt: "Mersin'de konut arayanlar için Mezitli, Yenişehir ve Akdeniz semtlerinin yaşam kalitesi, konut yapıları ve sosyal imkanlar karşılaştırma analizi.",
     date: '2026-07-10',
-    author: 'Mersin Kent Gözlemcisi',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-1.jpg',
     category: 'Bölge',
     faqs: [
@@ -879,14 +879,14 @@ export const blogDatabase: Record<string, BlogPostData> = {
       </ul>
 
       <h2>2. Yenişehir İlçesi: Tarih, Kültür ve Şehir Merkezi</h2>
-      <p>Yenişehir, Mersin'in en büyük, en kalabalık ve tarihi merkezidir. Şehrin ticaret, finans ve idari kalbi burada atar. Yenişehir'da yaşamı tercih ederken güney ve kuzey semtleri arasındaki farkı bilmek gerekir:</p>
+      <p>Yenişehir, Mersin'in en büyük, en kalabalık ve tarihi merkezidir. Şehrin ticaret, finans ve idari kalbi burada atar. Yenişehir'de yaşamı tercih ederken güney ve kuzey semtleri arasındaki farkı bilmek gerekir:</p>
       <ul>
         <li><strong>Reşatbey, Cemalpaşa ve Gazipaşa:</strong> Mersin'in en köklü, prestijli ve elit semtleridir. Atatürk Parkı'na, Yenişehir Nehri'ne ve merkez parkına yürüme mesafesindedirler. Sosyal ve kültürel hayatın içindedirler. Konut yapısı genellikle 20 yaş üzerindedir ancak kentsel dönüşümle yenilenen binalar mevcuttur.</li>
-        <li><strong>Güney Mahalleler:</strong> Alüvyon zemin yapısına sahip olan güney mahalleler, çarpık kentleşme ve eski yapı stoğu nedeniyle taşınma için daha az tercih edilmektedir. Yenişehir'daki taşınma operasyonlarımız için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz.</li>
+        <li><strong>Güney Mahalleler:</strong> Alüvyon zemin yapısına sahip olan güney mahalleler, çarpık kentleşme ve eski yapı stoğu nedeniyle taşınma için daha az tercih edilmektedir. Yenişehir'deki taşınma operasyonlarımız için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz.</li>
       </ul>
 
       <h2>3. Akdeniz İlçesi: Hızlı Gelişim ve Yeni Konutlar</h2>
-      <p>Akdeniz, son 5 yılda Mersin'in en hızlı büyüyen ve en çok göç alan ilçesidir. Mezitli Üniversitesi, Mersin Alparslan Türkeş Bilim ve Teknoloji Üniversitesi ve yeni stadyum projelerinin bu bölgede yer alması, ilçeyi genç ve dinamik bir nüfusun odağı haline getirmiştir. Akdeniz'da konutlar genellikle yeni deprem yönetmeliklerine uygun, havuzlu ve güvenlikli modern sitelerden oluşur. Kiralar ve konut fiyatları Mezitli'ya kıyasla daha uygundur. Zemin yapısı olarak tepelik ve sağlam zeminlerden oluşur. Akdeniz lojistik çözümlerimiz için <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamıza bakabilirsiniz.</p>
+      <p>Akdeniz, son 5 yılda Mersin'in en hızlı büyüyen ve en çok göç alan ilçesidir. Mezitli Üniversitesi, Mersin Alparslan Türkeş Bilim ve Teknoloji Üniversitesi ve yeni stadyum projelerinin bu bölgede yer alması, ilçeyi genç ve dinamik bir nüfusun odağı haline getirmiştir. Akdeniz'de konutlar genellikle yeni deprem yönetmeliklerine uygun, havuzlu ve güvenlikli modern sitelerden oluşur. Kiralar ve konut fiyatları Mezitli'ya kıyasla daha uygundur. Zemin yapısı olarak tepelik ve sağlam zeminlerden oluşur. Akdeniz lojistik çözümlerimiz için <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamıza bakabilirsiniz.</p>
 
       <h2>4. Toroslar İlçesi: Sanayileşme ve Gelişen Konutlar</h2>
       <p>Toroslar, Yenişehir Nehri'nin doğusunda yer alan, sanayi siteleri, büyük hastaneler ve Mersin Optimum AVM gibi büyük ticaret merkezlerini barındıran dinamik bir ilçedir. Sinanpaşa ve Yavuzlar gibi nehir kıyısındaki mahallelerde büyük kentsel dönüşüm projeleri devam etmektedir. Toroslar bölgesinde yeni yapılan siteler, Mezitli'ya kıyasla daha ekonomik konut seçenekleri sunmaktadır. Bu ilçedeki nakliye süreçlerimiz için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz.</p>
@@ -900,14 +900,14 @@ export const blogDatabase: Record<string, BlogPostData> = {
 
       <h3>7. Akdeniz Yeni Konut Projeleri Yaşam Standartları</h3>
       <p>Akdeniz ilçesi, son yıllarda Mersin'in en modern sitelerine ev sahipliği yapmaktadır. Havuzlu, güvenlikli, geniş yeşil alanlı siteler uygun fiyatlarla kiralanabilmektedir. Üniversiteye yakınlığı nedeniyle genç ve dinamik bir nüfus yapısına sahiptir. Gelişmiş lojistik hizmetlerimiz için <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamıza bakabilirsiniz.</p>
-      <h3>8. Toroslar'de Devam Eden Kentsel Dönüşüm Projeleri</h3>
+      <h3>8. Toroslar'da Devam Eden Kentsel Dönüşüm Projeleri</h3>
       <p>Toroslar, Mersin'in en eski yerleşim yerlerinden biri olup son yıllarda büyük bir dönüşüm geçirmektedir. Nehir kıyısındaki yeni konut projeleri lüks Mezitli sitelerine alternatif oluşturmaktadır. Hem sanayiye yakınlığı hem de nehir manzarasıyla tercih edilen bir bölgedir. Toroslar lojistik çözümlerimiz için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz.</p>
       <h3>9. Ulaşım ve Metro Hatlarına Yakın Mahalleler</h3>
       <p>Mersin'de metro hattı Yenişehir ve Mezitli ilçelerini birbirine bağlar. Turgut Özal Bulvarı, Yurt Mahallesi ve Cemalpaşa gibi semtler metro istasyonlarına yürüme mesafesindedir. Trafik stresinden uzak durmak isteyenler için metro güzergahındaki mahalleler en ideal konut seçeneklerini sunar.</p>
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -923,7 +923,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     desc: "Ucuz nakliyat firmalarının kapora tuzağı ve taşınma günü dolandırıcılığı rehberi. Güvenli nakliyat sözleşmesi ve doğru fiyat analizi.",
     excerpt: "İnternet reklamlarında maliyetin çok altında fiyat verip kapora aldıktan sonra taşınma günü ek ücret isteyen korsan firmaların çalışma yöntemleri.",
     date: '2026-07-28',
-    author: 'Lojistik Denetim ve Güvenlik Sorumlusu',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-2.jpg',
     category: 'Fiyat',
     faqs: [
@@ -952,7 +952,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
       <p>Ev taşımak ciddi bir maliyet ve organizasyon gerektirdiği için müşteriler haklı olarak en uygun fiyatlı teklifi bulmaya çalışırlar. Ancak evden eve nakliyat sektörü, denetimsiz korsan firmaların ve dolandırıcıların hedefi haline gelmiştir. İnternet aramalarında ve sosyal medyada "Mersin içi 3.000 TL'ye ev taşıma" gibi imkansız rakamlarla reklam veren şahıslar, müşterileri cezbeder. Fakat bu ucuz tekliflerin sonu neredeyse her zaman fahiş fiyat artışları, eşya hasarları ve büyük psikolojik yıpranmalarla biter. Sektörde "kapora tuzağı" veya "taşınma günü şantajı" olarak bilinen bu dolandırıcılık yöntemlerinin nasıl çalıştığını ve kendinizi nasıl koruyacağınızı bu yazıda deşifre edeceğiz.</p>
 
       <h2>1. Kapora Tuzağı Nedir ve Nasıl Çalışır?</h2>
-      <p>Dolandırıcı nakliyat web siteleri ve ilanları, piyasa rayicinin (örneğin 15.000 TL olan bir işin) yarı fiyatına (7.000 TL) teklif sunarlar. Müşteri fiyatın cazibesine kapılarak rezervasyon yapmak istediğinde, firma "Günü kapatmak için" 2.000 TL - 3.000 TL gibi yüksek bir kapora talep eder:</p>
+      <p>Dolandırıcı nakliyat web siteleri ve ilanları, piyasa rayicinin (örneğin 21.000 TL olan bir işin) yarı fiyatına (7.000 TL) teklif sunarlar. Müşteri fiyatın cazibesine kapılarak rezervasyon yapmak istediğinde, firma "Günü kapatmak için" 2.000 TL - 3.000 TL gibi yüksek bir kapora talep eder:</p>
       <ul>
         <li><strong>Senaryo A (Doğrudan Dolandırıcılık):</strong> Kapora hesaba yatırıldıktan sonra, taşınma günü nakliye kamyonu gelmez. Telefon numaraları engellenir ve dolandırıcılar ortadan kaybolur.</li>
         <li><strong>Senaryo B (Taşınma Günü Şantajı):</strong> Taşınma günü kamyon gelir, eşyaların bir kısmı yüklenir. Kamyon kapısı kapatıldıktan sonra şoför "Eşyalarınız söylenenden çokmuş, asansör sığmadı, merdiven dar" diyerek fiyatı 20.000 TL'ye çıkardığını söyler. Müşteri kabul etmezse eşyaları indirmeyeceğini ve kaporayı iade etmeyeceğini beyan ederek şantaj yapar.</li>
@@ -987,7 +987,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
   
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>
@@ -997,13 +997,13 @@ export const blogDatabase: Record<string, BlogPostData> = {
       <p>Taşınma gününün sorunsuz geçmesi için bazı basit ama etkili önlemler alabilirsiniz. İlk olarak, taşınma gününden en az bir gün önce apartman yöneticisine bilgi vererek bina önündeki nakliye kamyonu park alanını ayırtın. İkinci olarak, elektrik, su ve doğalgaz vanalarını kapatarak sayaçların fotoğraflarını çekin. Üçüncü olarak, evdeki değerli eşyalarınızı (para, altın, tapu ve önemli evraklar) şahsi çantanıza alarak kendi aracınızda taşıyın. Paketleme kalitemizi görmek için <a href="/hizmetler/profesyonel-esya-paketleme">Profesyonel Eşya Paketleme</a> sayfamızı inceleyebilirsiniz. Dördüncü olarak, beyaz eşyaların yeni adrese ulaştıktan sonra kompresör yağının süzülmesi için en az 4 saat çalıştırılmaması gerektiğini unutmayın. Bu adımlar taşınma sürecinizi çok daha stressiz kılacaktır.</p>
 `,
   },
-  'mersinda-tasinmak-icin-en-uygun-zaman': {
-    id: 'mersinda-tasinmak-icin-en-uygun-zaman',
+  'mersinde-tasinmak-icin-en-uygun-zaman': {
+    id: 'mersinde-tasinmak-icin-en-uygun-zaman',
     title: "Mersin'de Taşınmak İçin En Uygun Zaman Hangisi?",
     desc: "Mersin'de taşınmak için en uygun zaman analizi. Yaz sıcakları, okul dönemleri, hafta içi/hafta sonu fiyat farkları ve taşınma tarihi seçimi tüyoları.",
     excerpt: "Mersin'in aşırı yaz sıcaklarından kaçınmak, okulların açılış dönemleri ve hafta içi taşınma avantajlarıyla bütçe dostu nakliyat tarihi belirleme rehberi.",
     date: '2026-08-05',
-    author: 'Uzman Eller Nakliyat Planlama Müdürü',
+    author: 'Uzman Eller Nakliyat Editör Ekibi',
     image: '/img/slayt-1.jpg',
     category: 'Rehber',
     faqs: [
@@ -1053,7 +1053,7 @@ export const blogDatabase: Record<string, BlogPostData> = {
     
 
       <h3>Mersin Evden Eve Nakliyat İlçe Kılavuzu (Yenişehir, Mezitli, Toroslar, Akdeniz)</h3>
-      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'daki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
+      <p>Mersin'de ev taşırken ilçeler arası mesafe ve yol durumları taşınma konforunuzu doğrudan etkiler. Yenişehir ilçesi, Mersin'in en eski ve en kalabalık yerleşim yeri olması sebebiyle dar sokaklara ve bitişik nizam binalara sahiptir. Bu bölgelerde taşınma işlemleri genellikle daha fazla insan gücü ve dikkat gerektirir. Yenişehir'deki taşınma detayları için <a href="/bolgeler/yenisehir-evden-eve-nakliyat">Yenişehir Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Mezitli ilçesi ise geniş bulvarları, yüksek katlı modern siteleri ve düzenli altyapısı ile asansörlü nakliye araçlarımızın en rahat çalıştığı bölgedir. Mezitli bölgesindeki taşınma hizmetlerimiz hakkında detaylı bilgi için <a href="/bolgeler/mezitli-evden-eve-nakliyat">Mezitli Evden Eve Nakliyat</a> sayfamıza göz atabilirsiniz.</p>
       <p>Doğu Mersin'in yükselen değeri Akdeniz ilçesi ise yeni konut projeleri ve üniversite yerleşkesiyle son yıllarda hızla göç almaktadır. Akdeniz bölgesinde taşınma planlayan müşterilerimiz için geliştirdiğimiz özel çözümler hakkında <a href="/bolgeler/akdeniz-evden-eve-nakliyat">Akdeniz Evden Eve Nakliyat</a> sayfamızı ziyaret edebilirsiniz. Son olarak nehir kıyısında yer alan ve büyük bir kentsel dönüşüm sürecinden geçen Toroslar ilçesi, dar sokakları ve yeni yapılan modern siteleriyle karmaşık bir yapı sunar. Bu bölgeye özel asansörlü lojistik planlamalarımız için <a href="/bolgeler/toroslar-evden-eve-nakliyat">Toroslar Evden Eve Nakliyat</a> sayfamızı inceleyebilirsiniz. Tüm bu ilçelerde sabit fiyat ve profesyonel marangoz ekibi desteğimizle kesintisiz hizmet vermekteyiz.</p>
 
       <h3>Uzman Eller Nakliyat Lojistik Kalite Standartları ve Güvencelerimiz</h3>

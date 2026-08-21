@@ -58,15 +58,18 @@ Crawl-delay: 10
 
 Host: ${SITE.url}
 Sitemap: ${SITE.url}/sitemap.xml
+Sitemap: ${SITE.url}/image-sitemap.xml
 
 # AI Agent Context Reference
 # llms.txt: ${SITE.url}/llms.txt
 # llms-full.txt: ${SITE.url}/llms-full.txt
+
 `;
 
   return new Response(content, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600'
     },
   });
 }

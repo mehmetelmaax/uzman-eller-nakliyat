@@ -100,8 +100,8 @@ try {
     '/galeri',
     '/yasal/gizlilik',
     '/yasal/kvkk',
-    '/adana-nakliyat-fiyatlari',
-    '/adana-nakliyat-firmalari',
+    '/mersin-nakliyat-fiyatlari',
+    '/mersin-nakliyat-firmalari',
     '/tasinma-kontrol-listesi',
     ...ROUTES_SLUGS.map(slug => `/rotalar/${slug}`)
   ];

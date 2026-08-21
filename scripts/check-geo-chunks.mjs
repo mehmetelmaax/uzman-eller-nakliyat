@@ -7,8 +7,8 @@ const __dirname = path.dirname(__filename);
 const appBuildDir = path.join(__dirname, '..', '.next', 'server', 'app');
 
 const ENTITIES = [
-  'adana esenler nakliyat',
-  'esenler nakliyat',
+  'mersin uzman eller nakliyat',
+  'uzman eller nakliyat',
   'anadolu sigorta',
   'seyhan',
   'cukurova',
@@ -112,7 +112,7 @@ function runGeoChunksCheck() {
     const isRegion = cleanRoute.startsWith('/bolgeler/');
     const isService = cleanRoute.startsWith('/hizmetler/');
     const isRoute = cleanRoute.startsWith('/rotalar/');
-    const isPricing = cleanRoute === '/adana-nakliyat-fiyatlari';
+    const isPricing = cleanRoute === '/mersin-nakliyat-fiyatlari';
 
     if (!isRegion && !isService && !isRoute && !isPricing) {
       continue;

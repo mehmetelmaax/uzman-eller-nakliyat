@@ -1,20 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, startTransition } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, User, ArrowRight, Grid, Filter } from 'lucide-react';
-import type { BlogPostData } from '@/lib/blog-data';
+import type { BlogMetadata } from '@/content/blog';
 
 interface BlogClientProps {
-  posts: BlogPostData[];
-}
-
-function calculateReadingTime(html: string): number {
-  const text = html.replace(/<[^>]*>/g, ''); // strip HTML tags
-  const words = text.trim().split(/\s+/).length;
-  const wordsPerMinute = 200; // average reading speed
-  return Math.max(1, Math.ceil(words / wordsPerMinute));
+  posts: BlogMetadata[];
 }
 
 const CATEGORIES = ['Tümü', 'Fiyat', 'Rehber', 'Yasal', 'Teknik', 'Bölge'] as const;
@@ -44,8 +37,10 @@ export default function BlogClient({ posts }: BlogClientProps) {
   };
 
   const handleCategoryChange = (category: CategoryType) => {
-    setSelectedCategory(category);
-    setVisibleCount(9); // Reset pagination on filter change
+    startTransition(() => {
+      setSelectedCategory(category);
+      setVisibleCount(9); // Reset pagination on filter change
+    });
   };
 
   const getCategoryColor = (cat: string) => {
@@ -57,7 +52,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
       case 'Yasal':
         return 'bg-blue-50 text-blue-700 border-blue-200/50';
       case 'Teknik':
-        return 'bg-orange-50 text-orange-text border-orange-200/50';
+        return 'bg-brand-accent-50 text-brand-accent-dark border-brand-accent-200/50';
       case 'Bölge':
         return 'bg-purple-50 text-purple-700 border-purple-200/50';
       default:
@@ -68,9 +63,9 @@ export default function BlogClient({ posts }: BlogClientProps) {
   return (
     <div className="space-y-12">
       {/* Category Filter Tabs */}
-      <div className="bg-white p-4 rounded-2xl border border-gray-light shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-navy font-bold text-sm">
-          <Filter className="w-4 h-4 text-orange" />
+      <div className="bg-white p-4 rounded-2xl border border-border-light shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-brand-primary font-bold text-sm">
+          <Filter className="w-4 h-4 text-brand-accent" />
           <span>Kategori Seçin:</span>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -80,8 +75,8 @@ export default function BlogClient({ posts }: BlogClientProps) {
               onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border cursor-pointer active:scale-95 ${
                 selectedCategory === category
-                  ? 'bg-navy border-navy text-white shadow-md'
-                  : 'bg-off-white hover:bg-white border-gray-light text-charcoal hover:text-navy'
+                  ? 'bg-brand-primary border-brand-primary text-white shadow-md'
+                  : 'bg-surface-muted hover:bg-white border-border-light text-charcoal hover:text-brand-primary'
               }`}
             >
               {category} {category === 'Tümü' ? `(${posts.length})` : `(${posts.filter(p => p.category === category).length})`}
@@ -92,23 +87,22 @@ export default function BlogClient({ posts }: BlogClientProps) {
 
       {/* Grid List */}
       {paginatedPosts.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-gray-light p-12 text-center space-y-4">
+        <div className="bg-white rounded-2xl border border-border-light p-12 text-center space-y-4">
           <Grid className="w-12 h-12 text-gray-300 mx-auto" />
           <p className="text-gray-500 font-medium">Bu kategoride henüz yazı bulunmamaktadır.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedPosts.map((post) => {
-            const readingTime = calculateReadingTime(post.contentHtml);
             const badgeColor = getCategoryColor(post.category);
 
             return (
               <article
                 key={post.id}
-                className="bg-white rounded-2xl border border-gray-light hover:border-orange/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group"
+                className="bg-white rounded-2xl border border-border-light hover:border-brand-accent/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group"
               >
                 {/* Header Image */}
-                <div className="relative aspect-video w-full overflow-hidden bg-gray-100 border-b border-gray-light">
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-100 border-b border-border-light">
                   <Image
                     src={post.image || '/img/slayt-1.jpg'}
                     alt={post.title}
@@ -128,7 +122,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   <div className="space-y-3">
                     <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400 font-bold">
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-orange" />
+                        <Calendar className="w-3.5 h-3.5 text-brand-accent" />
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString('tr-TR', {
                             year: 'numeric',
@@ -138,13 +132,13 @@ export default function BlogClient({ posts }: BlogClientProps) {
                         </time>
                       </span>
                       <span className="flex items-center gap-1">
-                        <User className="w-3.5 h-3.5 text-orange" />
+                        <User className="w-3.5 h-3.5 text-brand-accent" />
                         {post.author}
                       </span>
-                      <span>• {readingTime} dk okuma</span>
+                      <span>• {post.readTime} dk okuma</span>
                     </div>
 
-                    <h2 className="font-display font-black text-navy text-lg group-hover:text-orange-text transition-colors line-clamp-2 leading-tight">
+                    <h2 className="font-display font-black text-brand-primary text-lg group-hover:text-brand-accent-dark transition-colors line-clamp-2 leading-tight">
                       {post.title}
                     </h2>
 
@@ -153,10 +147,10 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-light/60 mt-4">
+                  <div className="pt-4 border-t border-border-light/60 mt-4">
                     <Link
                       href={`/blog/${post.id}`}
-                      className="text-orange-text hover:text-navy font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 transition-colors group/link"
+                      className="text-brand-accent-dark hover:text-brand-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 transition-colors group/link"
                     >
                       <span>Yazıyı Görüntüle</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
@@ -174,7 +168,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
         <div className="flex justify-center pt-4">
           <button
             onClick={handleLoadMore}
-            className="bg-navy hover:bg-orange text-white hover:text-navy font-bold px-8 py-3.5 rounded-xl border border-navy hover:border-orange transition-all duration-200 shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-orange active:scale-95 cursor-pointer text-sm"
+            className="bg-brand-primary hover:bg-brand-accent text-white hover:text-brand-primary font-bold px-8 py-3.5 rounded-xl border border-brand-primary hover:border-brand-accent transition-all duration-200 shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-brand-accent active:scale-95 cursor-pointer text-sm"
           >
             Daha Fazla Yükle
           </button>

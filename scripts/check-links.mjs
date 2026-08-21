@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const appBuildDir = path.join(__dirname, '..', '.next', 'server', 'app');
-const siteCanonicalDomain = 'https://adanaevdeneveasansorlunakliyat.com.tr';
+const siteCanonicalDomain = 'https://mersinuzmaneller.com';
 
 function getHtmlFiles(dir, files = []) {
   if (!fs.existsSync(dir)) return files;

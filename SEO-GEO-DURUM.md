@@ -65,7 +65,7 @@ Aşağıdaki tablo, sitedeki tüm canlı rotaların SEO ve GEO (Generative Engin
 | `/rotalar/mersin-istanbul-evden-eve-nakliyat` | Rota Sayfası | Mersin İstanbul Evden Eve Nakliyat | Uzman Eller Nakliyat | 1231 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐⭐⭐ (5/5) |
 | `/rotalar/mersin-izmir-evden-eve-nakliyat` | Rota Sayfası | Mersin İzmir Evden Eve Nakliyat | Uzman Eller Nakliyat | 1136 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐⭐⭐ (5/5) |
 | `/rotalar/mersin-kayseri-evden-eve-nakliyat` | Rota Sayfası | Mersin Kayseri Evden Eve Nakliyat | Uzman Eller Nakliyat | 1108 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐⭐⭐ (5/5) |
-| `/rotalar/mersin-mersin-evden-eve-nakliyat` | Rota Sayfası | Mersin Mersin Evden Eve Nakliyat | Uzman Eller Nakliyat | 1101 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐⭐⭐ (5/5) |
+| `/rotalar/mersin-adana-evden-eve-nakliyat` | Rota Sayfası | Mersin Adana Evden Eve Nakliyat | Uzman Eller Nakliyat | 1101 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐⭐⭐ (5/5) |
 | `/tasinma-kontrol-listesi` | Genel Sayfa | İnteraktif Taşınma Kontrol Listesi ve Planlayıcı | Uzman Eller | 1105 | Service, AdministrativeArea, B... | 🟢 Evet | ⭐⭐⭐ (3/5) |
 | `/teklif-al` | Genel Sayfa | Mersin Evden Eve Nakliyat Fiyat Hesaplama | Uzman Eller Nakliyat | 202 | FAQPage, Question, Answer, Bre... | 🟢 Evet | ⭐⭐⭐ (3/5) |
 | `/yasal/gizlilik` | Genel Sayfa | Gizlilik Politikası | Uzman Eller Nakliyat | 116 | BreadcrumbList, ListItem... | 🟢 Evet | ⭐⭐ (2/5) |
@@ -122,7 +122,7 @@ AI Arama motorlarının ve Google botlarının hangi sayfayı hangi arama niyeti
 | `mersin nakliyat rehberleri` | [`/rotalar/mersin-istanbul-evden-eve-nakliyat`](/rotalar/mersin-istanbul-evden-eve-nakliyat) |
 | `mersin nakliyat rehberleri` | [`/rotalar/mersin-izmir-evden-eve-nakliyat`](/rotalar/mersin-izmir-evden-eve-nakliyat) |
 | `mersin nakliyat rehberleri` | [`/rotalar/mersin-kayseri-evden-eve-nakliyat`](/rotalar/mersin-kayseri-evden-eve-nakliyat) |
-| `mersin nakliyat rehberleri` | [`/rotalar/mersin-mersin-evden-eve-nakliyat`](/rotalar/mersin-mersin-evden-eve-nakliyat) |
+| `mersin nakliyat rehberleri` | [`/rotalar/mersin-adana-evden-eve-nakliyat`](/rotalar/mersin-adana-evden-eve-nakliyat) |
 | `mersin nakliyat rehberleri` | [`/tasinma-kontrol-listesi`](/tasinma-kontrol-listesi) |
 | `mersin nakliyat rehberleri` | [`/teklif-al`](/teklif-al) |
 | `mersin nakliyat rehberleri` | [`/yasal/gizlilik`](/yasal/gizlilik) |

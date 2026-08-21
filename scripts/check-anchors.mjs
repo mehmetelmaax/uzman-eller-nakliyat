@@ -30,7 +30,7 @@ const ignoredGlobalAnchors = [
   'kvkk aydınlatma metni', 'kvkk aydinlatma metni',
   'bölgelerimiz', 'bolgelerimiz',
   'hizmetlerimiz',
-  'esenler hizmetleri',
+  'uzman eller hizmetleri',
   'kurumsal çözümler', 'kurumsal cozumler',
   'taşıma faaliyetleri', 'tasima faaliyetleri',
   'lojistik hizmetler',
@@ -42,21 +42,21 @@ const ignoredGlobalAnchors = [
   'yazıyı oku', 'yaziyi oku',
   'makaleyi görüntüle', 'yazıyı görüntüle', 'yaziyi goruntule', 'makaleyi goruntule',
   'taşınma öncesi pratik eşya paketleme yöntemleri yazımız', 'tasinma oncesi pratik esya paketleme yontemleri yazimiz',
-  'adana evden eve nakliyat fiyatları nasıl belirlenir yazımız', 'adana evden eve nakliyat fiyatlari nasil belirlenir yazimiz',
+  'mersin evden eve nakliyat fiyatları nasıl belirlenir yazımız', 'mersin evden eve nakliyat fiyatlari nasil belirlenir yazimiz',
   'ücretsiz ekspertiz', 'ucretsiz ekspertiz',
-  'çukurova profesyonel taşımacılık', 'cukurova profesyonel tasimacilik',
+  'mezitli profesyonel taşımacılık', 'mezitli profesyonel tasimacilik',
   'sözleşmeli şehiriçi evden eve nakliyat süreci', 'sozlesmeli sehirici evden eve nakliyat sureci',
   'taşınma öncesi pratik eşya paketleme yöntemleri ipuçları', 'tasinma oncesi pratik esya paketleme yontemleri ipuclari',
-  'sarıçam uygun fiyatlı nakliyat', 'saricam uygun fiyatli nakliyat',
-  'sarıçam asansörlü ev taşıma', 'saricam asansorlu ev tasima',
-  'adana şehirlerarası evden eve nakliyat çözümleri', 'adana sehirlerarasi evden eve nakliyat cozumleri',
-  'adana nakliyat fiyatları', 'adana nakliyat fiyatlari',
-  'adana evden eve nakliyat fiyatları nasıl belirlenir detaylı incelemesi', 'adana evden eve nakliyat fiyatlari nasil belirlenir detayli incelemesi',
-  'yüreğir evden eve nakliyat', 'yuregir evden eve nakliyat',
+  'toroslar uygun fiyatlı nakliyat', 'toroslar uygun fiyatli nakliyat',
+  'toroslar asansörlü ev taşıma', 'toroslar asansorlu ev tasima',
+  'mersin şehirlerarası evden eve nakliyat çözümleri', 'mersin sehirlerarasi evden eve nakliyat cozumleri',
+  'mersin nakliyat fiyatları', 'mersin nakliyat fiyatlari',
+  'mersin evden eve nakliyat fiyatları nasıl belirlenir detaylı incelemesi', 'mersin evden eve nakliyat fiyatlari nasil belirlenir detayli incelemesi',
+  'akdeniz evden eve nakliyat', 'akdeniz evden eve nakliyat',
   'asansörlü nakliyat', 'asansorlu nakliyat',
-  'çukurova evden eve nakliyat', 'cukurova evden eve nakliyat',
-  'seyhan evden eve nakliyat', 'seyhan evden eve nakliyat',
-  'sarıçam evden eve nakliyat', 'saricam evden eve nakliyat',
+  'mezitli evden eve nakliyat', 'mezitli evden eve nakliyat',
+  'yenisehir evden eve nakliyat', 'yenisehir evden eve nakliyat',
+  'toroslar evden eve nakliyat', 'toroslar evden eve nakliyat',
   'tüm yazılar', 'tum yazilar',
   'profesyonel eşya paketleme', 'profesyonel esya paketleme',
   'teklif al',
@@ -129,7 +129,7 @@ try {
 
       // Skip non-internal links
       if (!href) continue;
-      const isInternal = href.startsWith('/') || href.startsWith('https://adanaevdeneveasansorlunakliyat.com.tr') || href.startsWith('http://localhost');
+      const isInternal = href.startsWith('/') || href.startsWith('https://mersinuzmaneller.com') || href.startsWith('http://localhost');
       const isSpecial = href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('https://wa.me') || href === '#';
 
       if (isSpecial || !isInternal) continue;

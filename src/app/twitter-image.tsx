@@ -1,8 +1,9 @@
 import { ImageResponse } from 'next/og';
+import { SITE } from '@/lib/site-config';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
-export const alt = 'Mersin Uzman Eller Nakliyat | Sabit Fiyatlı Evden Eve Taşımacılık';
+export const alt = `${SITE.name} | Sabit Fiyatlı Evden Eve Taşımacılık`;
 export const size = {
   width: 1200,
   height: 630,
@@ -15,7 +16,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#102A43',
+          background: '#0B2D5B',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -35,7 +36,7 @@ export default async function Image() {
             left: 0,
             right: 0,
             height: '12px',
-            backgroundColor: '#F7931E',
+            backgroundColor: '#16A34A',
           }}
         />
 
@@ -44,7 +45,7 @@ export default async function Image() {
           style={{
             fontSize: '24px',
             fontWeight: 'bold',
-            color: '#F7931E',
+            color: '#16A34A',
             textTransform: 'uppercase',
             letterSpacing: '4px',
             marginBottom: '20px',
@@ -64,7 +65,7 @@ export default async function Image() {
             textTransform: 'uppercase',
           }}
         >
-          ADANA ESENLER NAKLİYAT
+          {SITE.name}
         </div>
 
         {/* Features tag row */}
@@ -83,11 +84,11 @@ export default async function Image() {
           }}
         >
           <span>Sabit Fiyat</span>
-          <span style={{ margin: '0 15px', color: '#F7931E' }}>•</span>
+          <span style={{ margin: '0 15px', color: '#16A34A' }}>•</span>
           <span>Sigortalı</span>
-          <span style={{ margin: '0 15px', color: '#F7931E' }}>•</span>
+          <span style={{ margin: '0 15px', color: '#16A34A' }}>•</span>
           <span>Asansörlü</span>
-          <span style={{ margin: '0 15px', color: '#F7931E' }}>•</span>
+          <span style={{ margin: '0 15px', color: '#16A34A' }}>•</span>
           <span>K3 Belgeli</span>
         </div>
 
@@ -100,13 +101,13 @@ export default async function Image() {
             fontSize: '36px',
             fontWeight: 'bold',
             color: '#FFFFFF',
-            backgroundColor: '#F7931E',
+            backgroundColor: '#16A34A',
             padding: '16px 40px',
             borderRadius: '16px',
           }}
         >
-          <span style={{ color: '#102A43', marginRight: '10px' }}>📞</span>
-          <span style={{ color: '#102A43' }}>0533 520 44 42</span>
+          <span style={{ color: '#0B2D5B', marginRight: '10px' }}>📞</span>
+          <span style={{ color: '#0B2D5B' }}>{SITE.phoneDisplay}</span>
         </div>
       </div>
     ),

@@ -101,45 +101,45 @@ export const routesDatabase: Record<string, RouteData> = {
       }
 ]
   },
-  'mersin-mersin-evden-eve-nakliyat': {
-    slug: 'mersin-mersin-evden-eve-nakliyat',
-    city: 'Mersin',
-    distanceKm: 75,
+  'mersin-adana-evden-eve-nakliyat': {
+    slug: 'mersin-adana-evden-eve-nakliyat',
+    city: 'Adana',
+    distanceKm: 70,
     durationHours: 1,
-    priceRangeMin: 14500,
-    priceRangeMax: 25500,
-    viaRoute: 'O-51 Otoyolu (Mersin-Mersin Otoyolu)',
+    priceRangeMin: 9000,
+    priceRangeMax: 12000,
+    viaRoute: 'O-51 Tarsus-Adana Otoyolu',
     notes: 'Kısa mesafe avantajı sayesinde yükleme ve boşaltma işlemleri aynı gün içerisinde hızlıca tamamlanır.',
-    introText: "Mersin Uzman Eller Nakliyat, Mersin'den komşu ilimiz Mersin'e (Mezitli, Yenişehir, Tarsus, Toroslar, Erdemli dahil) hızlı, güvenilir ve uygun fiyatlı evden eve nakliyat hizmeti sağlamaktadır. Yakın mesafe lojistik ağımız sayesinde eşyalarınızı aynı gün içerisinde paketliyor, yüklüyor ve yeni adresinizde montajını tamamlayarak teslim ediyoruz. Uzman Eller Nakliyat olarak, Mersin-Mersin otoyol hattındaki yoğun taşıma trafiğimiz sayesinde müşterilerimize hem ekonomik fiyatlar sunuyor hem de asansörlü taşıma kolaylığı sağlıyoruz.",
-    distanceText: "Mersin ile Mersin arası karayolu mesafesi yaklaşık 75 kilometredir ve ev eşyası taşımacılığında teslimat süresi ortalama 1 gündür. Taşınma sabahı saat 08:00'de başlayan yükleme işlemi ortalama 4 saat sürer. Kamyonumuz otoyol üzerinden yaklaşık 1 saatlik sürüşle Mersin'e ulaşır. Mersin'deki yeni adresinizde eşyaların indirilmesi, kurulması ve tesisat bağlantılarının yapılmasıyla birlikte tüm taşınma süreci 6-8 saat içinde tamamlanmış olur.",
-    pricingText: "Mersin ile Mersin arası nakliyat fiyatları Mersin Uzman Eller Nakliyat tarafından 14.500 TL'den başlayarak ve şehirlerarası mesafe bazında kilometre başına 35 TL üzerinden hesaplanmaktadır. Mersin taşımalarında mesafenin uzun olması nedeniyle yakıt maliyeti temel girdidir. Fiyat teklifimize K3 belgeli kapalı kasa nakliye kamyonu, profesyonel paketleme malzemeleri, de-montaj ve montaj hizmetleri, sigorta poliçesi ve asansör kurulumu dahildir. 1+1 daire taşıma fiyatı 14.500 TL ile 16.500 TL arasında değişirken; 2+1 daire taşıma 17.500 TL ile 20.000 TL, 3+1 daire taşıma ise 20.500 TL ile 23.500 TL arasında bütçelendirilir.",
-    routeText: "Mersin'den Mersin'e giden nakliye araçlarımız O-51 Mersin-Erdemli otoyolunu kullanır. Yenişehir otoyol katılımından yola çıkan araçlarımız sırasıyla Yenice - Tarsus güzergâhını geçerek Mersin merkeze ve ardından Mezitli/Erdemli bölgesine ulaşır. Yol tamamen düz ve otoyol standartlarında olduğundan eşyaların sarsılma riski son derece düşüktür. Güvenli ve konforlu bir sürüşle eşyalarınız aynı gün Mersin'deki yeni evinize teslim edilir.",
-    insuranceText: "Mersin Uzman Eller Nakliyat şehirlerarası nakliyat seferlerinin tamamını Anadolu Sigorta güvencesiyle geniş kapsamlı emtia taşıma sigortası ile koruma altına almaktadır. Eşyalarınızın otoyol üzerinde seyir halindeyken veya yükleme-boşaltma esnasında yaşayabileceği tüm riskler poliçemiz kapsamındadır. Taşıma öncesinde hazırlanan poliçemiz sayesinde kafanız rahat bir şekilde yeni evinize yerleşebilirsiniz. Oluşabilecek en küçük çizik veya hasar da firmamızın garantisi altındadır.",
-    tipsText: "Mersin'e taşınırken dikkat edilmesi gereken husus, özellikle Mezitli ve Yenişehir sahil şeridindeki yeni yapılan çok katlı binaların rüzgar durumudur. Mersin'de deniz esintisi nedeniyle yüksek katlarda asansör kurulumu yapılırken rüzgar hızı ekiplerimizce kontrol edilir. Ayrıca yaz aylarındaki aşırı nem ve sıcaklık nedeniyle beyaz eşyaların ve elektroniklerin terleme yapmaması için havalandırmalı özel ambalaj malzemeleri kullanmaktayız.",
+    introText: "Mersin Uzman Eller Nakliyat, Mersin'den Adana'nın tüm ilçelerine (Seyhan, Çukurova, Yüreğir, Sarıçam dahil) hızlı, güvenilir ve uygun fiyatlı evden eve nakliyat hizmeti sağlamaktadır. Yakın mesafe lojistik ağımız sayesinde eşyalarınızı aynı gün içerisinde paketleyip yüklüyor ve Adana'daki yeni adresinizde marangoz montajını tamamlayarak teslim ediyoruz. Uzman Eller Nakliyat olarak, Mersin-Adana otoyol hattındaki günlük taşımalarımız sayesinde müşterilerimize son derece ekonomik fiyatlar sunuyoruz.",
+    distanceText: "Mersin ile Adana arası karayolu mesafesi yaklaşık 70 kilometredir ve nakliye kamyonlarımızla ulaşım süresi ortalama 1 saattir. Kısa mesafe avantajı sayesinde ev taşıma operasyonu sabah 08:00'de paketleme ile başlayıp, aynı gün akşamüstü Adana'daki dairenizde anahtar teslim olarak tamamlanır.",
+    pricingText: "Mersin Adana ev taşıma fiyatları Uzman Eller Nakliyat tarafından 9.000 TL ile 21.000 TL arasında bütçelendiriliyoruz. Fiyat teklifimize K3 yetki belgeli nakliye aracı, ambalajlama malzemeleri, marangoz de-montaj ve kurulum hizmetleri ile emtia taşıma sigortası dahildir. Daire oda sayısı ve yükseklik durumuna göre net fiyat belirlenir.",
+    routeText: "Mersin'den yola çıkan araçlarımız O-51 otoyolunu kullanarak Tarsus üzerinden doğrudan Adana çevre yoluna katılım sağlar. Yol tamamen düz ve bölünmüş duble yol/otoyol standartlarında olduğundan eşyaların sarsılma veya hasar görme riski sıfıra yakındır.",
+    insuranceText: "Mersin Adana arası tüm taşımalarımız Anadolu Sigorta güvencesiyle emtia nakliyat sigortası kapsamında gerçekleştirilmektedir. Eşyalarınız yoldaki olası kaza, yangın veya devrilme risklerine karşı tamamen güvence altına alınır.",
+    tipsText: "Adana'ya taşınırken dikkat edilmesi gereken husus, Seyhan ve Çukurova ilçelerindeki yoğun trafik saatleri ve site yönetimlerinin asansör kurulum kurallarıdır. Ekiplerimiz taşınma günü öncesinde gerekli koordinasyonu sağlayarak zaman kaybını önler.",
     faq: [
       {
-            "question": "Mersin'den Mersin'e taşınma kaç saat sürer?",
-            "answer": "Tüm süreç (paketleme, yükleme, yol ve montaj dahil) ortalama 6 ila 8 saat arasında tamamen bitmektedir."
+            "question": "Mersin'den Adana'ya taşınma kaç saat sürer?",
+            "answer": "Mesafe kısa olduğu için tüm yükleme, yolculuk ve montaj süreçleri dahil 5 ila 7 saat arasında tamamlanmaktadır."
       },
       {
-            "question": "Tarsus ilçesine de hizmet veriyor musunuz?",
-            "answer": "Evet, Mersin-Mersin yolu üzerindeki Tarsus ilçesine ve tüm Mersin ilçelerine günlük hizmetimiz vardır."
+            "question": "Seyhan ve Çukurova'da asansör kurulabiliyor mu?",
+            "answer": "Evet, Adana genelinde asansör kurulum alanı uygun olan tüm yüksek katlı binalarda mobil dış cephe eşya asansörümüzü kuruyoruz."
       },
       {
-            "question": "Mersin'de asansör kuruyor musunuz?",
-            "answer": "Evet, Mersin'deki yeni dairenizde balkon veya pencere açısı uygunsa dış cephe mobil asansörümüzü kuruyoruz."
+            "question": "Adana'da mobilya montajı fiyata dahil midir?",
+            "answer": "Evet, gardırop, yatak üniteleri ve beyaz eşyaların söküm ve kurulum işlemleri fiyatımıza dahildir."
       },
       {
-            "question": "Aynı gün içinde taşınmak mümkün mü?",
-            "answer": "Mesafe kısa olduğu için Mersin-Mersin taşınmaları kesinlikle aynı gün içerisinde tamamlanır."
+            "question": "Adana'dan Mersin'e dönüş taşıması yapıyor musunuz?",
+            "answer": "Evet, Adana-Mersin yönünde de günlük araç dönüş seferlerimizle ekonomik fiyatlı taşımacılık yapıyoruz."
       },
       {
-            "question": "Fiyatlarınıza klima söküm ve montajı dahil mi?",
-            "answer": "Klima montajı uzmanlık gerektirdiğinden fiyatlarımıza dahil değildir, ancak anlaşmalı klima servisimizle yönlendirme yapabiliriz."
+            "question": "Fiyatı sabitleyebiliyor musunuz?",
+            "answer": "Evet, taşınma öncesinde karşılıklı ıslak imzalı sözleşme imzalayarak fiyata sabitlik garantisi veriyoruz."
       },
       {
-            "question": "Mersin yazlık evlerine parça eşya taşıyor musunuz?",
-            "answer": "Evet, yazlık bölgelere (Erdemli, Silifke, Çeşmeli) parça eşya ve yazlık eşya taşıma seferlerimiz mevcuttur."
+            "question": "Klima sökümü yapıyor musunuz?",
+            "answer": "Klima söküm ve montajı elektrik ve gaz tesisatı uzmanlığı gerektirdiğinden dahil değildir, ancak anlaşmalı servisle yönlendirebiliyoruz."
       }
 ]
   },
@@ -352,5 +352,121 @@ export const routesDatabase: Record<string, RouteData> = {
             "answer": "Evet, Bursa-Mersin yönünde de profesyonel evden eve nakliye ve uygun fiyatlı dönüş aracı seçenekleri sunuyoruz."
       }
 ]
+  }
+,
+
+  "mersin-hatay-evden-eve-nakliyat": {
+    "slug": "mersin-hatay-evden-eve-nakliyat",
+    "city": "Hatay",
+    "distanceKm": 200,
+    "durationHours": 2.5,
+    "priceRangeMin": 15000,
+    "priceRangeMax": 22000,
+    "viaRoute": "O-52 Otoyolu ve İskenderun-Hatay Karayolu",
+    "notes": "Bölgedeki yerleşim durumuna uygun asansörlü platform planlaması yapılır.",
+    "introText": "Mersin Uzman Eller Nakliyat, Mersin'den Hatay'ın tüm bölgelerine (Antakya, İskenderun, Defne, Kırıkhan, Samandağ dahil) K3 yetki belgeli çelik kasalı araçlarımızla asansörlü evden eve nakliye hizmetleri sunmaktadır.",
+    "distanceText": "Mersin ile Hatay arası karayolu mesafesi yaklaşık 200 kilometredir ve nakliye kamyonlarımızla seyahat süresi ortalama 2.5 saattir. Tüm taşıma işlemi aynı gün içerisinde paketlemeden anahtar teslim montaja kadar tamamlanır.",
+    "pricingText": "Mersin Hatay nakliyat fiyatları 21.000 TL ile 25.000 TL arasında değişmekte olup, oda sayısı ve asansör gereksinimine göre kesinleştirilmektedir. Anadolu Sigorta poliçesi fiyata dahildir.",
+    "routeText": "Araçlarımız O-52 otoyolundan çıkış yaparak İskenderun üzerinden Hatay merkez ilçelerine ulaşım sağlar. Yol düzgün otoyol ve duble yol standartlarındadır.",
+    "insuranceText": "Mersin Hatay arası tüm ev taşımaları Anadolu Sigorta emtia sigortası kapsamında korunmaktadır.",
+    "tipsText": "Hatay'da yerel trafik kuralları ve bina otopark mesafelerine uygun teleskopik platform kurulumu planlanır.",
+    "faq": [
+      {
+        "question": "Mersin Hatay nakliyat kaç saat sürer?",
+        "answer": "Yükleme, yol ve montaj dahil olmak üzere tüm operasyon ortalama 6-8 saat içinde tamamlanır."
+      },
+      {
+        "question": "İskenderun ilçesine de taşıma yapıyor musunuz?",
+        "answer": "Evet, Hatay’ın İskenderun, Antakya, Kırıkhan ve diğer tüm ilçelerine nakliyat hizmetimiz vardır."
+      }
+    ]
+  },
+  "mersin-konya-evden-eve-nakliyat": {
+    "slug": "mersin-konya-evden-eve-nakliyat",
+    "city": "Konya",
+    "distanceKm": 350,
+    "durationHours": 4.5,
+    "priceRangeMin": 18500,
+    "priceRangeMax": 26000,
+    "viaRoute": "Mersin - Mut - Karaman - Konya Karayolu",
+    "notes": "Sert geçen kış şartlarında İç Anadolu geçişleri için kış donanımlı araçlarımız sevk edilir.",
+    "introText": "Mersin Uzman Eller Nakliyat, Mersin'den İç Anadolu'nun en büyük yüzölçümüne sahip şehri Konya'nın tüm bölgelerine (Selçuklu, Meram, Karatay dahil) güvenilir evden eve nakliye hizmetleri sağlamaktadır.",
+    "distanceText": "Mersin ile Konya arası karayolu mesafesi yaklaşık 350 kilometredir ve nakliye araçlarımızın sürüş süresi ortalama 4.5 saattir. Sabah başlanan yükleme işlemi sonrası ertesi gün sabah kurulum tamamlanır.",
+    "pricingText": "Mersin Konya arası nakliyat fiyatları 18.500 TL ile 26.000 TL arasında değişmektedir. Mesafe ve oda sayısına göre yakıt ve personel giderleri hesaplanarak şeffaf teklif sunulur.",
+    "routeText": "Araçlarımız Mersin - Silifke - Mut - Karaman üzerinden Konya güzergâhını takip eder. Toros geçişlerindeki virajlı dağ yollarında sürüş güvenliği önlemleri titizlikle uygulanır.",
+    "insuranceText": "Mersin Konya arası ev taşımalarımız Anadolu Sigorta emtia sigortası ile yol boyunca güvence altındadır.",
+    "tipsText": "Konya genelinde yüksek katlı konutlarda asansör kurulum alanı bina önceden kontrol edilmelidir.",
+    "faq": [
+      {
+        "question": "Mersin Konya nakliyat kaç gün sürer?",
+        "answer": "Operasyon genellikle 1.5 gün sürer. İlk gün yükleme yapılır, ertesi gün sabah yeni adrese teslimat gerçekleştirilir."
+      }
+    ]
+  },
+  "mersin-karaman-evden-eve-nakliyat": {
+    "slug": "mersin-karaman-evden-eve-nakliyat",
+    "city": "Karaman",
+    "distanceKm": 240,
+    "durationHours": 3.5,
+    "priceRangeMin": 16000,
+    "priceRangeMax": 23000,
+    "viaRoute": "Mersin - Silifke - Mut - Karaman Karayolu",
+    "notes": "Mut-Sertavul geçidindeki hava koşulları ve buzlanma durumları ekiplerimizce takip edilir.",
+    "introText": "Mersin Uzman Eller Nakliyat, Mersin'den Karaman'a (Merkez, Ermenek dahil) K3 yasal yetki belgeli araçlarımız ve kadrolu ambalaj ekiplerimizle güvenli asansörlü nakliyat çözümleri sunar.",
+    "distanceText": "Mersin Karaman arası yaklaşık 240 km olup sürüş süresi nakliye araçları için 3.5 saattir. Tüm taşıma işlemi aynı gün içinde bitirilerek anahtar teslim kurulum sağlanır.",
+    "pricingText": "Mersin Karaman arası nakliyat fiyatları 16.000 TL ile 23.000 TL aralığında bütçelendirilir. Sigorta poliçesi ve marangozluk bedeli fiyata dahildir.",
+    "routeText": "Sertavul Geçidi üzerinden yürütülen lojistik sürecinde, dik rampalar nedeniyle araçlarımızda özel sabitleme gergileri standart olarak kullanılır.",
+    "insuranceText": "Karaman taşımalarında Anadolu Sigorta poliçesiyle tüm eşya grupları hasara karşı teminat altındadır.",
+    "tipsText": "Yayla ve engebeli zeminlerde asansör kurulum emniyeti ekiplerimizce alınır.",
+    "faq": [
+      {
+        "question": "Karaman Ermenek ilçesine hizmetiniz var mı?",
+        "answer": "Evet, Karaman’ın Ermenek, Kâzımkarabekir ve diğer tüm çevre ilçelerine evden eve hizmet sunuyoruz."
+      }
+    ]
+  },
+  "mersin-osmaniye-evden-eve-nakliyat": {
+    "slug": "mersin-osmaniye-evden-eve-nakliyat",
+    "city": "Osmaniye",
+    "distanceKm": 180,
+    "durationHours": 2.2,
+    "priceRangeMin": 14000,
+    "priceRangeMax": 20000,
+    "viaRoute": "O-52 TAG Otoyolu Doğrudan Hat",
+    "notes": "TAG Otoyolu otoyol kalitesiyle sarsıntısız ve hızlı nakliye avantajı sunar.",
+    "introText": "Mersin Uzman Eller Nakliyat, Mersin'den komşu ilimiz Osmaniye'ye (Kadirli, Düziçi dahil) asansörlü ve marangozlu evden eve nakliye hizmetleri sunmaktadır.",
+    "distanceText": "Mersin Osmaniye arası yaklaşık 180 km olup otoyol standartlarında 2 saatlik sürüş mesafesindedir. Operasyon sabah başlayıp aynı gün akşam tamamlanır.",
+    "pricingText": "Mersin Osmaniye ev taşıma fiyatları 14.000 TL ile 20.000 TL arasında değişmekte olup sabit fiyat garantisi uygulanır.",
+    "routeText": "Tarsus-Adana-Ceyhan-Osmaniye TAG otoyol hattını kullanan araçlarımız, bölünmüş güvenli yollardan hasarsız transfer sağlar.",
+    "insuranceText": "Mersin Osmaniye arası tüm taşımalar emtia nakliye sigortası güvencesindedir.",
+    "tipsText": "Yüksek katlı binalarda otopark alanlarının asansör aracı için rezerve edilmesi süreci hızlandırır.",
+    "faq": [
+      {
+        "question": "Osmaniye Kadirli ilçesine taşıma yapıyor musunuz?",
+        "answer": "Evet, Osmaniye Kadirli başta olmak üzere tüm ilçelerine günlük servisimiz vardır."
+      }
+    ]
+  },
+  "mersin-nigde-evden-eve-nakliyat": {
+    "slug": "mersin-nigde-evden-eve-nakliyat",
+    "city": "Niğde",
+    "distanceKm": 200,
+    "durationHours": 2.5,
+    "priceRangeMin": 15000,
+    "priceRangeMax": 21500,
+    "viaRoute": "O-21 Otoyolu Doğrudan Geçiş",
+    "notes": "Pozantı otoban geçişindeki dik Toros tünellerinde sürüş emniyeti kuralları gözetilir.",
+    "introText": "Mersin Uzman Eller Nakliyat, Mersin'den İç Anadolu giriş kapısı Niğde'ye (Bor dahil) K3 yasal yetki belgeli araç filomuzla asansörlü ev taşıma desteği vermektedir.",
+    "distanceText": "Mersin Niğde arası karayolu mesafesi 200 km'dir ve nakliye araçları için sürüş süresi 2.5 saattir. Tüm işlem aynı gün içinde bitirilir.",
+    "pricingText": "Mersin Niğde nakliyat bütçesi 21.000 TL ile 21.500 TL aralığındadır. Sonradan ek ücret talep edilmez.",
+    "routeText": "Pozantı Otoyolu üzerinden tüneller geçilerek Niğde otoban çıkışına ulaşılır. Yol konforu yüksektir.",
+    "insuranceText": "Niğde taşımalarımız Anadolu Sigorta emtia sigortası kapsamındadır.",
+    "tipsText": "Pozantı dağ geçişinde kışın buzlanma takibi yapılır.",
+    "faq": [
+      {
+        "question": "Niğde Bor ilçesine taşıma yapıyor musunuz?",
+        "answer": "Evet, Niğde merkez ve Bor ilçesi başta olmak üzere tüm bölgelere hizmetimiz mevcuttur."
+      }
+    ]
   }
 };

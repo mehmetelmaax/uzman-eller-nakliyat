@@ -23,7 +23,7 @@ Mersin yerel nakliyat aramalarında Yandex ve Bing kullanıcılarını çekebilm
 
 1. **Yandex Webmaster** paneline girin ([webmaster.yandex.com](https://webmaster.yandex.com)).
 2. Site adresini ekleyin ve doğrulamayı `.env.local` içindeki `NEXT_PUBLIC_YANDEX_VERIFICATION` anahtarıyla meta etiket üzerinden tamamlayın.
-3. Yandex sitemap alanına `https://uzmanellernakliyat.com.tr/sitemap.xml` adresini gönderin.
+3. Yandex sitemap alanına `https://mersinuzmaneller.com/sitemap.xml` adresini gönderin.
 4. **Bing Webmaster Tools** paneline girin ([bing.com/webmasters](https://www.bing.com/webmasters)).
 5. Google Search Console verilerinizi tek tıkla Bing paneline aktararak mülk doğrulamasını ve sitemap kayıtlarını otomatik senkronize edin.
 
@@ -34,10 +34,10 @@ Mersin yerel nakliyat aramalarında Yandex ve Bing kullanıcılarını çekebilm
 Yeni açılan 12 adet yüksek arama hacimli blog sayfası ve fiyat hesaplama sayfasının Google'da hızlı indeks alabilmesi için Search Console üzerinden manuel istek gönderin:
 
 1. GSC üst arama kutusuna (URL Denetimi) sırayla şu sayfaları girin:
-   - `https://uzmanellernakliyat.com.tr/`
-   - `https://uzmanellernakliyat.com.tr/mersin-nakliyat-fiyatlari`
-   - `https://uzmanellernakliyat.com.tr/blog/mersin-tasinma-maliyeti-2026`
-   - `https://uzmanellernakliyat.com.tr/blog/nakliyat-sigortasi-nedir`
+   - `https://mersinuzmaneller.com/`
+   - `https://mersinuzmaneller.com/mersin-nakliyat-fiyatlari`
+   - `https://mersinuzmaneller.com/blog/mersin-tasinma-maliyeti-2026`
+   - `https://mersinuzmaneller.com/blog/nakliyat-sigortasi-nedir`
 2. **"Dizin Oluşturulmasını Talep Et"** butonuna basarak botların sayfaları acilen taramasını sağlayın.
 
 ---
@@ -60,7 +60,7 @@ Yayım sonrasında sıralamaları ve site sağlığını korumak adına haftalı
 
 ### 1. Hafta Kontrolleri (İndeks Sağlığı)
 - GSC panelinde "Sayfa Sayısı / Dizin Oluşturma" raporunu inceleyin. Sayfaların kaç tanesinin indekse girdiğini görün.
-- `site:uzmanellernakliyat.com.tr` araması yaparak Google indeks listesini manuel analiz edin.
+- `site:mersinuzmaneller.com` araması yaparak Google indeks listesini manuel analiz edin.
 
 ### 2. Hafta Kontrolleri (Performans & CWV)
 - Search Console **"Önemli Web Verileri" (Core Web Vitals)** raporunu kontrol edin. Mobil ve masaüstü CLS/LCP/INP değerlerinde "Kırmızı" (Zayıf) uyarı var mı bakın.

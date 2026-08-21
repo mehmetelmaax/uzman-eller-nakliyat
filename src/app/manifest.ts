@@ -24,4 +24,4 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   };
 }
-export const runtime = 'edge';
+

@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Send, Phone, CheckCircle, AlertCircle, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
-import { SITE } from '@/lib/site-config';
+import { SITE, DISTRICTS } from '@/lib/site-config';
 import { QuoteFormSchema } from '@/lib/validation';
 import { trackEvent } from '@/lib/analytics';
+import { estimatePriceFromForm } from '@/lib/pricing';
 
 interface QuoteFormProps {
   isInline?: boolean;
@@ -29,17 +30,19 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
   
   // Track if form started event has been fired
   const formStartedRef = useRef(false);
+  const formLoadedAtRef = useRef('');
+  const idempotencyKeyRef = useRef('');
+
+  useEffect(() => {
+    formLoadedAtRef.current = Date.now().toString();
+    idempotencyKeyRef.current = typeof window !== 'undefined' && window.crypto 
+      ? crypto.randomUUID() 
+      : Math.random().toString(36).substring(2);
+  }, []);
 
   const districts = [
-    'Yenişehir',
-    'Mezitli',
-    'Toroslar',
-    'Akdeniz',
-    'Tarsus',
-    'Erdemli',
-    'Silifke',
-    'Diğer (İlçe)',
-    'Şehirlerarası (İl Dışı)',
+    ...DISTRICTS.map(d => d.name),
+    'Şehirlerarası (İl Dışı)'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -62,33 +65,20 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
     }
   };
 
-  const calculateEstimate = () => {
-    let basePrice = 12000;
-    
-    if (formData.rooms === '2+1') basePrice = 15000;
-    if (formData.rooms === '3+1') basePrice = 18000;
-    if (formData.rooms === '4+1+') basePrice = 22000;
-    if (formData.rooms === 'ofis') basePrice = 12000;
-
-    if (formData.elevator === 'evet') {
-      basePrice += 2500;
-    }
-
-    if (formData.toDistrict === 'Şehirlerarası (İl Dışı)' || formData.fromDistrict === 'Şehirlerarası (İl Dışı)') {
-      return { min: basePrice + 17500, max: basePrice + 32000 };
-    }
-
-    return { min: basePrice, max: basePrice + 5000 };
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
     setErrors({});
     setErrorMessage('');
 
+    const payload = {
+      ...formData,
+      formLoadedAt: formLoadedAtRef.current,
+      idempotencyKey: idempotencyKeyRef.current
+    };
+
     // Zod Client-side Validation
-    const validation = QuoteFormSchema.safeParse(formData);
+    const validation = QuoteFormSchema.safeParse(payload);
     if (!validation.success) {
       const fieldErrors = validation.error.flatten().fieldErrors;
       const newErrors: { [key: string]: string } = {};
@@ -105,8 +95,9 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       trackEvent('teklif_formu_hata', { hataAlani: errorKeys.join(', ') });
 
       // Focus on the first invalid field
-      if (errorKeys.length > 0) {
-        document.getElementById(errorKeys[0])?.focus();
+      const firstKey = errorKeys[0];
+      if (firstKey) {
+        document.getElementById(firstKey)?.focus();
       }
       return;
     }
@@ -115,13 +106,13 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       const response = await fetch('/api/teklif', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
       if (response.ok && data.ok) {
-        const priceRange = calculateEstimate();
+        const priceRange = estimatePriceFromForm(formData.rooms, formData.elevator, formData.fromDistrict, formData.toDistrict);
         setEstimate(priceRange);
         setStatus('success');
 
@@ -167,7 +158,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       {/* Row 1: Name & Tel */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         <div className="space-y-1">
-          <label htmlFor="name" className="text-[10px] font-bold text-navy uppercase tracking-wider block">Adınız Soyadınız *</label>
+          <label htmlFor="name" className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">Adınız Soyadınız *</label>
           <input
             type="text"
             id="name"
@@ -179,15 +170,15 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Örn: Ahmet Yılmaz"
-            className={`w-full border rounded px-3 py-2 text-xs bg-off-white focus:outline-none ${
-              errors.name ? 'border-rose-500 bg-rose-50' : 'border-gray-light'
+            className={`w-full border rounded px-3 py-2 text-xs bg-surface-muted focus:outline-none ${
+              errors.name ? 'border-rose-500 bg-rose-50' : 'border-border-light'
             }`}
           />
           {errors.name && <span id="err-name" role="alert" className="text-[10px] text-rose-500 font-semibold block">{errors.name}</span>}
         </div>
 
         <div className="space-y-1">
-          <label htmlFor="phone" className="text-[10px] font-bold text-navy uppercase tracking-wider block">Telefon Numaranız *</label>
+          <label htmlFor="phone" className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">Telefon Numaranız *</label>
           <input
             type="tel"
             id="phone"
@@ -200,8 +191,8 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
             value={formData.phone}
             onChange={handleInputChange}
             placeholder="Örn: 532 123 45 67"
-            className={`w-full border rounded px-3 py-2 text-xs bg-off-white focus:outline-none ${
-              errors.phone ? 'border-rose-500 bg-rose-50' : 'border-gray-light'
+            className={`w-full border rounded px-3 py-2 text-xs bg-surface-muted focus:outline-none ${
+              errors.phone ? 'border-rose-500 bg-rose-50' : 'border-border-light'
             }`}
           />
           {errors.phone && <span id="err-phone" role="alert" className="text-[10px] text-rose-500 font-semibold block">{errors.phone}</span>}
@@ -211,7 +202,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       {/* Row 2: Nereden & Nereye */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         <div className="space-y-1">
-          <label htmlFor="fromDistrict" className="text-[10px] font-bold text-navy uppercase tracking-wider block">Nereden Taşınacaksınız? *</label>
+          <label htmlFor="fromDistrict" className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">Nereden Taşınacaksınız? *</label>
           <select
             id="fromDistrict"
             name="fromDistrict"
@@ -221,8 +212,8 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
             aria-describedby={errors.fromDistrict ? 'err-fromDistrict' : undefined}
             value={formData.fromDistrict}
             onChange={handleInputChange}
-            className={`w-full border rounded px-2.5 py-2 text-xs bg-off-white focus:outline-none ${
-              errors.fromDistrict ? 'border-rose-500 bg-rose-50' : 'border-gray-light'
+            className={`w-full border rounded px-2.5 py-2 text-xs bg-surface-muted focus:outline-none ${
+              errors.fromDistrict ? 'border-rose-500 bg-rose-50' : 'border-border-light'
             }`}
           >
             <option value="">İlçe Seçin</option>
@@ -234,7 +225,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
         </div>
 
         <div className="space-y-1">
-          <label htmlFor="toDistrict" className="text-[10px] font-bold text-navy uppercase tracking-wider block">Nereye Taşınacaksınız? *</label>
+          <label htmlFor="toDistrict" className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">Nereye Taşınacaksınız? *</label>
           <select
             id="toDistrict"
             name="toDistrict"
@@ -244,8 +235,8 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
             aria-describedby={errors.toDistrict ? 'err-toDistrict' : undefined}
             value={formData.toDistrict}
             onChange={handleInputChange}
-            className={`w-full border rounded px-2.5 py-2 text-xs bg-off-white focus:outline-none ${
-              errors.toDistrict ? 'border-rose-500 bg-rose-50' : 'border-gray-light'
+            className={`w-full border rounded px-2.5 py-2 text-xs bg-surface-muted focus:outline-none ${
+              errors.toDistrict ? 'border-rose-500 bg-rose-50' : 'border-border-light'
             }`}
           >
             <option value="">İlçe / İl Seçin</option>
@@ -260,7 +251,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       {/* Row 3: Oda Sayısı & Asansör */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         <div className="space-y-1">
-          <label htmlFor="rooms" className="text-[10px] font-bold text-navy uppercase tracking-wider block">Ev Boyutu (Oda Sayısı) *</label>
+          <label htmlFor="rooms" className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">Ev Boyutu (Oda Sayısı) *</label>
           <select
             id="rooms"
             name="rooms"
@@ -270,8 +261,8 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
             aria-describedby={errors.rooms ? 'err-rooms' : undefined}
             value={formData.rooms}
             onChange={handleInputChange}
-            className={`w-full border rounded px-2.5 py-2 text-xs bg-off-white focus:outline-none ${
-              errors.rooms ? 'border-rose-500 bg-rose-50' : 'border-gray-light'
+            className={`w-full border rounded px-2.5 py-2 text-xs bg-surface-muted focus:outline-none ${
+              errors.rooms ? 'border-rose-500 bg-rose-50' : 'border-border-light'
             }`}
           >
             <option value="">Boyut Seçin</option>
@@ -285,7 +276,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
         </div>
 
         <div className="space-y-1">
-          <span className="text-[10px] font-bold text-navy tracking-wider block">EŞYA ASANSÖRÜ *</span>
+          <span className="text-[10px] font-bold text-brand-primary tracking-wider block">EŞYA ASANSÖRÜ *</span>
           <div className="flex gap-4 pt-1">
             <label className="flex items-center gap-1.5 text-xs font-semibold cursor-pointer select-none">
               <input
@@ -294,7 +285,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
                 value="evet"
                 checked={formData.elevator === 'evet'}
                 onChange={handleInputChange}
-                className="w-3.5 h-3.5 text-orange-text focus:ring-orange"
+                className="w-3.5 h-3.5 text-brand-accent-dark focus:ring-brand-accent"
               />
               <span>Kurulsun</span>
             </label>
@@ -305,7 +296,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
                 value="hayir"
                 checked={formData.elevator === 'hayir'}
                 onChange={handleInputChange}
-                className="w-3.5 h-3.5 text-orange-text focus:ring-orange"
+                className="w-3.5 h-3.5 text-brand-accent-dark focus:ring-brand-accent"
               />
               <span>İstemiyorum</span>
             </label>
@@ -317,7 +308,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-orange hover:bg-navy text-navy hover:text-white font-black py-3.5 rounded transition-all duration-200 border border-navy shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-orange text-sm flex items-center justify-center gap-2 mt-2 cursor-pointer active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-brand-accent hover:bg-brand-primary text-brand-primary hover:text-white font-black py-3.5 rounded transition-all duration-200 border border-brand-primary shadow-md hover:shadow-lg focus-visible:ring-2 focus-visible:ring-brand-accent text-sm flex items-center justify-center gap-2 mt-2 cursor-pointer active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'submitting' ? (
           <>
@@ -344,12 +335,12 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       </div>
       
       <div className="space-y-1">
-        <h3 className="font-display font-black text-navy text-xl">Talebiniz Alındı!</h3>
+        <h3 className="font-display font-black text-brand-primary text-xl">Talebiniz Alındı!</h3>
         <p className="text-charcoal text-xs font-semibold">Müşteri temsilcimiz 15 dakika içinde sizi arayacaktır.</p>
         <p className="text-charcoal text-[11px] font-medium pt-1">Tahmini taşınma maliyet aralığınız:</p>
       </div>
 
-      <div className="bg-navy text-white rounded px-6 py-3 font-display font-black text-xl tracking-wide">
+      <div className="bg-brand-primary text-white rounded px-6 py-3 font-display font-black text-xl tracking-wide">
         {estimate ? `${estimate.min.toLocaleString('tr-TR')} TL - ${estimate.max.toLocaleString('tr-TR')} TL` : 'Hesaplanıyor...'}
       </div>
 
@@ -360,7 +351,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEvent('whatsapp_tikla', { konum: 'form_basari', sayfa: window.location.pathname })}
-          className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-black py-3 rounded-xl border border-navy transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
+          className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-black py-3 rounded-xl border border-brand-primary transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
         >
           <MessageCircle className="w-4 h-4 fill-current" />
           <span>Hızlı WhatsApp Görüşmesi Başlat</span>
@@ -370,15 +361,15 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
         <a
           href={SITE.phoneHref}
           onClick={() => trackEvent('telefon_tikla', { konum: 'form_basari', sayfa: window.location.pathname })}
-          className="bg-orange hover:bg-navy text-navy hover:text-white font-black py-3 rounded-xl border border-navy transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
+          className="bg-brand-accent hover:bg-brand-primary text-brand-primary hover:text-white font-black py-3 rounded-xl border border-brand-primary transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
         >
           <Phone className="w-3.5 h-3.5" />
           <span>Hemen Ara: {SITE.phoneDisplay}</span>
         </a>
       </div>
 
-      <div className="pt-4 border-t border-gray-light w-full">
-        <Link href="/tasinma-kontrol-listesi" className="text-navy hover:text-orange-text font-bold text-xs uppercase tracking-wider block">
+      <div className="pt-4 border-t border-border-light w-full">
+        <Link href="/tasinma-kontrol-listesi" className="text-brand-primary hover:text-brand-accent-dark font-bold text-xs uppercase tracking-wider block">
           Taşınma Kontrol Listesine Göz Atın &rarr;
         </Link>
       </div>
@@ -392,7 +383,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
       </div>
 
       <div className="space-y-1">
-        <h3 className="font-display font-black text-navy text-xl">Gönderim Başarısız</h3>
+        <h3 className="font-display font-black text-brand-primary text-xl">Gönderim Başarısız</h3>
         <p className="text-charcoal text-xs font-semibold">{errorMessage}</p>
       </div>
 
@@ -402,7 +393,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
         <a
           href={SITE.phoneHref}
           onClick={() => trackEvent('telefon_tikla', { konum: 'form_hata_cta', sayfa: window.location.pathname })}
-          className="bg-orange hover:bg-navy text-navy hover:text-white font-black py-3 rounded-xl border border-navy transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
+          className="bg-brand-accent hover:bg-brand-primary text-brand-primary hover:text-white font-black py-3 rounded-xl border border-brand-primary transition-all duration-200 shadow-md text-xs flex items-center justify-center gap-2 w-full"
         >
           <Phone className="w-3.5 h-3.5" />
           <span>Hemen Arayın: {SITE.phoneDisplay}</span>
@@ -410,7 +401,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
 
         <button
           onClick={() => setStatus('idle')}
-          className="text-navy hover:underline text-xs font-bold pt-2 cursor-pointer"
+          className="text-brand-primary hover:underline text-xs font-bold pt-2 cursor-pointer"
         >
           Formu Yeniden Düzenle
         </button>
@@ -429,7 +420,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
 
   // Default section wrapper layout
   return (
-    <section className="py-20 bg-navy relative text-white" id="iletisim">
+    <section className="py-20 bg-brand-primary relative text-white" id="iletisim">
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -437,7 +428,7 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
           
           {/* Left Text */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-orange-text font-bold text-xs tracking-widest">ANINDA TEKLİF</span>
+            <span className="text-brand-accent-dark font-bold text-xs tracking-widest">ANINDA TEKLİF</span>
             <h2 className="font-display font-black text-3xl md:text-4xl text-white tracking-tight leading-tight">
               Taşınma Maliyetini Hemen Hesaplayın
             </h2>
@@ -447,11 +438,11 @@ export default function QuoteForm({ isInline = false }: QuoteFormProps) {
 
             <div className="space-y-4 pt-4 border-t border-white/10 text-xs md:text-sm text-gray-300 font-semibold">
               <div className="flex items-center gap-3">
-                <span className="bg-orange/20 text-orange p-2 rounded-full">✓</span>
+                <span className="bg-brand-accent/20 text-brand-accent p-2 rounded-full">✓</span>
                 <span>Bilgileriniz üçüncü şahıslarla paylaşılmaz.</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="bg-orange/20 text-orange p-2 rounded-full">✓</span>
+                <span className="bg-brand-accent/20 text-brand-accent p-2 rounded-full">✓</span>
                 <span>E-posta adresi istemiyoruz, spam göndermiyoruz.</span>
               </div>
             </div>

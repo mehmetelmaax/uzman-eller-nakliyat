@@ -1,16 +1,18 @@
 import fs from 'fs';
 import path from 'path';
-import { SITE, SERVICES, DISTRICTS, ROUTES } from '@/lib/site-config';
+import { SITE, SERVICES, DISTRICTS } from '@/lib/site-config';
 import { FACTS } from '@/lib/facts';
-import { blogDatabase } from '@/lib/blog-data';
+import { blogMetadataDatabase } from '@/content/blog';
+import { routesMetadataDatabase } from '@/content/routes';
 
 export function GET() {
   const indexableDistricts = DISTRICTS.filter(d => d.indexable);
-  const blogs = Object.values(blogDatabase);
+  const blogs = Object.values(blogMetadataDatabase);
+  const routes = Object.values(routesMetadataDatabase);
 
   let fullContent = `# ${SITE.name} - Tam İçerik İndeksi (llms-full.txt)
 
-> ${SITE.name}, Mersin genelinde K3 yetki belgesiyle 2006 yılından bu yana asansörlü ve sigortalı evden eve nakliyat hizmeti vermektedir.
+> ${SITE.name}, Mersin genelinde K3 yetki belgesiyle ${FACTS.foundedYear} yılından bu yana asansörlü ve sigortalı evden eve nakliyat hizmeti vermektedir.
 
 ## 1. Temel Bilgiler
 - Kuruluş Yılı: ${FACTS.foundedYear}
@@ -41,7 +43,7 @@ export function GET() {
       name: `${d.name} Nakliyat`,
       filePath: path.join('bolgeler', `${d.slug}.html`)
     })),
-    ...ROUTES.map(r => ({
+    ...routes.map(r => ({
       route: `/rotalar/${r.slug}`,
       name: `Mersin - ${r.city} Nakliyat`,
       filePath: path.join('rotalar', `${r.slug}.html`)
@@ -64,16 +66,15 @@ export function GET() {
       try {
         const html = fs.readFileSync(fullFilePath, 'utf8');
         
-        // Extract <main> section
         const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
-        let contentHtml = mainMatch ? mainMatch[1] : html;
+        let contentHtml = (mainMatch ? mainMatch[1] : html) || '';
 
         // Strip script/style tags
         contentHtml = contentHtml
           .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
           .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '');
 
-        // Extract and clean clean text
+        // Extract and clean text
         pageText = contentHtml
           .replace(/<[^>]*>/g, ' ') // Replace tags with space
           .replace(/&amp;/g, '&')
@@ -104,6 +105,7 @@ ${pageText}
   return new Response(fullContent, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600'
     },
   });
 }

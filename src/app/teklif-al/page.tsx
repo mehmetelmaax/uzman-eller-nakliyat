@@ -17,7 +17,7 @@ export default function TeklifAlPage() {
   const teklifFaqs = [
     {
       question: 'Mersin evden eve nakliyat fiyatları ne kadar?',
-      answer: 'Mersin evden eve nakliyat fiyatları 2026 yılı itibarıyla taşınacak odaların sayısına, asansör ihtiyacına ve Yenişehir merkezli taşıma mesafesine göre 12.000 TL ile 28.000 TL arasında değişmektedir.'
+      answer: 'Mersin evden eve nakliyat fiyatları 2026 yılı itibarıyla taşınacak odaların sayısına, asansör ihtiyacına ve Yenişehir merkezli taşıma mesafesine göre 15.000 TL ile 31.000 TL arasında değişmektedir.'
     },
     {
       question: 'Ev taşıma fiyat teklifi almak ücretli midir?',
@@ -40,7 +40,7 @@ export default function TeklifAlPage() {
   return (
     <>
       <JsonLd data={faqSchema(teklifFaqs)} />
-      <main className="pt-24 min-h-screen bg-navy text-white flex flex-col justify-between">
+      <main className="pt-24 min-h-screen bg-brand-primary text-white flex flex-col justify-between">
         <Breadcrumb items={[{ name: 'Teklif Al', url: '/teklif-al' }]} className="pt-4 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full" dark={true} />
         
         {/* Title and Intro */}
@@ -68,19 +68,19 @@ export default function TeklifAlPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2">
-                <span className="font-bold text-orange-text text-sm block">✓ Sabit Fiyat Güvencesi</span>
+                <span className="font-bold text-brand-accent-dark text-sm block">✓ Sabit Fiyat Güvencesi</span>
                 <p className="text-gray-300 text-xs leading-relaxed">
                   Formda belirttiğiniz şartlar değişmediği sürece, teklif edilen nakliye fiyatı taşınma günü asla değişmez. Ek ücret sürprizleriyle karşılaşmazsınız.
                 </p>
               </div>
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2">
-                <span className="font-bold text-orange-text text-sm block">✓ K3 Belgeli ve Sigortalı</span>
+                <span className="font-bold text-brand-accent-dark text-sm block">✓ K3 Belgeli ve Sigortalı</span>
                 <p className="text-gray-300 text-xs leading-relaxed">
                   Tüm operasyonlarımız yasal K3 yetki belgemiz kapsamında, eşya hasar sigortası poliçesi düzenlenerek gerçekleştirilir. Eşyalarınız güvence altındadır.
                 </p>
               </div>
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 space-y-2">
-                <span className="font-bold text-orange-text text-sm block">✓ Ücretsiz Ön Keşif</span>
+                <span className="font-bold text-brand-accent-dark text-sm block">✓ Ücretsiz Ön Keşif</span>
                 <p className="text-gray-300 text-xs leading-relaxed">
                   Formu doldurduktan sonra dilerseniz ekiplerimiz adresinize gelerek ücretsiz fiziki ekspertiz ve yer incelemesi yapar, raporunu hazırlar.
                 </p>

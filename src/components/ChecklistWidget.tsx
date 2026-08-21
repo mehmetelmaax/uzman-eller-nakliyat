@@ -74,8 +74,14 @@ export default function ChecklistWidget() {
 
   const toggleItem = (groupIdx: number, itemIdx: number) => {
     const newGroups = [...groups];
-    newGroups[groupIdx].items[itemIdx].checked = !newGroups[groupIdx].items[itemIdx].checked;
-    setGroups(newGroups);
+    const group = newGroups[groupIdx];
+    if (group) {
+      const item = group.items[itemIdx];
+      if (item) {
+        item.checked = !item.checked;
+        setGroups(newGroups);
+      }
+    }
   };
 
   const resetChecklist = () => {
@@ -127,15 +133,15 @@ export default function ChecklistWidget() {
       `}</style>
 
       {/* Progress Bar & Actions (no-print) */}
-      <div className="bg-white p-6 rounded-xl border border-gray-light shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 no-print">
+      <div className="bg-white p-6 rounded-xl border border-border-light shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 no-print">
         <div className="space-y-2 w-full md:w-2/3">
-          <div className="flex justify-between items-center text-xs font-bold text-navy uppercase">
+          <div className="flex justify-between items-center text-xs font-bold text-brand-primary uppercase">
             <span>Taşınma Hazırlık İlerlemesi</span>
             <span>%{progressPercent} Tamamlandı</span>
           </div>
-          <div className="w-full bg-off-white h-3.5 rounded-full overflow-hidden border border-gray-light">
+          <div className="w-full bg-surface-muted h-3.5 rounded-full overflow-hidden border border-border-light">
             <div
-              className="bg-orange h-full transition-all duration-300 rounded-full"
+              className="bg-brand-accent h-full transition-all duration-300 rounded-full"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
@@ -145,14 +151,14 @@ export default function ChecklistWidget() {
         <div className="flex gap-3 shrink-0 w-full md:w-auto">
           <button
             onClick={handlePrint}
-            className="flex-1 md:flex-initial bg-navy hover:bg-orange text-white hover:text-navy font-bold px-4 py-2.5 rounded-xl border border-navy transition-all duration-200 text-xs flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
+            className="flex-1 md:flex-initial bg-brand-primary hover:bg-brand-accent text-white hover:text-brand-primary font-bold px-4 py-2.5 rounded-xl border border-brand-primary transition-all duration-200 text-xs flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
           >
             <Printer className="w-4.5 h-4.5" />
             <span>Listeyi Yazdır (PDF)</span>
           </button>
           <button
             onClick={resetChecklist}
-            className="bg-off-white hover:bg-gray-light/40 text-charcoal font-bold px-4 py-2.5 rounded-xl border border-gray-light transition-all duration-200 text-xs flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
+            className="bg-surface-muted hover:bg-border-light/40 text-charcoal font-bold px-4 py-2.5 rounded-xl border border-border-light transition-all duration-200 text-xs flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
             aria-label="Listeyi temizle"
           >
             <RefreshCw className="w-4.5 h-4.5" />
@@ -164,30 +170,30 @@ export default function ChecklistWidget() {
       {/* Checklist Sections */}
       <div className="space-y-6 print-container">
         {groups.map((group, groupIdx) => (
-          <div key={groupIdx} className="bg-white rounded-xl border border-gray-light shadow-sm overflow-hidden print-card">
+          <div key={groupIdx} className="bg-white rounded-xl border border-border-light shadow-sm overflow-hidden print-card">
             
             {/* Group Header */}
-            <div className="bg-navy/5 px-6 py-4 border-b border-gray-light flex items-center gap-3">
-              <CheckCircle2 className="w-5 h-5 text-orange" />
-              <h3 className="font-display font-bold text-navy text-sm md:text-base">{group.title}</h3>
+            <div className="bg-brand-primary/5 px-6 py-4 border-b border-border-light flex items-center gap-3">
+              <CheckCircle2 className="w-5 h-5 text-brand-accent" />
+              <h3 className="font-display font-bold text-brand-primary text-sm md:text-base">{group.title}</h3>
             </div>
 
             {/* Group Items */}
-            <div className="divide-y divide-gray-light/60 px-6">
+            <div className="divide-y divide-border-light/60 px-6">
               {group.items.map((item, itemIdx) => (
                 <div
                   key={item.id}
                   onClick={() => toggleItem(groupIdx, itemIdx)}
-                  className="py-4 flex items-start gap-4 cursor-pointer hover:bg-off-white/40 transition-colors select-none group"
+                  className="py-4 flex items-start gap-4 cursor-pointer hover:bg-surface-muted/40 transition-colors select-none group"
                 >
                   <button
-                    className="shrink-0 mt-0.5 text-navy hover:text-orange transition-colors focus:outline-none"
+                    className="shrink-0 mt-0.5 text-brand-primary hover:text-brand-accent transition-colors focus:outline-none"
                     aria-label={item.task}
                   >
                     {item.checked ? (
-                      <CheckSquare className="w-5 h-5 text-orange fill-orange/15" />
+                      <CheckSquare className="w-5 h-5 text-brand-accent fill-brand-accent/15" />
                     ) : (
-                      <Square className="w-5 h-5 text-gray-400 group-hover:text-navy" />
+                      <Square className="w-5 h-5 text-gray-400 group-hover:text-brand-primary" />
                     )}
                   </button>
                   <span className={`text-xs md:text-sm font-semibold leading-relaxed transition-all ${item.checked ? 'text-gray-400 line-through' : 'text-charcoal'}`}>

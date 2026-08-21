@@ -1,10 +1,12 @@
-import { SITE, SERVICES, DISTRICTS, ROUTES } from '@/lib/site-config';
+import { SITE, SERVICES, DISTRICTS } from '@/lib/site-config';
 import { FACTS } from '@/lib/facts';
-import { blogDatabase } from '@/lib/blog-data';
+import { blogMetadataDatabase } from '@/content/blog';
+import { routesMetadataDatabase } from '@/content/routes';
 
 export function GET() {
   const indexableDistricts = DISTRICTS.filter(d => d.indexable);
-  const blogs = Object.values(blogDatabase);
+  const blogs = Object.values(blogMetadataDatabase);
+  const routes = Object.values(routesMetadataDatabase);
 
   const markdown = `# ${SITE.name}
 
@@ -27,7 +29,7 @@ ${SERVICES.map(s => `- [${s.name}](${SITE.url}/hizmetler/${s.slug}): ${s.descrip
 ${indexableDistricts.map(d => `- [${d.name} Evden Eve Nakliyat](${SITE.url}/bolgeler/${d.slug}): ${d.name} ilçesinde asansörlü ve sigortalı ev taşıma hizmetleri.`).join('\n')}
 
 ## Şehirlerarası Rotalar
-${ROUTES.map(r => `- [Mersin - ${r.city} Nakliyat](${SITE.url}/rotalar/${r.slug}): Mesafe yaklaşık ${r.distanceKm} km, ortalama seyahat süresi ${r.durationHours} saattir.`).join('\n')}
+${routes.map(r => `- [Mersin - ${r.city} Nakliyat](${SITE.url}/rotalar/${r.slug}): Mesafe yaklaşık ${r.distanceKm} km, ortalama seyahat süresi ${r.durationHours} saattir.`).join('\n')}
 
 ## Fiyat Bilgisi
 Fiyatlandırma detayları ve anlık maliyet hesaplama robotu için [Mersin Evden Eve Nakliyat Fiyatları](${SITE.url}/mersin-nakliyat-fiyatlari) sayfamızı ziyaret edin. Sitedeki standart şehiriçi ev taşıma bütçesi ortalama ₺${FACTS.priceMin} ile ₺${FACTS.priceMax} aralığındadır.
@@ -46,6 +48,7 @@ ${blogs.map(b => `- [${b.title}](${SITE.url}/blog/${b.id}): ${b.desc}`).join('\n
   return new Response(markdown, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600'
     },
   });
 }

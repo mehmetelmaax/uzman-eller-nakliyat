@@ -33,7 +33,7 @@ export default function RelatedLinks({ currentSlug, type, title }: RelatedLinksP
       `${name} uygun fiyatlı nakliyat`,
       `${name} ev taşıma çözümleri`,
     ];
-    return templates[(index + hashVal) % templates.length];
+    return templates[(index + hashVal) % templates.length] || '';
   };
 
   // Helper to generate varied anchor texts for services
@@ -45,7 +45,7 @@ export default function RelatedLinks({ currentSlug, type, title }: RelatedLinksP
       `Mersin ${prefix ? prefix + ' ' : ''}${name} çözümleri`,
       `${prefix ? prefix + ' ' : ''}${name} firmaları`,
     ];
-    return templates[(index + hashVal) % templates.length];
+    return templates[(index + hashVal) % templates.length] || '';
   };
 
   // Helper to generate varied anchor texts for blogs
@@ -56,7 +56,7 @@ export default function RelatedLinks({ currentSlug, type, title }: RelatedLinksP
       `${title} yazımız`,
       `${title} ipuçları`,
     ];
-    return templates[(index + hashVal) % templates.length];
+    return templates[(index + hashVal) % templates.length] || '';
   };
 
   if (type === 'hizmet') {
@@ -153,8 +153,8 @@ export default function RelatedLinks({ currentSlug, type, title }: RelatedLinksP
   }
 
   return (
-    <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6 no-print">
-      <h3 className="font-display font-bold text-navy text-lg border-b border-gray-light pb-3">
+    <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6 no-print">
+      <h3 className="font-display font-bold text-brand-primary text-lg border-b border-border-light pb-3">
         {title || 'Alakalı Hizmetlerimiz ve Bölgelerimiz'}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
@@ -162,7 +162,7 @@ export default function RelatedLinks({ currentSlug, type, title }: RelatedLinksP
           <Link
             key={idx}
             href={link.href}
-            className="text-orange-text hover:underline font-semibold flex items-center gap-1.5"
+            className="text-brand-accent-dark hover:underline font-semibold flex items-center gap-1.5"
           >
             <span>➔</span>
             <span>{link.text}</span>

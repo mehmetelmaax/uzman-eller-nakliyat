@@ -29,8 +29,8 @@ const DESCS = [
   'Yüksek katlı binalarda güvenli taşıma sağlayan mobil asansör sistemimiz.',
   'Mobilyalarınızın taşınma öncesinde uzman marangozumuzca sökülmesi ve numaralandırılması.',
   'Kırılacak cam ve mutfak eşyalarının Kraft kağıtlarla sarılıp kolilere yerleştirilmesi.',
-  'Adana Seyhan merkezimizden diğer illere yola çıkmaya hazır kapalı kasa taşıma aracımız.',
-  'Adana Esenler Nakliyat güvencesiyle uzman kadromuz iş başında.',
+  'Mersin Yenişehir merkezimizden diğer illere yola çıkmaya hazır kapalı kasa taşıma aracımız.',
+  'Mersin Uzman Eller Nakliyat güvencesiyle uzman kadromuz iş başında.',
   'Eşyaların oda oda tasnif edilip yeni evinizde istenen yerlere yerleştirilmesi.',
   'Apartman içi merdivenleri kullanmadan balkondan doğrudan araca yükleme yapılması.',
   'Koli, köşe koruyucu bentler ve özel ambalaj ipleriyle yapılan kurumsal paketleme.'
@@ -57,7 +57,7 @@ function processUserImages() {
 
   files.forEach((file, index) => {
     const ext = path.extname(file).toLowerCase();
-    const newFileName = `adana-nakliyat-faaliyet-${index + 1}${ext}`;
+    const newFileName = `mersin-nakliyat-faaliyet-${index + 1}${ext}`;
     const srcPath = path.join(userGalleryDir, file);
     const destPath = path.join(publicImgDir, newFileName);
 
@@ -70,7 +70,7 @@ function processUserImages() {
       src: `/img/${newFileName}`,
       title: TITLES[index % TITLES.length],
       desc: DESCS[index % DESCS.length],
-      alt: `Adana Esenler Evden Eve Nakliyat firmasına ait ${TITLES[index % TITLES.length].toLowerCase()} gerçek faaliyet fotoğrafı`
+      alt: `Mersin Uzman Eller Nakliyat firmasına ait ${TITLES[index % TITLES.length].toLowerCase()} gerçek faaliyet fotoğrafı`
     });
   });
 
@@ -95,19 +95,19 @@ function processUserImages() {
       src: '/img/slayt-1.jpg',
       title: 'Şehirlerarası Nakliyat Tırımız',
       desc: 'Büyük boy çelik kasa ev eşyası taşıma kamyonumuz yükleme esnasında.',
-      alt: "Adana'dan Türkiye geneline K3 belgeli araçlarla şehirlerarası evden eve nakliyat taşıması yapan büyük nakliye tırı",
+      alt: "Mersin'den Türkiye geneline K3 belgeli araçlarla şehirlerarası evden eve nakliyat taşıması yapan büyük nakliye tırı",
     },
     {
       src: '/img/slayt-2.jpg',
       title: 'Dış Cephe Asansör Kurulumu',
       desc: 'Rezidans tipi binalarda balkondan eşya transferi yapan teleskopik asansörümüz.',
-      alt: "Adana Seyhan'da yüksek katlı bir rezidansın dış cephesine kurulmuş teleskopik yük ve eşya taşıma asansörü",
+      alt: "Mersin Yenişehir'de yüksek katlı bir rezidansın dış cephesine kurulmuş teleskopik yük ve eşya taşıma asansörü",
     },
     {
       src: '/img/slayt-3.jpg',
       title: 'Asansörlü Nakliye Aracımız',
       desc: 'Mobil asansör kasalı taşıma kamyonetimiz dar sokakta operasyonda.',
-      alt: "Asansörlü nakliyat taşıma hizmeti veren teleskopik asansör sistemli Adana Esenler Nakliyat taşıma aracı",
+      alt: "Asansörlü nakliyat taşıma hizmeti veren teleskopik asansör sistemli Mersin Uzman Eller Nakliyat taşıma aracı",
     },
     {
       src: '/img/arac-filosu.jpg',
@@ -119,13 +119,13 @@ function processUserImages() {
       src: '/img/paketleme-detay.jpg',
       title: 'Özenli Eşya Ambalajlama',
       desc: 'Kraft kağıt ve patpat naylonlarla korumaya alınmış mobilyalar.',
-      alt: "Esenler Nakliyat marangozlarınca balonlu patpat ambalaj malzemeleri ile paketlenerek korumaya alınmış gardırop ve mobilyalar",
+      alt: "Uzman Eller Nakliyat marangozlarınca balonlu patpat ambalaj malzemeleri ile paketlenerek korumaya alınmış gardırop ve mobilyalar",
     },
     {
       src: '/img/ekip.jpg',
       title: 'Profesyonel Nakliye Ekibimiz',
-      desc: 'Esenler logolu kurumsal kıyafetli kadrolu taşıma personellerimiz.',
-      alt: "Adana Esenler Evden Eve Nakliyat kurumsal logolu iş elbiseleriyle uzman ve sigortalı profesyonel taşıma ekibimiz",
+      desc: 'Uzman Eller logolu kurumsal kıyafetli kadrolu taşıma personellerimiz.',
+      alt: "Mersin Uzman Eller Nakliyat kurumsal logolu iş elbiseleriyle uzman ve sigortalı profesyonel taşıma ekibimiz",
     }
   ];
 

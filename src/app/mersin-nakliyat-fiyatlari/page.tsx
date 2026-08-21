@@ -86,12 +86,12 @@ export default function FiyatlarPage() {
     <>
       <JsonLd data={schemas} />
       
-      <main className="pt-24 bg-off-white min-h-screen">
+      <main className="pt-24 bg-surface-muted min-h-screen">
         <Breadcrumb items={[{ name: 'Fiyat Rehberi', url: '/mersin-nakliyat-fiyatlari' }]} className="pt-4" />
         
         {/* Intro Section */}
-        <section className="py-20 bg-navy text-white text-center space-y-4">
-          <span className="text-orange font-bold text-xs tracking-widest">
+        <section className="py-20 bg-brand-primary text-white text-center space-y-4">
+          <span className="text-brand-accent font-bold text-xs tracking-widest">
             ŞEFFAF FİYAT POLİTİKASI
           </span>
           <h1 className="font-display font-black text-3xl md:text-5xl tracking-tight leading-tight px-4">
@@ -104,8 +104,8 @@ export default function FiyatlarPage() {
 
         {/* Technical Definitions Section */}
         <section className="py-8 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-6 rounded-xl border border-gray-light shadow-sm space-y-3">
-            <span className="font-bold text-navy text-sm block">Ev Taşıma Sektörüne Özgü Teknik Tanımlamalar:</span>
+          <div className="bg-white p-6 rounded-xl border border-border-light shadow-sm space-y-3">
+            <span className="font-bold text-brand-primary text-sm block">Ev Taşıma Sektörüne Özgü Teknik Tanımlamalar:</span>
             <ul className="list-disc list-inside text-xs text-charcoal space-y-1.5 pl-2">
               <li><strong>K3 Yetki Belgesi:</strong> Ev ve ofis eşyalarının ticari araçlarla karayolunda taşınması için Ulaştırma Bakanlığı tarafından zorunlu kılınan yasal yetki belgesidir.</li>
               <li><strong>Mobil dış cephe asansörü:</strong> Yüksek katlı binalardaki eşyaların bina içi merdivenlere sokulmadan pencere veya balkondan nakliye aracına transfer edilmesini sağlayan teleskopik platform sistemidir.</li>
@@ -119,7 +119,7 @@ export default function FiyatlarPage() {
         {/* Price Calculator Section */}
         <section className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 text-center mb-8">
-            <h2 className="font-display font-black text-navy text-2xl md:text-3xl">
+            <h2 className="font-display font-black text-brand-primary text-2xl md:text-3xl">
               Dairenizin Taşınma Bütçesi Nasıl Hesaplanır?
             </h2>
             <p className="text-charcoal text-sm max-w-xl mx-auto">
@@ -131,12 +131,12 @@ export default function FiyatlarPage() {
 
         {/* Section 1: Mersin'de Ev Taşıma Ne Kadar Tutar? */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl">
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl">
               Mersin'de Ev Taşıma Ne Kadar Tutar?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
-              Mersin'de ev taşıma maliyetleri 2026 yılı itibarıyla oda sayısına, asansör durumuna ve mesafeye bağlı olarak ortalama ₺12.000 ile ₺28.000 arasında değişmektedir. Eşyaların hacmi, taşınacak katların yükseklikleri, ambalajlama ve paketleme kalitesi ile marangozluk işçiliği bu bütçe aralığını doğrudan belirleyen temel bileşenlerdir.
+              Mersin'de ev taşıma maliyetleri 2026 yılı itibarıyla oda sayısına, asansör durumuna ve mesafeye bağlı olarak ortalama ₺{FACTS.priceMin.toLocaleString('tr-TR')} ile ₺{FACTS.priceMax.toLocaleString('tr-TR')} arasında değişmektedir. Eşyaların hacmi, taşınacak katların yükseklikleri, ambalajlama ve paketleme kalitesi ile marangozluk işçiliği bu bütçe aralığını doğrudan belirleyen temel bileşenlerdir.
             </p>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
               Daire büyüklüğü, nakliyat sürecinde görev alacak personel sayısını ve kullanılacak araç boyutunu belirler. Örneğin, küçük boyutlu 1+1 daireler genellikle 3 personel ve küçük boy bir kamyonet ile taşınabilirken, 3+1 ve daha büyük dairelerin transferi en az 5-6 kişilik profesyonel nakliye ekibini ve büyük boy çelik kapalı kasa kamyonları gerektirir. Bu durum, operasyon maliyetlerini ve ambalaj malzemesi sarfiyatını doğrudan etkiler.
@@ -148,64 +148,64 @@ export default function FiyatlarPage() {
 
         {/* Section 2: Nakliyede Fiyatı Belirleyen 8 Faktör */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl">
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl">
               Nakliyat Fiyatını Belirleyen 8 Faktör Nelerdir?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">Mersin Uzman Eller Nakliyat, Evden eve nakliye tekliflerinde yer alan bütçe aralıkları, sekiz ana lojistik kalemin birleşiminden meydana gelmektedir. Bu etkenler, her müşterinin taşınma şartlarına göre ayrı ayrı hesaplanır:</p>
             
             <div className="space-y-6">
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">1. Oda Sayısı ve Eşya Hacmi (Etki Oranı: %30)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">1. Oda Sayısı ve Eşya Hacmi (Etki Oranı: %30)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Evdeki oda sayısı arttıkça taşınacak eşyaların kapladığı net metreküp hacmi artar. Bu durum, kullanılacak havalı patpat naylon rulo miktarını, koli sayısını ve çalışacak personel yevmiyelerini belirleyen en temel maliyet etkenidir.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">2. Bulunulan Kat Yükseklikleri (Etki Oranı: %15)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">2. Bulunulan Kat Yükseklikleri (Etki Oranı: %15)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Eşyaların taşınacağı çıkış ve varış kat durumları yükseldikçe personelin eşya taşıma süresi ve harcayacağı efor katlanır. Asansörsüz yüksek katlar ek beden işçiliği yevmiyesi gerektirmektedir.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">3. Eşya Asansörü Kurulum Talebi (Etki Oranı: %20)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">3. Eşya Asansörü Kurulum Talebi (Etki Oranı: %20)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Yüksek katlı modern sitelerde bina yönetimleri bina içi asansörle taşımayı yasakladığı için dış cephe mobil eşya asansörü kurulması operasyonel bir zorunluluktur. Kurulacak asansör sayısı (sadece yüklemede veya hem yükleme hem teslimatta) fiyata yansır.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">4. Güzergah ve Karayolu Mesafesi (Etki Oranı: %15)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">4. Güzergah ve Karayolu Mesafesi (Etki Oranı: %15)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Yükleme noktası ile teslimat adresi arasındaki kilometre farkı, kamyon veya tırlarımızın yakıt tüketimini ve amortisman giderlerini belirler. Mersin şehiriçi, çevre ilçeler ve şehirlerarası taşımalarda km katsayıları farklıdır.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">5. Ambalajlama ve Kolileme Kapsamı (Etki Oranı: %10)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">5. Ambalajlama ve Kolileme Kapsamı (Etki Oranı: %10)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Mutfak kırılacak eşyalarının, bardakların, porselenlerin ve giysilerin koli içine yerleştirilmesi işini nakliye firmasının yapması durumunda ek işçilik ve sarf malzemesi gideri bütçeye eklenmektedir.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">6. Marangozluk ve Tesisat Kurulumları (Etki Oranı: %5)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">6. Marangozluk ve Tesisat Kurulumları (Etki Oranı: %5)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Yatak odası gardırobunun, raylı dolapların, yatak ünitelerinin sökümü ve montajı ile çamaşır, bulaşık makinesi, kurutma makinesi tesisat bağlantıları için görevlendirilecek sertifikalı marangoz ustası işçiliğidir.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">7. Taşınma Sezonu ve Gün Tercihi (Etki Oranı: %5)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">7. Taşınma Sezonu ve Gün Tercihi (Etki Oranı: %5)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Tayin dönemleri, memur atamaları ve düğünlerin yoğun olduğu yaz aylarında (Haziran-Eylül) nakliye talebi aşırı yükselir. Hafta sonu ve ay sonlarında oluşan yoğunluklar fiyatlarda dalgalanma yaratabilir.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-bold text-navy text-base">8. Özel Ağır Yüklerin Varlığı (Etki Oranı: Sabit Ek Maliyet)</h3>
+                <h3 className="font-display font-bold text-brand-primary text-base">8. Özel Ağır Yüklerin Varlığı (Etki Oranı: Sabit Ek Maliyet)</h3>
                 <p className="text-charcoal text-sm leading-relaxed">
                   Evde yer alan çelik para kasaları, kuyruklu veya duvar piyanoları, dev akvaryumlar, antika mobilyalar gibi özel askı takımı, taşıma lifleri ve ekstra kas gücü gerektiren ağır eşyalar için sabit ek işçilik yansıtılır.
                 </p>
@@ -217,8 +217,8 @@ export default function FiyatlarPage() {
         {/* Section 3: Detailed Questions */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl">
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl">
               Asansörlü Taşıma Fiyata Ne Kadar Ekler?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -226,8 +226,8 @@ export default function FiyatlarPage() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl">
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl">
               Paketleme Hizmeti Fiyatı Nedir?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -235,14 +235,14 @@ export default function FiyatlarPage() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl">
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl">
               Şehirlerarası Taşıma Fiyatı Nasıl Hesaplanır?
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
               Şehirlerarası ev taşıma fiyatları, Yenişehir merkez garajımızdan çıkış yapacak aracın gideceği hedef şehir arasındaki kilometre bazlı mesafe hesabı yapılarak belirlenmektedir. Hesaplama formülü şu şekildedir:
             </p>
-            <div className="bg-navy/5 border border-navy/10 rounded-xl p-5 text-center font-display font-bold text-navy text-xs md:text-sm">
+            <div className="bg-brand-primary/5 border border-brand-primary/10 rounded-xl p-5 text-center font-display font-bold text-brand-primary text-xs md:text-sm">
               Mesafe Ücreti = [Gidilecek Yol Mesafesi (Km) × Yakıt Katsayısı (₺12)] + Otoban/Köprü Geçiş Giderleri + Sürücü Harcırahları
             </div>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -252,32 +252,32 @@ export default function FiyatlarPage() {
               <table className="w-full text-left border-collapse text-xs md:text-sm">
                 <caption>Mersin Çıkışlı Şehirlerarası Ev Taşıma Rota ve Fiyat Listesi</caption>
                 <thead>
-                  <tr className="bg-navy text-white">
+                  <tr className="bg-brand-primary text-white">
                     <th scope="col" className="p-3 font-display rounded-tl-lg">Rota / Güzergah</th>
                     <th scope="col" className="p-3 font-display">Mesafe (Km)</th>
                     <th scope="col" className="p-3 font-display rounded-tr-lg">Ortalama Fiyat Aralığı</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-light">
-                  <tr className="hover:bg-off-white/50">
-                    <th scope="row" className="p-3 font-bold text-navy">Mersin - Ankara Nakliyat</th>
+                <tbody className="divide-y divide-border-light">
+                  <tr className="hover:bg-surface-muted/50">
+                    <th scope="row" className="p-3 font-bold text-brand-primary">Mersin - Ankara Nakliyat</th>
                     <td className="p-3">490 km</td>
-                    <td className="p-3 font-semibold text-orange-text">₺24.000 - ₺28.000</td>
+                    <td className="p-3 font-semibold text-brand-accent-dark">₺24.000 - ₺28.000</td>
                   </tr>
-                  <tr className="hover:bg-off-white/50">
-                    <th scope="row" className="p-3 font-bold text-navy">Mersin - İstanbul Nakliyat</th>
+                  <tr className="hover:bg-surface-muted/50">
+                    <th scope="row" className="p-3 font-bold text-brand-primary">Mersin - İstanbul Nakliyat</th>
                     <td className="p-3">930 km</td>
-                    <td className="p-3 font-semibold text-orange-text">₺35.000 - ₺42.000</td>
+                    <td className="p-3 font-semibold text-brand-accent-dark">₺35.000 - ₺42.000</td>
                   </tr>
-                  <tr className="hover:bg-off-white/50">
-                    <th scope="row" className="p-3 font-bold text-navy">Mersin - İzmir Nakliyat</th>
+                  <tr className="hover:bg-surface-muted/50">
+                    <th scope="row" className="p-3 font-bold text-brand-primary">Mersin - İzmir Nakliyat</th>
                     <td className="p-3">900 km</td>
-                    <td className="p-3 font-semibold text-orange-text">₺34.000 - ₺40.000</td>
+                    <td className="p-3 font-semibold text-brand-accent-dark">₺34.000 - ₺40.000</td>
                   </tr>
-                  <tr className="hover:bg-off-white/50">
-                    <th scope="row" className="p-3 font-bold text-navy">Mersin - Mersin Nakliyat</th>
-                    <td className="p-3">85 km</td>
-                    <td className="p-3 font-semibold text-orange-text">₺9.000 - ₺12.000</td>
+                  <tr className="hover:bg-surface-muted/50">
+                    <th scope="row" className="p-3 font-bold text-brand-primary">Mersin - Adana Nakliyat</th>
+                    <td className="p-3">70 km</td>
+                    <td className="p-3 font-semibold text-brand-accent-dark">₺9.000 - ₺12.000</td>
                   </tr>
                 </tbody>
               </table>
@@ -287,9 +287,9 @@ export default function FiyatlarPage() {
 
         {/* Section 4: Ucuz Nakliyat Teklifi Neden Pahalıya Patlar? */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <ShieldAlert className="w-6.5 h-6.5 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <ShieldAlert className="w-6.5 h-6.5 text-brand-accent" />
               <span>Ucuz Nakliyat Teklifi Neden Pahalıya Patlar?</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">
@@ -297,28 +297,28 @@ export default function FiyatlarPage() {
             </p>
             <div className="space-y-4 text-xs md:text-sm text-charcoal">
               <div className="border-l-4 border-rose-500 pl-4 space-y-1">
-                <span className="font-bold text-navy block">1. Kapora Dolandırıcılığı Tuzağı</span>
+                <span className="font-bold text-brand-primary block">1. Kapora Dolandırıcılığı Tuzağı</span>
                 <p className="text-charcoal/90">
                   Sahte profillerle piyasa fiyatının çok altında teklif verip, rezervasyon bahanesiyle yüksek kapora talep eden korsan acenteler, taşınma günü telefonlarını kapatarak kapora bedelini gasp etmekte ve adrese araç göndermemektedir.
                 </p>
               </div>
               
               <div className="border-l-4 border-rose-500 pl-4 space-y-1">
-                <span className="font-bold text-navy block">2. Yol Ortasında Fiyat Artırma Şantajı</span>
+                <span className="font-bold text-brand-primary block">2. Yol Ortasında Fiyat Artırma Şantajı</span>
                 <p className="text-charcoal/90">
                   Eşyalarınızı kamyona yarı yarıya yükledikten veya araç yola çıktıktan sonra "eşyalarınız fazlaymış, asansör açısı uzaktı" gibi bahanelerle eşyalarınızı rehin tutarlar. Taşınmanın tamamlanması için sizden zorla anlaşılan rakamın iki katı ek ödemeler talep ederler.
                 </p>
               </div>
 
               <div className="border-l-4 border-rose-500 pl-4 space-y-1">
-                <span className="font-bold text-navy block">3. Emtia Taşıma Sigortası Eksikliği</span>
+                <span className="font-bold text-brand-primary block">3. Emtia Taşıma Sigortası Eksikliği</span>
                 <p className="text-charcoal/90">
                   Korsan firmalar adınıza sigorta poliçesi düzenlemez. Yol esnasında meydana gelebilecek kaza, yangın, devrilme veya hırsızlık durumunda eşyalarınız tamamen yok olsa dahi zararınızı tahsil edebileceğiniz yasal bir muhatap bulamazsınız.
                 </p>
               </div>
 
               <div className="border-l-4 border-rose-500 pl-4 space-y-1">
-                <span className="font-bold text-navy block">4. Vasıfsız Günlük İşçiler ve Hasar Riski</span>
+                <span className="font-bold text-brand-primary block">4. Vasıfsız Günlük İşçiler ve Hasar Riski</span>
                 <p className="text-charcoal/90">
                   Ucuza çalışan firmalar kadrolu profesyonel personel yerine dışarıdan günlük yevmiyeli vasıfsız işçiler görevlendirir. Mobilyaların söküm ve montajı doğru aletlerle yapılmadığı için gardıroplarınız ve beyaz eşyalarınız kalıcı hasar görür.
                 </p>
@@ -329,51 +329,51 @@ export default function FiyatlarPage() {
 
         {/* Section 5: Fiyat Teklifi Alırken Sorulması Gereken 10 Soru */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-4">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <Scale className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-4">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <Scale className="w-6 h-6 text-brand-accent" />
               <span>Fiyat Teklifi Alırken Sorulması Gereken 10 Soru Nedir?</span>
             </h2>
             <p className="text-charcoal text-sm md:text-base leading-relaxed">Mersin Uzman Eller Nakliyat, Hangi taşıma firmasıyla anlaşırsanız anlaşın, taşınma gününde mağduriyet yaşamamak adına aşağıdaki on soruluk kontrol listesini firmaya yöneltip teyit almanız yasal haklarınızı korumak adına zorunludur:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-charcoal">
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">1.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">1.</span>
                 <span>Firma adına kayıtlı yasal Karayolu K3 Yetki Belgeniz var mı?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">2.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">2.</span>
                 <span>Anlaştığımız bu fiyat taşınma günü kesinlikle sabit kalacak mı?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">3.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">3.</span>
                 <span>Taşıma ekibinde gardırop montajını yapacak sertifikalı marangoz var mı?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">4.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">4.</span>
                 <span>Eşyaların tamamı için adıma emtia taşıma sigortası düzenlenecek mi?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">5.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">5.</span>
                 <span>Kullanılacak ambalaj malzemeleri kalın balonlu patpat naylonlardan mı oluşuyor?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">6.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">6.</span>
                 <span>Fiyat teklifine dış cephe mobil asansör kurulum ücreti dahil midir?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">7.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">7.</span>
                 <span>Çalışacak personel yevmiyeli işçi mi yoksa kadrolu çalışanınız mı?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">8.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">8.</span>
                 <span>Yeni evde çamaşır ve bulaşık makinesinin tesisat bağlantılarını yapıyor musunuz?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">9.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">9.</span>
                 <span>Taşınma öncesinde karşılıklı ıslak imzalı nakliye sözleşmesi imzalayacak mıyız?</span>
               </div>
-              <div className="flex gap-2.5 bg-off-white p-3 rounded-lg border border-gray-light/60">
-                <span className="text-orange font-bold font-mono">10.</span>
+              <div className="flex gap-2.5 bg-surface-muted p-3 rounded-lg border border-border-light/60">
+                <span className="text-brand-accent font-bold font-mono">10.</span>
                 <span>Taşıma sonrasında resmi irsaliyeli fatura düzenliyor musunuz?</span>
               </div>
             </div>
@@ -382,15 +382,15 @@ export default function FiyatlarPage() {
 
         {/* Section 6: FAQ section */}
         <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-light shadow-sm space-y-6">
-            <h2 className="font-display font-bold text-navy text-xl md:text-2xl flex items-center gap-2">
-              <HelpCircle className="w-6 h-6 text-orange" />
+          <div className="bg-white p-8 rounded-xl border border-border-light shadow-sm space-y-6">
+            <h2 className="font-display font-bold text-brand-primary text-xl md:text-2xl flex items-center gap-2">
+              <HelpCircle className="w-6 h-6 text-brand-accent" />
               <span>Mersin Nakliyat Fiyatları Hakkında Sıkça Sorulan Sorular Nelerdir?</span>
             </h2>
             <div className="space-y-4 text-sm text-charcoal">
               {pricingFaqs.map((item, idx) => (
-                <div key={idx} className={idx > 0 ? "border-t border-gray-light/60 pt-4" : ""}>
-                  <span className="font-bold text-navy block mb-1">{item.question}</span>
+                <div key={idx} className={idx > 0 ? "border-t border-border-light/60 pt-4" : ""}>
+                  <span className="font-bold text-brand-primary block mb-1">{item.question}</span>
                   <p className="text-charcoal/95 leading-relaxed">{item.answer}</p>
                 </div>
               ))}

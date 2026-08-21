@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
-import { SITE, SERVICES, DISTRICTS, ROUTES } from '@/lib/site-config';
-import { blogDatabase } from '@/lib/blog-data';
+import { SITE, DISTRICTS } from '@/lib/site-config';
+import { blogMetadataDatabase } from '@/content/blog';
+import { servicesDatabase } from '@/lib/services-data';
+import { routesMetadataDatabase } from '@/content/routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE.url;
@@ -21,35 +23,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   };
 
-  // 3. Hizmetler (6 adet, 0.9, monthly)
-  const servicePages = SERVICES.map((service) => ({
-    url: `${baseUrl}/hizmetler/${service.slug}`,
+  // 3. Hub Pages (0.8, monthly)
+  const hubPages = ['/hizmetler', '/bolgeler', '/rotalar'].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // 4. Hizmetler (9 adet, 0.9, monthly)
+  const servicePages = Object.keys(servicesDatabase).map((slug) => ({
+    url: `${baseUrl}/hizmetler/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }));
 
-  // 4. Bölgeler - Merkez (4 adet, 0.9, monthly)
+  // 5. Bölgeler - Merkez (4 adet, 0.9, monthly)
   const merkezRegionPages = DISTRICTS.filter(d => d.tier === 'merkez' && d.indexable).map((district) => ({
     url: `${baseUrl}/bolgeler/${district.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
-  }));  // 6. İletişim (0.8, monthly)
-  const iletisimPage = {
-    url: `${baseUrl}/iletisim`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  };
+  }));
 
-  // 7. Bölgeler - İlçe (11 adet, 0.7, monthly)
+  // 6. Bölgeler - İlçe (9 adet, 0.7, monthly)
   const ilceRegionPages = DISTRICTS.filter(d => d.tier === 'ilce' && d.indexable).map((district) => ({
     url: `${baseUrl}/bolgeler/${district.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
+
+  // 7. İletişim (0.8, monthly)
+  const iletisimPage = {
+    url: `${baseUrl}/iletisim`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  };
 
   // 8. Blog List (0.7, weekly)
   const blogPage = {
@@ -59,8 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   };
 
-  // 9. Blog Yazıları (3 adet, 0.6, monthly, lastModified from post date)
-  const blogPostPages = Object.values(blogDatabase).map((post) => ({
+  // 9. Blog Yazıları (0.6, monthly)
+  const blogPostPages = Object.values(blogMetadataDatabase).map((post) => ({
     url: `${baseUrl}/blog/${post.id}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
@@ -91,7 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  // 13. Yeni Rehber ve Yardımcı Sayfalar (3 adet, 0.8, monthly)
+  // 13. Yeni Rehber ve Yardımcı Sayfalar (0.8, monthly)
   const additionalPages = [
     {
       url: `${baseUrl}/mersin-nakliyat-fiyatlari`,
@@ -113,9 +125,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ];
 
-  // 14. Şehirlerarası Rotalar (8 adet, 0.8, monthly)
-  const routePages = ROUTES.map((route) => ({
-    url: `${baseUrl}/rotalar/${route.slug}`,
+  // 14. Şehirlerarası Rotalar (0.8, monthly)
+  const routePages = Object.keys(routesMetadataDatabase).map((slug) => ({
+    url: `${baseUrl}/rotalar/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -124,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     mainPage,
     teklifPage,
+    ...hubPages,
     ...servicePages,
     ...merkezRegionPages,
     iletisimPage,

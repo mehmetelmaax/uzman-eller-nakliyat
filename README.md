@@ -39,7 +39,7 @@ Geliştirme veya canlı ortama geçişte kök dizinde bir `.env.local` dosyası 
 | Değişken Adı | Açıklama | Nereden Alınır? |
 | :--- | :--- | :--- |
 | `RESEND_API_KEY` | Form bildirim e-postalarını göndermek için kullanılan Resend şifresi. | [resend.com](https://resend.com) panelinden ücretsiz API anahtarı olarak oluşturulur. |
-| `NOTIFY_EMAIL` | Teklifler geldiğinde bildirim gönderilecek yönetici adresi. | firmanın resmi e-postası (örn: `info@uzmanellernakliyat.com.tr`). |
+| `NOTIFY_EMAIL` | Teklifler geldiğinde bildirim gönderilecek yönetici adresi. | firmanın resmi e-postası (örn: `info@mersinuzmaneller.com`). |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Ölçüm Kimliği. | [analytics.google.com](https://analytics.google.com) adresinden mülk kurulumunda verilen `G-XXXXXXXXXX` kodu. |
 | `NEXT_PUBLIC_CLARITY_ID`| Microsoft Clarity Proje Kimliği. | [clarity.microsoft.com](https://clarity.microsoft.com) panelinden alınan 10 haneli proje kodu. |
 | `NEXT_PUBLIC_GSC_VERIFICATION`| Google Search Console doğrulama kodu. | Search Console mülk doğrulama adımındaki `<meta>` etiketinin `content` değeri. |

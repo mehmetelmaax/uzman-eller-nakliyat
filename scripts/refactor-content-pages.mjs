@@ -39,11 +39,11 @@ const SERVICES = [
 // Helper to clean self-referential pronouns and capitalize them
 function cleanPronouns(text) {
   return text
-    .replace(/\b(firmamız|şirketimiz|kuruluşumuz)\b/g, 'Adana Esenler Nakliyat')
-    .replace(/\b(firmamızın|şirketimizin)\b/g, 'Adana Esenler Nakliyat’ın')
-    .replace(/\b(firmamıza|şirketimize)\b/g, 'Adana Esenler Nakliyat’a')
-    .replace(/\b(firmamızdan|şirketimizden)\b/g, 'Adana Esenler Nakliyat’tan')
-    .replace(/\b(biz|ekibimiz|kadromuz)\b/g, 'Adana Esenler Nakliyat ekipleri')
+    .replace(/\b(firmamız|şirketimiz|kuruluşumuz)\b/g, 'Mersin Uzman Eller Nakliyat')
+    .replace(/\b(firmamızın|şirketimizin)\b/g, 'Mersin Uzman Eller Nakliyat’ın')
+    .replace(/\b(firmamıza|şirketimize)\b/g, 'Mersin Uzman Eller Nakliyat’a')
+    .replace(/\b(firmamızdan|şirketimizden)\b/g, 'Mersin Uzman Eller Nakliyat’tan')
+    .replace(/\b(biz|ekibimiz|kadromuz)\b/g, 'Mersin Uzman Eller Nakliyat ekipleri')
     .replace(/\b(hizmet veriyoruz|taşıyoruz|sağlıyoruz)\b/g, 'hizmet vermektedir')
     .replace(/\b(yapıyoruz|sunuyoruz|üretiyoruz)\b/g, 'sunmaktadır');
 }

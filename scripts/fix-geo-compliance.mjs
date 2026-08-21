@@ -7,8 +7,8 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 
 const ENTITIES = [
-  'adana esenler nakliyat',
-  'esenler nakliyat',
+  'mersin uzman eller nakliyat',
+  'uzman eller nakliyat',
   'anadolu sigorta',
   'seyhan',
   'cukurova',
@@ -77,13 +77,13 @@ function processFile(filePath) {
 
     let updatedPBody = pBody;
     if (!hasDigit && !hasEntity) {
-      // Prepend "Adana Esenler Nakliyat, "
+      // Prepend "Mersin Uzman Eller Nakliyat, "
       // If it starts with some tag like <strong>, we prepend inside it or outside
       if (pBody.trim().startsWith('<strong>')) {
-        updatedPBody = pBody.replace('<strong>', '<strong>Adana Esenler Nakliyat, ');
+        updatedPBody = pBody.replace('<strong>', '<strong>Mersin Uzman Eller Nakliyat, ');
       } else {
         // Find the first word and capitalize it if needed, or just prepend
-        updatedPBody = 'Adana Esenler Nakliyat, ' + pBody.trim();
+        updatedPBody = 'Mersin Uzman Eller Nakliyat, ' + pBody.trim();
       }
     }
 
@@ -107,7 +107,7 @@ function runGeoComplianceFix() {
   for (const f of folders) {
     getTsxFiles(f, files);
   }
-  files.push(path.join(rootDir, 'src', 'app', 'adana-nakliyat-fiyatlari', 'page.tsx'));
+  files.push(path.join(rootDir, 'src', 'app', 'mersin-nakliyat-fiyatlari', 'page.tsx'));
 
   for (const file of files) {
     processFile(file);
